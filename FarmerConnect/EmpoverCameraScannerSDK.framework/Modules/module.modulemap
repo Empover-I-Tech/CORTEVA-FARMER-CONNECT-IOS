@@ -1,0 +1,6 @@
+framework module EmpoverCameraScannerSDK {
+  umbrella header "EmpoverCameraScannerSDK.h"
+  export *
+
+  module * { export * }
+}

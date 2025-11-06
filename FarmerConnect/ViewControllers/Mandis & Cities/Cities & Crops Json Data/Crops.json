@@ -1,0 +1,22 @@
+{
+  "sprayDetailsList": [
+    {
+      "id" :1
+     "farmerName" :"fatima"
+     "mobileNumber" :"9542489540"
+     "noOfAcres" :10
+     "crop" :"corn"
+     "address" :"hyderabad"
+     "recordStatus" :"pending"
+    },
+    {
+      "id" :1
+     "farmerName" :"fatima"
+     "mobileNumber" :"9542489540"
+     "noOfAcres" :10
+     "crop" :"corn"
+     "address" :"hyderabad"
+     "recordStatus" :"pending"
+    }
+  ]
+}

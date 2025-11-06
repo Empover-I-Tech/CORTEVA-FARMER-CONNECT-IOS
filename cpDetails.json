@@ -1,0 +1,79 @@
+{
+  "dose": {
+    "tableHeader": "Dose(Formulation/Acre)",
+    "tableData": [
+      {
+        "columnOne": "R1column1 data",
+        "columnTwo": " R1column2 data",
+        "columnThree": "R1column3 data",
+        "columnFour": "R1column4 data"
+      },
+      {
+        "columnOne": "R2column1 data",
+        "columnTwo": " R2column2 data",
+        "columnThree": "R2column3 data",
+        "columnFour": "R2column4 data"
+      },
+      {
+        "columnOne": "R3column1data",
+        "columnTwo": "R3column2data",
+        "columnThree": "R3column3data",
+        "columnFour": "R3column4data"
+      }
+    ],
+    "noOfColumns": 4,
+    "noofRows": 3
+  },
+  "product_images": "http://pioneeractivity.in/fabMasterData/imageFiles/1569938914317_Jellyfish.jpg",
+  "a_message": {
+    "a_englishMsg ": [
+      "1. First advantage message",
+      "2. Second Advantage message"
+    ],
+    "a_localMsg ": [
+      "1. అధిక గింజలు, అధిక దిగుబడి",
+    ]
+  },
+  "cropId": "2",
+  "f_pdfFile": "http://pioneeractivity.in/fabMasterData/pdfFiles/1572516478002_autodebit-deactivation-letter.pdf",
+  "b_message": {
+    "b_englishMsg ": [
+      "1. First advantage message",
+      "2. Second Advantage message"
+    ],
+    "b_localMsg ": [
+      "1. అధిక గింజలు, అధిక దిగుబడి",
+      "2. అధిక దిగుబడ",
+      
+    ]
+  },
+  "stateId": "14",
+  "description": "test",
+  "f_voiceFile": "http://pioneeractivity.in/fabMasterData/voiceFiles/1569938903255_Sleep_Away.mp3",
+  "hybridId": "6",
+  "a_pdfFile": "http://pioneeractivity.in/fabMasterData/pdfFiles/1572516478002_autodebit-deactivation-letter.pdf",
+  "version": "0",
+  "b_pdfFile": "http://pioneeractivity.in/fabMasterData/pdfFiles/1572516478002_autodebit-deactivation-letter.pdf",
+  "f_message": {
+    "f_englishMsg ": [
+      "1. First advantage message",
+      "2. Second Advantage message"
+    ],
+    "f_localMsg ": [
+      "1. అధిక గింజలు, అధిక దిగుబడి",
+      "2. అధిక దిగుబడ",
+      "3.మార్కెట్ లో అధిక ధర"
+    ]
+  },
+  "f_image_tags": "jellyfish",
+  "f_images": "http://pioneeractivity.in/fabMasterData/imageFiles/1569938914317_Jellyfish.jpg",
+  "productId": "1",
+  "diseaseId": "2",
+  "diseaseName" : "Downy mildow",
+  "productName" : "curzate",
+  "bigHaatProductName": "27p31 HYBRID PADDY (RICE) ( धान )",
+  "isBigHaatProdAvailable": true,
+  "id": "74",
+  "state": "Telangana",
+  "crop": "Rice"
+}

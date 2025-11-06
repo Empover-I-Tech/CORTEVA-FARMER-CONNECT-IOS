@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StackViewCell" rowHeight="150" id="KGk-i7-Jjw" customClass="StackViewCell" customModule="FarmerConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="NBs-77-mdO">
+                        <rect key="frame" x="0.0" y="11" width="322" height="178"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEd-Ea-DdR">
+                                <rect key="frame" x="0.0" y="0.0" width="322" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7YG-4e-fU7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="el3-ep-3Eu">
+                                <rect key="frame" x="0.0" y="40" width="322" height="138"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ss" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="yCg-GV-nRX">
+                                        <rect key="frame" x="5" y="0.0" width="315" height="138"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="KGk-i7-Jjw" id="hFK-p4-Z1p"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yCg-GV-nRX" firstAttribute="top" secondItem="el3-ep-3Eu" secondAttribute="top" id="4Fu-aM-CjP"/>
+                                    <constraint firstAttribute="trailing" secondItem="yCg-GV-nRX" secondAttribute="trailing" constant="2" id="Mgk-15-HHU"/>
+                                    <constraint firstAttribute="bottom" secondItem="yCg-GV-nRX" secondAttribute="bottom" id="bBB-hr-gX0"/>
+                                    <constraint firstItem="yCg-GV-nRX" firstAttribute="centerX" secondItem="el3-ep-3Eu" secondAttribute="centerX" constant="1.5" id="cH3-bC-Jfc"/>
+                                    <constraint firstItem="yCg-GV-nRX" firstAttribute="leading" secondItem="el3-ep-3Eu" secondAttribute="leading" constant="5" id="jb2-FT-kVY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="el3-ep-3Eu" firstAttribute="top" secondItem="NBs-77-mdO" secondAttribute="top" constant="40" id="2FQ-lR-xkL"/>
+                            <constraint firstItem="gEd-Ea-DdR" firstAttribute="leading" secondItem="NBs-77-mdO" secondAttribute="leading" id="7tA-k3-kpz"/>
+                            <constraint firstItem="gEd-Ea-DdR" firstAttribute="top" secondItem="NBs-77-mdO" secondAttribute="top" id="HBP-lz-e9Z"/>
+                            <constraint firstItem="el3-ep-3Eu" firstAttribute="top" secondItem="gEd-Ea-DdR" secondAttribute="bottom" id="L6y-ch-Xes"/>
+                            <constraint firstAttribute="trailing" secondItem="gEd-Ea-DdR" secondAttribute="trailing" id="z9V-Ub-Aba"/>
+                        </constraints>
+                    </stackView>
+                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Vyc-e4-NWQ">
+                        <rect key="frame" x="5" y="11" width="313" height="47"/>
+                        <color key="backgroundColor" red="0.75686274509803919" green="0.77647058823529413" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="qGM-oV-atK"/>
+                        </constraints>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="250" minY="5" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="errrr">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yCg-GV-nRX" firstAttribute="leading" secondItem="Vyc-e4-NWQ" secondAttribute="leading" id="0xp-V5-dmc"/>
+                    <constraint firstItem="Vyc-e4-NWQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="1.5" id="3sQ-O2-uma"/>
+                    <constraint firstItem="Vyc-e4-NWQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="6hy-IS-UOg"/>
+                    <constraint firstItem="Vyc-e4-NWQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="DVi-MZ-EgE"/>
+                    <constraint firstAttribute="trailing" secondItem="Vyc-e4-NWQ" secondAttribute="trailing" constant="2" id="Z2S-ff-9ks"/>
+                    <constraint firstAttribute="trailing" secondItem="NBs-77-mdO" secondAttribute="trailing" constant="-2" id="g5Q-ED-qyn"/>
+                    <constraint firstItem="NBs-77-mdO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sKz-Zk-YeI"/>
+                    <constraint firstItem="NBs-77-mdO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="w4B-v7-E0R"/>
+                    <constraint firstItem="NBs-77-mdO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="xIe-xE-35p"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NBs-77-mdO" secondAttribute="bottom" id="z4Q-SM-4Fv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="open" destination="Vyc-e4-NWQ" id="5wg-aH-o5l"/>
+                <outlet property="openView" destination="gEd-Ea-DdR" id="7Sm-i2-MrK"/>
+                <outlet property="stuffView" destination="el3-ep-3Eu" id="41a-Xr-gTV"/>
+                <outlet property="textView" destination="yCg-GV-nRX" id="0zQ-jB-yhu"/>
+            </connections>
+            <point key="canvasLocation" x="-986.25" y="92.957746478873247"/>
+        </tableViewCell>
+    </objects>
+</document>

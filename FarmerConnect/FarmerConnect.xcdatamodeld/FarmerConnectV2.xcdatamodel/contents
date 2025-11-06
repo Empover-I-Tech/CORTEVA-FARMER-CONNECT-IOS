@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AgroProductMasterEntity" representedClassName="AgroProductMasterEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="caution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="character" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropAndDiseaseNamesArray" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="cropAndDiseaseNamesForMobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productDeleted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productUse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resultAndEffect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="work" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CropAdvisoryDetails" representedClassName="CropAdvisoryDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="caRequestMasterId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropAdvisoryStages" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="cropId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybridId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybridName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sowingDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CropCalculatorEntity" representedClassName="CropCalculatorEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="commercialFooderPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commercialGrainPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="costPerIrrigation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fertiliserCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="geoLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grainYield" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="labourCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="landPreparation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mechanicalHarvestingCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="netProfit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noOfIrrigations" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pesticidesCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planningAcers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seedCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seedRate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="strawYield" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalIncome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalInputCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalIrrigationCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalLabourCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalNoOfLabours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalSeedCost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DiseasePrescriptionsEntity" representedClassName="DiseasePrescriptionsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="biologicalControl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chemicalControl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseBiologicalName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseDeleted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseImageFile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hazadDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hosts" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inANutshell" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preventiveMeasures" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productMapping" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productMappingImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="symptoms" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trigger" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FABDetails" representedClassName="FABDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="cropId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fabData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="hybridId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybridName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NotificationsEntity" representedClassName="NotificationsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationMsg" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RaiseTicketEntity" representedClassName="RaiseTicketEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="damagePerc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybrid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSentToServer" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="issueType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isUserExist" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lotNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pincode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raisingForUserType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="retailerMobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="retailerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TicketDetailsEntity" representedClassName="TicketDetailsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="assignedTo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignedToID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="assignedToMobilenumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="callcenterUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="callcenterUserId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="damagePerc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="defaultWorkflow" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionStr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="district" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="escalationLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feedback" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feedbackStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formattedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formattedTicketClosedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formattedUpdatedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybrid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issueType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issueTypeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isUserSatisfy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lotNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pincode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raisedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raisingforUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raisingForUserType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raisingForUserTypeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subCategoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ticketNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userTypeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workflowNo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AgroProductMasterEntity" positionX="-63" positionY="72" width="128" height="285"/>
+        <element name="CropAdvisoryDetails" positionX="-54" positionY="135" width="128" height="240"/>
+        <element name="CropCalculatorEntity" positionX="-54" positionY="135" width="128" height="450"/>
+        <element name="DiseasePrescriptionsEntity" positionX="-54" positionY="144" width="128" height="375"/>
+        <element name="FABDetails" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="NotificationsEntity" positionX="-45" positionY="144" width="128" height="90"/>
+        <element name="RaiseTicketEntity" positionX="-54" positionY="135" width="128" height="300"/>
+        <element name="TicketDetailsEntity" positionX="-45" positionY="144" width="128" height="675"/>
+    </elements>
+</model>

@@ -1,0 +1,10 @@
+/* 
+  PhotoLibraryServices.strings
+  FarmerConnect
+
+  Created by EMPOVER-049 on 01/09/21.
+  Copyright © 2021 ABC. All rights reserved.
+*/
+"PHOTOS" = "Photos";
+"CAMERA_ROLL" = "Camera roll";
+"ALL_SCREENSHOTS" = "Screenshots";

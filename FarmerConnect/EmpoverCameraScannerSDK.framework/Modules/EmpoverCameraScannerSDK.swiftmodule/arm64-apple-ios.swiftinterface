@@ -1,0 +1,75 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name EmpoverCameraScannerSDK
+import AVFoundation
+import DeveloperToolsSupport
+@_exported import EmpoverCameraScannerSDK
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class CameraScanner {
+  public static func createScanner(delegate: any EmpoverCameraScannerSDK.CameraScannerDelegate) -> EmpoverCameraScannerSDK.CameraScannerView
+  @objc deinit
+}
+public struct ScannerUser {
+  public let linkedId: Swift.String
+  public let authId: Swift.String
+  public let token: Swift.String
+  public let fullName: Swift.String
+  public let email: Swift.String
+  public let deviceType: Swift.String
+  public let projectId: Swift.String
+  public let projectName: Swift.String
+  public let userId: Swift.String
+  public let mobileNumber: Swift.String
+  public init(linkedId: Swift.String, authId: Swift.String, token: Swift.String, fullName: Swift.String, email: Swift.String, deviceType: Swift.String, projectId: Swift.String, projectName: Swift.String, userId: Swift.String, mobileNumber: Swift.String)
+}
+public struct ScannerConfiguration {
+  public let regexPatterns: [Swift.String]
+  public let environment: EmpoverCameraScannerSDK.ScannerConfiguration.Environment
+  public let user: EmpoverCameraScannerSDK.ScannerUser
+  public let scanMultiple: Swift.Bool
+  public let scannerType: Swift.String
+  public let referralCode: Swift.String
+  public let language: Swift.String
+  public enum Environment {
+    case production
+    case test
+    public static func == (a: EmpoverCameraScannerSDK.ScannerConfiguration.Environment, b: EmpoverCameraScannerSDK.ScannerConfiguration.Environment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(regexPatterns: [Swift.String], environment: EmpoverCameraScannerSDK.ScannerConfiguration.Environment, user: EmpoverCameraScannerSDK.ScannerUser, scanMultiple: Swift.Bool, scannerType: Swift.String, referralCode: Swift.String, language: Swift.String)
+}
+public protocol CameraScannerDelegate : AnyObject {
+  func didDetectQRCode(_ code: Swift.String)
+  func didFailWithError(_ error: any Swift.Error)
+  func didTapBackButton()
+  func didReceiveAPIResponse(_ response: [Swift.String : Any])
+}
+public struct ExemptedCode {
+  public let isStatus: Swift.Bool
+  public let message: Swift.String
+  public let matchedRegEx: Swift.String
+  public let barCodeScannedValue: Swift.String
+  public let codeType: Swift.String
+  public init(isStatus: Swift.Bool, message: Swift.String, matchedRegEx: Swift.String, barCodeScannedValue: Swift.String, codeType: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class CameraScannerView : UIKit.UIView, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any EmpoverCameraScannerSDK.CameraScannerDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency public func configure(with config: EmpoverCameraScannerSDK.ScannerConfiguration)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func startScanning()
+  @_Concurrency.MainActor @preconcurrency public func stopScanning()
+  @_Concurrency.MainActor @preconcurrency @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+  @objc deinit
+}
+extension EmpoverCameraScannerSDK.ScannerConfiguration.Environment : Swift.Equatable {}
+extension EmpoverCameraScannerSDK.ScannerConfiguration.Environment : Swift.Hashable {}

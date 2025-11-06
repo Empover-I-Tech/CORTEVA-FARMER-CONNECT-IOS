@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9Nm-kx-9FA" customClass="ClusterMarkerView" customModule="FarmerConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Sq-lx-sGc">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="52"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IdW-h2-wDW">
+                            <rect key="frame" x="3" y="23" width="34" height="27"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egs-kK-K5U">
+                            <rect key="frame" x="3" y="2" width="34" height="20"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="egs-kK-K5U" firstAttribute="leading" secondItem="5Sq-lx-sGc" secondAttribute="leading" constant="3" id="Cao-Pg-2ea"/>
+                        <constraint firstAttribute="bottom" secondItem="IdW-h2-wDW" secondAttribute="bottom" constant="2" id="OK4-eJ-3GO"/>
+                        <constraint firstAttribute="trailing" secondItem="egs-kK-K5U" secondAttribute="trailing" constant="3" id="Sxd-6E-HUH"/>
+                        <constraint firstItem="IdW-h2-wDW" firstAttribute="top" secondItem="egs-kK-K5U" secondAttribute="bottom" constant="1" id="T0i-no-hqx"/>
+                        <constraint firstItem="IdW-h2-wDW" firstAttribute="leading" secondItem="5Sq-lx-sGc" secondAttribute="leading" constant="3" id="Y3Y-SK-Qzj"/>
+                        <constraint firstItem="egs-kK-K5U" firstAttribute="width" secondItem="IdW-h2-wDW" secondAttribute="height" multiplier="34:27" id="cXm-Vu-5aR"/>
+                        <constraint firstAttribute="bottom" secondItem="IdW-h2-wDW" secondAttribute="bottom" constant="2" id="dC4-O4-fj6"/>
+                        <constraint firstAttribute="trailing" secondItem="IdW-h2-wDW" secondAttribute="trailing" constant="3" id="eMz-Ej-GaA"/>
+                        <constraint firstItem="egs-kK-K5U" firstAttribute="top" secondItem="5Sq-lx-sGc" secondAttribute="top" constant="2" id="g5J-TS-d9S"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Gkb-cX-cBW">
+                    <rect key="frame" x="8" y="49" width="24" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="CIS-8h-v4a"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Gkb-cX-cBW" firstAttribute="centerX" secondItem="yFO-zQ-dkz" secondAttribute="centerX" id="0pl-C0-vQs"/>
+                <constraint firstItem="Gkb-cX-cBW" firstAttribute="bottom" secondItem="yFO-zQ-dkz" secondAttribute="bottom" id="1qO-pa-gxd"/>
+                <constraint firstItem="5Sq-lx-sGc" firstAttribute="leading" secondItem="yFO-zQ-dkz" secondAttribute="leading" id="Nim-y0-Uns"/>
+                <constraint firstItem="yFO-zQ-dkz" firstAttribute="bottom" secondItem="5Sq-lx-sGc" secondAttribute="bottom" constant="10" id="Qtg-6v-tcU"/>
+                <constraint firstItem="Gkb-cX-cBW" firstAttribute="top" secondItem="5Sq-lx-sGc" secondAttribute="bottom" constant="-3" id="ZA9-rc-YbE"/>
+                <constraint firstItem="5Sq-lx-sGc" firstAttribute="trailing" secondItem="yFO-zQ-dkz" secondAttribute="trailing" id="jvL-uN-JoY"/>
+                <constraint firstItem="5Sq-lx-sGc" firstAttribute="top" secondItem="yFO-zQ-dkz" secondAttribute="top" id="pv9-6s-Qmu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="yFO-zQ-dkz"/>
+            <connections>
+                <outlet property="imageEquipment" destination="IdW-h2-wDW" id="1Rl-28-gpA"/>
+                <outlet property="imgCount" destination="egs-kK-K5U" id="Czd-Yo-anp"/>
+            </connections>
+            <point key="canvasLocation" x="45" y="-169"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="InfoArrow" width="30" height="30"/>
+    </resources>
+</document>

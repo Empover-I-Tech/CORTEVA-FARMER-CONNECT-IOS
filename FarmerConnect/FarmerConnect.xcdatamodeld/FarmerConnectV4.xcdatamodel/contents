@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AgroProductMasterEntity" representedClassName="AgroProductMasterEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="String"/>
+        <attribute name="caution" optional="YES" attributeType="String"/>
+        <attribute name="character" optional="YES" attributeType="String"/>
+        <attribute name="createdOn" optional="YES" attributeType="String"/>
+        <attribute name="cropAndDiseaseNamesArray" optional="YES" attributeType="Binary"/>
+        <attribute name="cropAndDiseaseNamesForMobile" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="productDeleted" optional="YES" attributeType="String"/>
+        <attribute name="productImage" optional="YES" attributeType="String"/>
+        <attribute name="productName" optional="YES" attributeType="String"/>
+        <attribute name="productUse" optional="YES" attributeType="String"/>
+        <attribute name="resultAndEffect" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="updatedOn" optional="YES" attributeType="String"/>
+        <attribute name="work" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CropAdvisoryDetails" representedClassName="CropAdvisoryDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="caRequestMasterId" optional="YES" attributeType="String"/>
+        <attribute name="categoryId" optional="YES" attributeType="String"/>
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="cropAdvisoryStages" optional="YES" attributeType="Binary"/>
+        <attribute name="cropId" optional="YES" attributeType="String"/>
+        <attribute name="cropName" optional="YES" attributeType="String"/>
+        <attribute name="hybridId" optional="YES" attributeType="String"/>
+        <attribute name="hybridName" optional="YES" attributeType="String"/>
+        <attribute name="seasonId" optional="YES" attributeType="String"/>
+        <attribute name="seasonName" optional="YES" attributeType="String"/>
+        <attribute name="sowingDate" optional="YES" attributeType="String"/>
+        <attribute name="stateId" optional="YES" attributeType="String"/>
+        <attribute name="stateName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CropCalculatorEntity" representedClassName="CropCalculatorEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="commercialFooderPrice" optional="YES" attributeType="String"/>
+        <attribute name="commercialGrainPrice" optional="YES" attributeType="String"/>
+        <attribute name="costPerIrrigation" optional="YES" attributeType="String"/>
+        <attribute name="cropName" optional="YES" attributeType="String"/>
+        <attribute name="fertiliserCost" optional="YES" attributeType="String"/>
+        <attribute name="geoLocation" optional="YES" attributeType="String"/>
+        <attribute name="grainYield" optional="YES" attributeType="String"/>
+        <attribute name="isSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="labourCost" optional="YES" attributeType="String"/>
+        <attribute name="landPreparation" optional="YES" attributeType="String"/>
+        <attribute name="mechanicalHarvestingCost" optional="YES" attributeType="String"/>
+        <attribute name="mobileId" optional="YES" attributeType="String"/>
+        <attribute name="netProfit" optional="YES" attributeType="String"/>
+        <attribute name="noOfIrrigations" optional="YES" attributeType="String"/>
+        <attribute name="pesticidesCost" optional="YES" attributeType="String"/>
+        <attribute name="planningAcers" optional="YES" attributeType="String"/>
+        <attribute name="seedCost" optional="YES" attributeType="String"/>
+        <attribute name="seedRate" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="strawYield" optional="YES" attributeType="String"/>
+        <attribute name="totalIncome" optional="YES" attributeType="String"/>
+        <attribute name="totalInputCost" optional="YES" attributeType="String"/>
+        <attribute name="totalIrrigationCost" optional="YES" attributeType="String"/>
+        <attribute name="totalLabourCost" optional="YES" attributeType="String"/>
+        <attribute name="totalNoOfLabours" optional="YES" attributeType="String"/>
+        <attribute name="totalSeedCost" optional="YES" attributeType="String"/>
+        <attribute name="year" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DiseasePrescriptionsEntity" representedClassName="DiseasePrescriptionsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="String"/>
+        <attribute name="biologicalControl" optional="YES" attributeType="String"/>
+        <attribute name="chemicalControl" optional="YES" attributeType="String"/>
+        <attribute name="createdOn" optional="YES" attributeType="String"/>
+        <attribute name="crop" optional="YES" attributeType="String"/>
+        <attribute name="diseaseBiologicalName" optional="YES" attributeType="String"/>
+        <attribute name="diseaseDeleted" optional="YES" attributeType="String"/>
+        <attribute name="diseaseId" optional="YES" attributeType="String"/>
+        <attribute name="diseaseImageFile" optional="YES" attributeType="String"/>
+        <attribute name="diseaseName" optional="YES" attributeType="String"/>
+        <attribute name="diseaseType" optional="YES" attributeType="String"/>
+        <attribute name="hazadDescription" optional="YES" attributeType="String"/>
+        <attribute name="hosts" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="inANutshell" optional="YES" attributeType="String"/>
+        <attribute name="preventiveMeasures" optional="YES" attributeType="String"/>
+        <attribute name="productMapping" optional="YES" attributeType="String"/>
+        <attribute name="productMappingImage" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="symptoms" optional="YES" attributeType="String"/>
+        <attribute name="trigger" optional="YES" attributeType="String"/>
+        <attribute name="updatedOn" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="FAB_CPDetails" representedClassName="FAB_CPDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="cropId" optional="YES" attributeType="String"/>
+        <attribute name="cropImageUrl" optional="YES" attributeType="String"/>
+        <attribute name="cropName" optional="YES" attributeType="String"/>
+        <attribute name="des_englishMsg" optional="YES" attributeType="String"/>
+        <attribute name="des_localMsg" optional="YES" attributeType="String"/>
+        <attribute name="diseaseId" optional="YES" attributeType="String"/>
+        <attribute name="diseaseImageUrl" optional="YES" attributeType="String"/>
+        <attribute name="diseaseName" optional="YES" attributeType="String"/>
+        <attribute name="diseaseType" optional="YES" attributeType="String"/>
+        <attribute name="fabcpData" optional="YES" attributeType="Binary"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="product_images_urls" optional="YES" attributeType="String"/>
+        <attribute name="productFormulation" optional="YES" attributeType="String"/>
+        <attribute name="productId" optional="YES" attributeType="String"/>
+        <attribute name="productImageUrl" optional="YES" attributeType="String"/>
+        <attribute name="productName" optional="YES" attributeType="String"/>
+        <attribute name="stateId" optional="YES" attributeType="String"/>
+        <attribute name="stateName" optional="YES" attributeType="String"/>
+        <attribute name="tableData" optional="YES" attributeType="Binary"/>
+        <attribute name="tableHeader" optional="YES" attributeType="String"/>
+        <attribute name="tableLocData" optional="YES" attributeType="Binary"/>
+        <attribute name="tableLocHeader" optional="YES" attributeType="String"/>
+        <attribute name="version" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="FABDetails" representedClassName="FABDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="cropId" optional="YES" attributeType="String"/>
+        <attribute name="cropName" optional="YES" attributeType="String"/>
+        <attribute name="fabData" optional="YES" attributeType="Binary"/>
+        <attribute name="hybridId" optional="YES" attributeType="String"/>
+        <attribute name="hybridName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="mainDescription" optional="YES" attributeType="String"/>
+        <attribute name="seasonId" optional="YES" attributeType="String"/>
+        <attribute name="seasonName" optional="YES" attributeType="String"/>
+        <attribute name="stateId" optional="YES" attributeType="String"/>
+        <attribute name="stateName" optional="YES" attributeType="String"/>
+        <attribute name="version" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NewsEntity" representedClassName="NewsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="createdOn" optional="YES" attributeType="String"/>
+        <attribute name="heading1" optional="YES" attributeType="String"/>
+        <attribute name="heading2" optional="YES" attributeType="String"/>
+        <attribute name="heading3" optional="YES" attributeType="String"/>
+        <attribute name="imagePath" optional="YES" attributeType="String"/>
+        <attribute name="newsDescription" optional="YES" attributeType="String"/>
+        <attribute name="newsType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NotificationsEntity" representedClassName="NotificationsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="createdOn" optional="YES" attributeType="String"/>
+        <attribute name="notificationId" optional="YES" attributeType="String"/>
+        <attribute name="notificationMsg" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RaiseTicketEntity" representedClassName="RaiseTicketEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="crop" optional="YES" attributeType="String"/>
+        <attribute name="damagePerc" optional="YES" attributeType="String"/>
+        <attribute name="descriptionStr" optional="YES" attributeType="String"/>
+        <attribute name="district" optional="YES" attributeType="String"/>
+        <attribute name="hybrid" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isSentToServer" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="issueType" optional="YES" attributeType="String"/>
+        <attribute name="isUserExist" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lotNo" optional="YES" attributeType="String"/>
+        <attribute name="mobileNo" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pincode" optional="YES" attributeType="String"/>
+        <attribute name="raisingForUserType" optional="YES" attributeType="String"/>
+        <attribute name="retailerMobileNo" optional="YES" attributeType="String"/>
+        <attribute name="retailerName" optional="YES" attributeType="String"/>
+        <attribute name="userType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TicketDetailsEntity" representedClassName="TicketDetailsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="assignedTo" optional="YES" attributeType="String"/>
+        <attribute name="assignedToID" optional="YES" attributeType="String"/>
+        <attribute name="assignedToMobilenumber" optional="YES" attributeType="String"/>
+        <attribute name="callcenterUser" optional="YES" attributeType="String"/>
+        <attribute name="callcenterUserId" optional="YES" attributeType="String"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="categoryId" optional="YES" attributeType="String"/>
+        <attribute name="crop" optional="YES" attributeType="String"/>
+        <attribute name="damagePerc" optional="YES" attributeType="String"/>
+        <attribute name="defaultWorkflow" optional="YES" attributeType="String"/>
+        <attribute name="descriptionStr" optional="YES" attributeType="String"/>
+        <attribute name="district" optional="YES" attributeType="String"/>
+        <attribute name="escalationLevel" optional="YES" attributeType="String"/>
+        <attribute name="feedback" optional="YES" attributeType="String"/>
+        <attribute name="feedbackStatus" optional="YES" attributeType="String"/>
+        <attribute name="formattedDate" optional="YES" attributeType="String"/>
+        <attribute name="formattedTicketClosedDate" optional="YES" attributeType="String"/>
+        <attribute name="formattedUpdatedDate" optional="YES" attributeType="String"/>
+        <attribute name="hybrid" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="issueType" optional="YES" attributeType="String"/>
+        <attribute name="issueTypeId" optional="YES" attributeType="String"/>
+        <attribute name="isUserSatisfy" optional="YES" attributeType="String"/>
+        <attribute name="lotNo" optional="YES" attributeType="String"/>
+        <attribute name="mobileNo" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pincode" optional="YES" attributeType="String"/>
+        <attribute name="qty" optional="YES" attributeType="String"/>
+        <attribute name="raisedBy" optional="YES" attributeType="String"/>
+        <attribute name="raisingforUser" optional="YES" attributeType="String"/>
+        <attribute name="raisingForUserType" optional="YES" attributeType="String"/>
+        <attribute name="raisingForUserTypeId" optional="YES" attributeType="String"/>
+        <attribute name="regionName" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <attribute name="stateName" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="subCategory" optional="YES" attributeType="String"/>
+        <attribute name="subCategoryId" optional="YES" attributeType="String"/>
+        <attribute name="ticketNo" optional="YES" attributeType="String"/>
+        <attribute name="userType" optional="YES" attributeType="String"/>
+        <attribute name="userTypeId" optional="YES" attributeType="String"/>
+        <attribute name="workflowNo" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="AgroProductMasterEntity" positionX="-63" positionY="72" width="128" height="285"/>
+        <element name="CropAdvisoryDetails" positionX="-54" positionY="135" width="128" height="240"/>
+        <element name="CropCalculatorEntity" positionX="-54" positionY="135" width="128" height="450"/>
+        <element name="DiseasePrescriptionsEntity" positionX="-54" positionY="144" width="128" height="375"/>
+        <element name="FAB_CPDetails" positionX="-54" positionY="135" width="128" height="388"/>
+        <element name="FABDetails" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="NewsEntity" positionX="-54" positionY="135" width="128" height="150"/>
+        <element name="NotificationsEntity" positionX="-45" positionY="144" width="128" height="90"/>
+        <element name="RaiseTicketEntity" positionX="-54" positionY="135" width="128" height="300"/>
+        <element name="TicketDetailsEntity" positionX="-45" positionY="144" width="128" height="675"/>
+    </elements>
+</model>

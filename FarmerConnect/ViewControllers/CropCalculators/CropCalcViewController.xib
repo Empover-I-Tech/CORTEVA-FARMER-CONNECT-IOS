@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CropCalcViewController" customModule="FarmerConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSubmit" destination="g9Y-JH-XGE" id="354-lg-1sX"/>
+                <outlet property="calculateView" destination="wbS-ox-wLr" id="dpT-Qo-FCo"/>
+                <outlet property="calculateViewTopConstraint" destination="TrO-YE-3jT" id="A6a-qN-DJ0"/>
+                <outlet property="contentView" destination="ske-sA-kGY" id="TAI-1Y-LSh"/>
+                <outlet property="contentViewHeightConstraint" destination="Njt-t5-hoI" id="NJF-E3-fEj"/>
+                <outlet property="cropViewTopConstraint" destination="DFn-2U-hfZ" id="YHo-Fz-Qpn"/>
+                <outlet property="cropsView" destination="Cc3-6H-cYv" id="ebi-Ur-WGn"/>
+                <outlet property="lblNetProfit" destination="UvL-dX-MRT" id="Py8-cI-86y"/>
+                <outlet property="lblTotalIncome" destination="ae3-jY-AmA" id="7L6-sL-wz6"/>
+                <outlet property="lblTotalInput" destination="52L-z1-70N" id="tMk-aN-bqV"/>
+                <outlet property="lblTotalIrrigation" destination="qsl-Wm-ZRu" id="OeV-C8-BCt"/>
+                <outlet property="lblTotalLabour" destination="x1e-Wx-DVc" id="A5r-j2-JE9"/>
+                <outlet property="lblTotalSeed" destination="UOd-qf-ERR" id="KbF-Jf-BJa"/>
+                <outlet property="scrollView" destination="aTV-MD-mYH" id="fQq-uC-Sy3"/>
+                <outlet property="txtCommercialFooderPrice" destination="ik6-gE-bYa" id="gUF-Qi-oKa"/>
+                <outlet property="txtCommercialGrainPrice" destination="Jpt-4U-aRb" id="v1D-mU-Xaa"/>
+                <outlet property="txtFertiliserCost" destination="jtS-Yk-BpA" id="gsg-JQ-H9a"/>
+                <outlet property="txtGrainYieldCost" destination="YQ4-JB-ztp" id="4Tb-fG-51x"/>
+                <outlet property="txtIrrigationCost" destination="aa3-zG-nfj" id="5YN-Z5-SXJ"/>
+                <outlet property="txtLabourCost" destination="7t0-PY-Uvt" id="zk2-q9-cwf"/>
+                <outlet property="txtLandPreparation" destination="nDG-8a-A68" id="Zgq-WL-u9l"/>
+                <outlet property="txtMechHarvestCost" destination="2VI-ug-mlr" id="1QO-6J-Kpd"/>
+                <outlet property="txtNetProfit" destination="eHj-yn-2fM" id="g7p-vD-Qut"/>
+                <outlet property="txtNoOfIrrigations" destination="CpC-Fv-UYY" id="7aG-Vn-ckj"/>
+                <outlet property="txtNoOfLabours" destination="9BM-CD-E5L" id="UUt-Pm-x5V"/>
+                <outlet property="txtOtherMiscellaneousCost" destination="vfZ-PU-Sgg" id="m5I-qC-34h"/>
+                <outlet property="txtPesticideCost" destination="KXx-8n-QO1" id="COu-x0-0Jh"/>
+                <outlet property="txtPlanningAcres" destination="KyL-pz-2RO" id="7vF-aS-zqr"/>
+                <outlet property="txtPreviousYear" destination="Puh-7i-g7l" id="hLe-xR-zNi"/>
+                <outlet property="txtSeedCost" destination="0tv-dJ-Uhx" id="6Le-BS-GyL"/>
+                <outlet property="txtSeedRate" destination="Si3-RC-187" id="Fpk-Kl-w8g"/>
+                <outlet property="txtStrawYield" destination="I1e-tg-14x" id="TNc-kN-8pR"/>
+                <outlet property="txtTotalIncome" destination="lpR-MU-oLp" id="7oa-fg-97x"/>
+                <outlet property="txtTotalInputCost" destination="YAG-cH-pLC" id="cbK-fr-I3t"/>
+                <outlet property="txtTotalIrrigationCost" destination="EFI-Az-rF8" id="5wc-2p-sa7"/>
+                <outlet property="txtTotalLabourCost" destination="RGh-IL-Pe4" id="wcd-1t-r8A"/>
+                <outlet property="txtTotalSeedCost" destination="E4j-NR-483" id="8ld-xs-hpv"/>
+                <outlet property="txtYear" destination="TAW-iW-vmM" id="4Zb-ge-eOp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yearViewTopConstraint" destination="yDQ-IE-dcB" id="F3X-Tc-3ph"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-7g-Qpe">
+                    <rect key="frame" x="9" y="75" width="412" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Previous Years" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vO-Yl-71v">
+                            <rect key="frame" x="5" y="9.6666666666666714" width="140" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="Ofk-t4-Jer"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="nVX-Qy-oa0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="view_previous_years"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-7i-g7l">
+                            <rect key="frame" x="153" y="2" width="255" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="soB-Dc-BDp"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.18431372549019609" green="0.5607843137254902" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="78i-K3-b9t"/>
+                        <constraint firstItem="5vO-Yl-71v" firstAttribute="centerY" secondItem="e3k-7g-Qpe" secondAttribute="centerY" id="I32-0b-bhN"/>
+                        <constraint firstItem="5vO-Yl-71v" firstAttribute="leading" secondItem="e3k-7g-Qpe" secondAttribute="leading" constant="5" id="OrP-gp-D1V"/>
+                        <constraint firstItem="Puh-7i-g7l" firstAttribute="leading" secondItem="5vO-Yl-71v" secondAttribute="trailing" constant="8" id="ZW1-Ce-w82"/>
+                        <constraint firstItem="Puh-7i-g7l" firstAttribute="top" secondItem="e3k-7g-Qpe" secondAttribute="top" constant="2" id="uUN-Q1-0ri"/>
+                        <constraint firstAttribute="trailing" secondItem="Puh-7i-g7l" secondAttribute="trailing" constant="4" id="vav-3n-09z"/>
+                        <constraint firstAttribute="bottom" secondItem="Puh-7i-g7l" secondAttribute="bottom" constant="3" id="xOp-po-kvU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-ox-wLr">
+                    <rect key="frame" x="0.0" y="121" width="430" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planning Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-oA-nSM">
+                            <rect key="frame" x="9" y="6" width="120" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="9NL-Et-ubg"/>
+                                <constraint firstAttribute="width" constant="120" id="IGo-QF-bUV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="planning_year"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TAW-iW-vmM">
+                            <rect key="frame" x="136" y="2" width="285" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="O0s-b1-Yii"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planning Acres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-uc-fQN">
+                            <rect key="frame" x="9" y="44" width="120" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="NTa-NF-b2F"/>
+                                <constraint firstAttribute="width" constant="120" id="XyD-cR-d8l"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="planning_acres"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KyL-pz-2RO">
+                            <rect key="frame" x="137" y="44" width="284" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="hSO-HG-4Dl"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-0N-r2n">
+                            <rect key="frame" x="143" y="88" width="144" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="144" id="NtU-5b-oGV"/>
+                                <constraint firstAttribute="height" constant="30" id="pk8-SV-03G"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Calculate"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="calculate"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="calculateButtonClick:" destination="-1" eventType="touchUpInside" id="3qc-19-Sdj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="TAW-iW-vmM" firstAttribute="leading" secondItem="xCL-oA-nSM" secondAttribute="trailing" constant="7" id="1et-84-0TI"/>
+                        <constraint firstAttribute="height" constant="120" id="2Nv-Wv-eSb"/>
+                        <constraint firstItem="KyL-pz-2RO" firstAttribute="leading" secondItem="T1A-uc-fQN" secondAttribute="trailing" constant="8" id="4Lz-qR-UqX"/>
+                        <constraint firstItem="hc1-0N-r2n" firstAttribute="top" secondItem="KyL-pz-2RO" secondAttribute="bottom" constant="10" id="8Xx-KN-2yF"/>
+                        <constraint firstItem="T1A-uc-fQN" firstAttribute="top" secondItem="xCL-oA-nSM" secondAttribute="bottom" constant="17" id="8hy-Md-phq"/>
+                        <constraint firstItem="xCL-oA-nSM" firstAttribute="top" secondItem="wbS-ox-wLr" secondAttribute="top" constant="6" id="CcW-c3-X2z"/>
+                        <constraint firstItem="KyL-pz-2RO" firstAttribute="top" secondItem="TAW-iW-vmM" secondAttribute="bottom" constant="8" id="EBt-be-17V"/>
+                        <constraint firstItem="hc1-0N-r2n" firstAttribute="centerX" secondItem="wbS-ox-wLr" secondAttribute="centerX" id="TcA-KL-4zG"/>
+                        <constraint firstItem="TAW-iW-vmM" firstAttribute="top" secondItem="wbS-ox-wLr" secondAttribute="top" constant="2" id="Xqq-Ga-lcw"/>
+                        <constraint firstAttribute="trailing" secondItem="KyL-pz-2RO" secondAttribute="trailing" constant="9" id="fIk-xX-mCK"/>
+                        <constraint firstItem="T1A-uc-fQN" firstAttribute="leading" secondItem="wbS-ox-wLr" secondAttribute="leading" constant="9" id="fcG-JK-8Gz"/>
+                        <constraint firstAttribute="trailing" secondItem="TAW-iW-vmM" secondAttribute="trailing" constant="9" id="uQm-dx-JwQ"/>
+                        <constraint firstItem="xCL-oA-nSM" firstAttribute="leading" secondItem="wbS-ox-wLr" secondAttribute="leading" constant="9" id="ykg-QO-WPE"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTV-MD-mYH">
+                    <rect key="frame" x="0.0" y="249" width="430" height="649"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ske-sA-kGY">
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="947"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Land Preparation/ Nursery Raising" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sa-0u-fgq">
+                                    <rect key="frame" x="9" y="10" width="274" height="41"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="41" id="pvc-Jb-3Ae"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="land_preparation"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-8a-A68">
+                                    <rect key="frame" x="290" y="13.666666666666686" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="1F3-1V-JUP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Bvm-4A-vYy"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed Cost (Rs./ Kg)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f7-db-6zL">
+                                    <rect key="frame" x="9" y="53" width="275" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="k88-iu-tYb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="seed_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0tv-dJ-Uhx">
+                                    <rect key="frame" x="290" y="51" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="Ptu-S4-dY0"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="zUp-Rp-7HZ"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed Rate (Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iet-c7-Zc1">
+                                    <rect key="frame" x="9" y="91" width="275" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="5Ni-KK-W0F"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="seed_rate"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Si3-RC-187">
+                                    <rect key="frame" x="290" y="89" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="rLK-aY-9LS"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="4dv-Au-rpp"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Seed Cost Rs./ 5 Acres)         " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOd-qf-ERR">
+                                    <rect key="frame" x="9" y="126" width="275" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="iqv-gc-Slk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="total_seed_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4j-NR-483">
+                                    <rect key="frame" x="290" y="127" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="Elh-0O-Aiu"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Nvp-To-RTd"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labour Cost (Rs./Labour)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2R-gi-ikb">
+                                    <rect key="frame" x="9" y="172" width="275" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="cq5-aS-Ld3"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="labour_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7t0-PY-Uvt">
+                                    <rect key="frame" x="290" y="173" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="Hoh-a1-blz"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Fso-Zv-OxN"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total no. of labourers requd. in entire crop duration" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbN-rk-OvE">
+                                    <rect key="frame" x="9" y="213" width="275" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="zfI-ul-1cg"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="total_labourers"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9BM-CD-E5L">
+                                    <rect key="frame" x="290" y="214" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="PE9-vW-7fs"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="kPt-st-n0j"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mechanical harvesting cost Rs./acre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-uO-5eL">
+                                    <rect key="frame" x="9" y="254" width="274" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="noZ-5Z-WmO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="mechanical_harvesting"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VI-ug-mlr">
+                                    <rect key="frame" x="290" y="255" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="er4-kW-xNs"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Uks-Iz-QBT"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Labour Cost (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1e-Wx-DVc">
+                                    <rect key="frame" x="8" y="298" width="276" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="fnj-dx-0ly"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="total_labour_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-IL-Pe4">
+                                    <rect key="frame" x="290" y="299" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="mHY-dQ-YmN"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="hcm-bm-av6"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost per irrigation (Rs./Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIb-eJ-ks9">
+                                    <rect key="frame" x="9" y="342" width="274" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="4Nu-AT-Pj2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="cost_irrigation"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aa3-zG-nfj">
+                                    <rect key="frame" x="290" y="343" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="h79-eG-WJp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="IZ8-fX-orf"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Irrigations" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryi-7r-qvg">
+                                    <rect key="frame" x="9" y="386" width="275" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="z4q-x5-Rql"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="no_irrigations"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-Fv-UYY">
+                                    <rect key="frame" x="290" y="387" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="7M7-96-2iK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="2kT-Us-M85"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Irrigation Cost (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsl-Wm-ZRu">
+                                    <rect key="frame" x="9" y="430" width="274" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="uuu-UZ-PKL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="total_irrigation_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFI-Az-rF8">
+                                    <rect key="frame" x="290" y="431" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="BOx-tk-qgF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="b43-4a-oxk"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fertiliser Cost (Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqk-yY-Brz">
+                                    <rect key="frame" x="9" y="474" width="275" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="L5g-vi-fT1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="fertiliser_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jtS-Yk-BpA">
+                                    <rect key="frame" x="290" y="475" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="YRq-E5-h01"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="BuJ-ey-zGP"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesticide Cost (Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-EB-GgF">
+                                    <rect key="frame" x="9" y="518" width="275" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="CZa-rV-ocq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="pesticide_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXx-8n-QO1">
+                                    <rect key="frame" x="290" y="519" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="OJs-nZ-rDq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="p76-s3-NAs"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Miscellaneous Cost(Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIr-sO-3bb">
+                                    <rect key="frame" x="9" y="562" width="275" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="PGf-6X-cAZ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="otherMiscellaneous_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-PU-Sgg">
+                                    <rect key="frame" x="290" y="563" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="cIn-6j-w2X"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="DSm-C9-Yyx"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Input Cost (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52L-z1-70N">
+                                    <rect key="frame" x="8" y="606" width="276" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="9jJ-kv-cyc"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="total_input_cost"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAG-cH-pLC">
+                                    <rect key="frame" x="290" y="607" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="mPz-Gl-TuH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="9id-6q-vHj"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grain/Cotton Yield (Qntl./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-Vp-q9d">
+                                    <rect key="frame" x="9" y="650" width="276" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="bHu-wz-nIJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="grain_cotton_yield"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-JB-ztp">
+                                    <rect key="frame" x="291" y="651" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="yGM-KK-VWs"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Xo3-Sv-Hko"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial Grain Price (Rs./Qntl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF6-LS-1oO">
+                                    <rect key="frame" x="9" y="694" width="276" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="Y06-7j-nOq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="commercial_grain_price"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jpt-4U-aRb">
+                                    <rect key="frame" x="291" y="695" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="I27-Uz-dUF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="WZn-9W-H4N"/>
+                                    </connections>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cc3-6H-cYv">
+                                    <rect key="frame" x="0.0" y="738" width="430" height="75"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straw Yield (Qntl./Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj3-A2-deq">
+                                            <rect key="frame" x="9" y="0.0" width="276" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="36" id="FO1-vN-a7A"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="straw_yield"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1e-tg-14x">
+                                            <rect key="frame" x="291" y="1" width="130" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="fWT-N1-wWC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="ETf-Eo-Uur"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial Fodder Price (Rs./Qntl.)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dE-U9-kQl">
+                                            <rect key="frame" x="9" y="41" width="276" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="36" id="uPW-C3-ifb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="commercial_fodder_price"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ik6-gE-bYa">
+                                            <rect key="frame" x="291" y="42" width="130" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="7y8-Ys-lJG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="gH1-jF-9SE"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="mj3-A2-deq" firstAttribute="top" secondItem="Cc3-6H-cYv" secondAttribute="top" id="0rq-dm-A0j"/>
+                                        <constraint firstItem="mj3-A2-deq" firstAttribute="leading" secondItem="Cc3-6H-cYv" secondAttribute="leading" constant="9" id="3XQ-Nl-Dae"/>
+                                        <constraint firstAttribute="height" constant="75" id="5vA-qw-b1I"/>
+                                        <constraint firstAttribute="trailing" secondItem="I1e-tg-14x" secondAttribute="trailing" constant="9" id="LHU-T3-TWa"/>
+                                        <constraint firstItem="ik6-gE-bYa" firstAttribute="leading" secondItem="4dE-U9-kQl" secondAttribute="trailing" constant="6" id="Ucg-4G-42S"/>
+                                        <constraint firstItem="ik6-gE-bYa" firstAttribute="centerY" secondItem="4dE-U9-kQl" secondAttribute="centerY" id="ZOa-px-Owv"/>
+                                        <constraint firstAttribute="trailing" secondItem="ik6-gE-bYa" secondAttribute="trailing" constant="9" id="Zk5-EK-PmA"/>
+                                        <constraint firstItem="I1e-tg-14x" firstAttribute="leading" secondItem="mj3-A2-deq" secondAttribute="trailing" constant="6" id="efb-Pc-nVd"/>
+                                        <constraint firstItem="4dE-U9-kQl" firstAttribute="leading" secondItem="Cc3-6H-cYv" secondAttribute="leading" constant="9" id="j0s-88-b6P"/>
+                                        <constraint firstItem="4dE-U9-kQl" firstAttribute="top" secondItem="mj3-A2-deq" secondAttribute="bottom" constant="5" id="q44-yH-fxb"/>
+                                        <constraint firstItem="I1e-tg-14x" firstAttribute="centerY" secondItem="mj3-A2-deq" secondAttribute="centerY" id="u0r-EI-fJj"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Income (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae3-jY-AmA">
+                                    <rect key="frame" x="9" y="821" width="276" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="VEO-iu-erm"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="total_income"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpR-MU-oLp">
+                                    <rect key="frame" x="291" y="822" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="FfH-Sw-Kr2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="qc8-li-7bQ"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net Profit (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-dX-MRT">
+                                    <rect key="frame" x="9" y="865" width="276" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="9OB-ns-tAh"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="net_profit"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-yn-2fM">
+                                    <rect key="frame" x="291" y="866" width="130" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="130" id="RhE-P1-G7j"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="ZkW-kh-kwY"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-JH-XGE">
+                                    <rect key="frame" x="155" y="897" width="120" height="30"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="yfh-xk-60v"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <state key="normal" title="Submit"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="submit"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="submitButtonClick:" destination="-1" eventType="touchUpInside" id="1rO-0A-RjA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="jtS-Yk-BpA" firstAttribute="centerY" secondItem="Sqk-yY-Brz" secondAttribute="centerY" id="0hw-mZ-HAG"/>
+                                <constraint firstItem="QbN-rk-OvE" firstAttribute="top" secondItem="B2R-gi-ikb" secondAttribute="bottom" constant="5" id="2Tb-0j-a1z"/>
+                                <constraint firstItem="CpC-Fv-UYY" firstAttribute="leading" secondItem="Ryi-7r-qvg" secondAttribute="trailing" constant="6" id="3QA-3e-bTu"/>
+                                <constraint firstItem="QbN-rk-OvE" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="3TY-nc-psg"/>
+                                <constraint firstAttribute="trailing" secondItem="lpR-MU-oLp" secondAttribute="trailing" constant="9" id="3hA-uH-f7d"/>
+                                <constraint firstItem="nDG-8a-A68" firstAttribute="centerY" secondItem="6sa-0u-fgq" secondAttribute="centerY" id="44x-82-0CQ"/>
+                                <constraint firstItem="0tv-dJ-Uhx" firstAttribute="centerY" secondItem="6f7-db-6zL" secondAttribute="centerY" id="4dh-47-5ea"/>
+                                <constraint firstItem="qsl-Wm-ZRu" firstAttribute="top" secondItem="Ryi-7r-qvg" secondAttribute="bottom" constant="8" id="62K-pt-Ykf"/>
+                                <constraint firstItem="vfZ-PU-Sgg" firstAttribute="centerY" secondItem="jIr-sO-3bb" secondAttribute="centerY" id="71M-LI-iNJ"/>
+                                <constraint firstItem="2VI-ug-mlr" firstAttribute="centerY" secondItem="qBB-uO-5eL" secondAttribute="centerY" id="7SF-d7-9TM"/>
+                                <constraint firstAttribute="trailing" secondItem="0tv-dJ-Uhx" secondAttribute="trailing" constant="10" id="8Sb-64-Z9W"/>
+                                <constraint firstItem="aa3-zG-nfj" firstAttribute="centerY" secondItem="dIb-eJ-ks9" secondAttribute="centerY" id="8fn-j7-2aJ"/>
+                                <constraint firstAttribute="trailing" secondItem="Jpt-4U-aRb" secondAttribute="trailing" constant="9" id="9tR-qs-mYr"/>
+                                <constraint firstItem="2VI-ug-mlr" firstAttribute="leading" secondItem="qBB-uO-5eL" secondAttribute="trailing" constant="7" id="9uW-3l-fV5"/>
+                                <constraint firstItem="a4y-Vp-q9d" firstAttribute="top" secondItem="52L-z1-70N" secondAttribute="bottom" constant="8" id="Amo-Lw-LW7"/>
+                                <constraint firstItem="qsl-Wm-ZRu" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="Bic-e4-wIS"/>
+                                <constraint firstItem="Sqk-yY-Brz" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="C5b-lz-L6R"/>
+                                <constraint firstAttribute="trailing" secondItem="CpC-Fv-UYY" secondAttribute="trailing" constant="10" id="CAX-bv-cuT"/>
+                                <constraint firstItem="Cc3-6H-cYv" firstAttribute="top" secondItem="fF6-LS-1oO" secondAttribute="bottom" constant="8" id="DFn-2U-hfZ"/>
+                                <constraint firstItem="lpR-MU-oLp" firstAttribute="centerY" secondItem="ae3-jY-AmA" secondAttribute="centerY" id="DPF-MF-ciO"/>
+                                <constraint firstItem="E4j-NR-483" firstAttribute="leading" secondItem="UOd-qf-ERR" secondAttribute="trailing" constant="6" id="DXv-w6-2Vn"/>
+                                <constraint firstItem="Jpt-4U-aRb" firstAttribute="centerY" secondItem="fF6-LS-1oO" secondAttribute="centerY" id="EdV-Sk-nZt"/>
+                                <constraint firstItem="eHj-yn-2fM" firstAttribute="centerY" secondItem="UvL-dX-MRT" secondAttribute="centerY" id="Fk7-aM-XE1"/>
+                                <constraint firstAttribute="trailing" secondItem="YAG-cH-pLC" secondAttribute="trailing" constant="10" id="Gyr-Sk-YkR"/>
+                                <constraint firstItem="Si3-RC-187" firstAttribute="centerY" secondItem="iet-c7-Zc1" secondAttribute="centerY" id="Hpv-j5-uhv"/>
+                                <constraint firstItem="Jpt-4U-aRb" firstAttribute="leading" secondItem="fF6-LS-1oO" secondAttribute="trailing" constant="6" id="I2L-Do-nkU"/>
+                                <constraint firstItem="EFI-Az-rF8" firstAttribute="leading" secondItem="qsl-Wm-ZRu" secondAttribute="trailing" constant="7" id="I7y-hf-PZS"/>
+                                <constraint firstItem="iet-c7-Zc1" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="IVx-D6-ZlW"/>
+                                <constraint firstItem="UOd-qf-ERR" firstAttribute="top" secondItem="iet-c7-Zc1" secondAttribute="bottom" constant="5" id="Kcl-qR-nqQ"/>
+                                <constraint firstItem="a4y-Vp-q9d" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="L7S-o6-7D1"/>
+                                <constraint firstItem="YQ4-JB-ztp" firstAttribute="leading" secondItem="a4y-Vp-q9d" secondAttribute="trailing" constant="6" id="Lhn-yV-36i"/>
+                                <constraint firstItem="UOd-qf-ERR" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="Ltq-om-qkJ"/>
+                                <constraint firstItem="7t0-PY-Uvt" firstAttribute="leading" secondItem="B2R-gi-ikb" secondAttribute="trailing" constant="6" id="MaG-ah-GIt"/>
+                                <constraint firstItem="MJx-EB-GgF" firstAttribute="top" secondItem="Sqk-yY-Brz" secondAttribute="bottom" constant="8" id="Mvi-eb-gXq"/>
+                                <constraint firstItem="E4j-NR-483" firstAttribute="centerY" secondItem="UOd-qf-ERR" secondAttribute="centerY" id="NEK-mr-eCg"/>
+                                <constraint firstItem="qBB-uO-5eL" firstAttribute="top" secondItem="QbN-rk-OvE" secondAttribute="bottom" constant="5" id="NZu-pN-BLN"/>
+                                <constraint firstAttribute="height" constant="947" id="Njt-t5-hoI"/>
+                                <constraint firstItem="Ryi-7r-qvg" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="OH3-Mw-9pq"/>
+                                <constraint firstItem="52L-z1-70N" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="8" id="Ont-OP-MZU"/>
+                                <constraint firstItem="KXx-8n-QO1" firstAttribute="centerY" secondItem="MJx-EB-GgF" secondAttribute="centerY" id="P0m-Fo-vbi"/>
+                                <constraint firstItem="fF6-LS-1oO" firstAttribute="top" secondItem="a4y-Vp-q9d" secondAttribute="bottom" constant="8" id="Ple-mo-Cvm"/>
+                                <constraint firstItem="dIb-eJ-ks9" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="Qh4-YY-YGQ"/>
+                                <constraint firstItem="ae3-jY-AmA" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="S0m-HG-KXc"/>
+                                <constraint firstItem="7t0-PY-Uvt" firstAttribute="centerY" secondItem="B2R-gi-ikb" secondAttribute="centerY" id="STM-uj-Ktb"/>
+                                <constraint firstAttribute="trailing" secondItem="vfZ-PU-Sgg" secondAttribute="trailing" constant="10" id="TOa-8R-C3h"/>
+                                <constraint firstItem="aa3-zG-nfj" firstAttribute="leading" secondItem="dIb-eJ-ks9" secondAttribute="trailing" constant="7" id="TRV-MH-hqg"/>
+                                <constraint firstAttribute="trailing" secondItem="Cc3-6H-cYv" secondAttribute="trailing" id="U5f-hq-cVf"/>
+                                <constraint firstItem="EFI-Az-rF8" firstAttribute="centerY" secondItem="qsl-Wm-ZRu" secondAttribute="centerY" id="Uvb-xo-GVD"/>
+                                <constraint firstItem="9BM-CD-E5L" firstAttribute="leading" secondItem="QbN-rk-OvE" secondAttribute="trailing" constant="6" id="Vt3-3N-3WE"/>
+                                <constraint firstAttribute="trailing" secondItem="aa3-zG-nfj" secondAttribute="trailing" constant="10" id="WLx-R0-5Ft"/>
+                                <constraint firstItem="6sa-0u-fgq" firstAttribute="top" secondItem="ske-sA-kGY" secondAttribute="top" constant="10" id="WfC-8b-0fl"/>
+                                <constraint firstItem="g9Y-JH-XGE" firstAttribute="centerX" secondItem="ske-sA-kGY" secondAttribute="centerX" id="XbR-fV-UfO"/>
+                                <constraint firstItem="6f7-db-6zL" firstAttribute="top" secondItem="6sa-0u-fgq" secondAttribute="bottom" constant="2" id="Xr4-RU-riK"/>
+                                <constraint firstItem="YAG-cH-pLC" firstAttribute="centerY" secondItem="52L-z1-70N" secondAttribute="centerY" id="ZHe-Hc-Haw"/>
+                                <constraint firstItem="iet-c7-Zc1" firstAttribute="top" secondItem="6f7-db-6zL" secondAttribute="bottom" constant="8" id="ZXh-UL-O8W"/>
+                                <constraint firstItem="dIb-eJ-ks9" firstAttribute="top" secondItem="x1e-Wx-DVc" secondAttribute="bottom" constant="8" id="a8B-wQ-Mvv"/>
+                                <constraint firstAttribute="trailing" secondItem="7t0-PY-Uvt" secondAttribute="trailing" constant="10" id="ahz-2F-8rQ"/>
+                                <constraint firstItem="ae3-jY-AmA" firstAttribute="top" secondItem="Cc3-6H-cYv" secondAttribute="bottom" constant="8" id="aj7-GJ-A4c"/>
+                                <constraint firstAttribute="trailing" secondItem="KXx-8n-QO1" secondAttribute="trailing" constant="10" id="bpH-1z-pl2"/>
+                                <constraint firstItem="vfZ-PU-Sgg" firstAttribute="leading" secondItem="jIr-sO-3bb" secondAttribute="trailing" constant="6" id="bxM-Zj-M9D"/>
+                                <constraint firstAttribute="trailing" secondItem="EFI-Az-rF8" secondAttribute="trailing" constant="10" id="d8m-NF-xhy"/>
+                                <constraint firstAttribute="bottom" secondItem="g9Y-JH-XGE" secondAttribute="bottom" constant="20" id="dcE-0G-gXh"/>
+                                <constraint firstItem="52L-z1-70N" firstAttribute="top" secondItem="jIr-sO-3bb" secondAttribute="bottom" constant="8" id="e2Z-gF-6ca"/>
+                                <constraint firstItem="RGh-IL-Pe4" firstAttribute="centerY" secondItem="x1e-Wx-DVc" secondAttribute="centerY" id="eCy-T2-wXi"/>
+                                <constraint firstItem="UvL-dX-MRT" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="fPv-SK-iF7"/>
+                                <constraint firstItem="6sa-0u-fgq" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="fmW-BT-DAv"/>
+                                <constraint firstItem="x1e-Wx-DVc" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="8" id="ftY-RQ-bFa"/>
+                                <constraint firstItem="9BM-CD-E5L" firstAttribute="centerY" secondItem="QbN-rk-OvE" secondAttribute="centerY" id="hEe-yy-BAe"/>
+                                <constraint firstItem="fF6-LS-1oO" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="i1s-AU-qFm"/>
+                                <constraint firstItem="Sqk-yY-Brz" firstAttribute="top" secondItem="qsl-Wm-ZRu" secondAttribute="bottom" constant="8" id="iMa-oh-xtH"/>
+                                <constraint firstItem="jtS-Yk-BpA" firstAttribute="leading" secondItem="Sqk-yY-Brz" secondAttribute="trailing" constant="6" id="ivv-h3-z8g"/>
+                                <constraint firstItem="eHj-yn-2fM" firstAttribute="leading" secondItem="UvL-dX-MRT" secondAttribute="trailing" constant="6" id="jDK-Sp-Jfn"/>
+                                <constraint firstItem="RGh-IL-Pe4" firstAttribute="leading" secondItem="x1e-Wx-DVc" secondAttribute="trailing" constant="6" id="jym-Y6-QOK"/>
+                                <constraint firstItem="KXx-8n-QO1" firstAttribute="leading" secondItem="MJx-EB-GgF" secondAttribute="trailing" constant="6" id="kT8-f3-RSi"/>
+                                <constraint firstAttribute="trailing" secondItem="RGh-IL-Pe4" secondAttribute="trailing" constant="10" id="mWM-Sr-JbY"/>
+                                <constraint firstItem="0tv-dJ-Uhx" firstAttribute="leading" secondItem="6f7-db-6zL" secondAttribute="trailing" constant="6" id="moB-kd-veR"/>
+                                <constraint firstAttribute="trailing" secondItem="2VI-ug-mlr" secondAttribute="trailing" constant="10" id="n2Z-Nk-S7R"/>
+                                <constraint firstItem="YQ4-JB-ztp" firstAttribute="centerY" secondItem="a4y-Vp-q9d" secondAttribute="centerY" id="n8h-UW-i6S"/>
+                                <constraint firstAttribute="trailing" secondItem="E4j-NR-483" secondAttribute="trailing" constant="10" id="naG-XZ-qez"/>
+                                <constraint firstItem="UvL-dX-MRT" firstAttribute="top" secondItem="ae3-jY-AmA" secondAttribute="bottom" constant="8" id="njE-WN-b0y"/>
+                                <constraint firstItem="Cc3-6H-cYv" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" id="oaC-zH-nLf"/>
+                                <constraint firstItem="CpC-Fv-UYY" firstAttribute="centerY" secondItem="Ryi-7r-qvg" secondAttribute="centerY" id="oaP-vi-gru"/>
+                                <constraint firstAttribute="trailing" secondItem="nDG-8a-A68" secondAttribute="trailing" constant="10" id="onE-Cj-y7I"/>
+                                <constraint firstItem="nDG-8a-A68" firstAttribute="leading" secondItem="6sa-0u-fgq" secondAttribute="trailing" constant="7" id="ovI-u1-wLp"/>
+                                <constraint firstItem="lpR-MU-oLp" firstAttribute="leading" secondItem="ae3-jY-AmA" secondAttribute="trailing" constant="6" id="p0M-li-bs7"/>
+                                <constraint firstAttribute="trailing" secondItem="Si3-RC-187" secondAttribute="trailing" constant="10" id="pnc-Dj-pRT"/>
+                                <constraint firstItem="YAG-cH-pLC" firstAttribute="leading" secondItem="52L-z1-70N" secondAttribute="trailing" constant="6" id="pvi-nK-97U"/>
+                                <constraint firstItem="6f7-db-6zL" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="r5v-dX-ffa"/>
+                                <constraint firstAttribute="trailing" secondItem="jtS-Yk-BpA" secondAttribute="trailing" constant="10" id="s0E-Z6-IWQ"/>
+                                <constraint firstItem="Si3-RC-187" firstAttribute="leading" secondItem="iet-c7-Zc1" secondAttribute="trailing" constant="6" id="sXm-9k-gvF"/>
+                                <constraint firstItem="jIr-sO-3bb" firstAttribute="leading" secondItem="MJx-EB-GgF" secondAttribute="leading" id="uOW-1b-2a6"/>
+                                <constraint firstAttribute="trailing" secondItem="9BM-CD-E5L" secondAttribute="trailing" constant="10" id="uba-u6-xwF"/>
+                                <constraint firstItem="MJx-EB-GgF" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="v0J-P3-soB"/>
+                                <constraint firstItem="x1e-Wx-DVc" firstAttribute="top" secondItem="qBB-uO-5eL" secondAttribute="bottom" constant="8" id="v0N-RJ-Ldh"/>
+                                <constraint firstItem="B2R-gi-ikb" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="vm5-VQ-x7w"/>
+                                <constraint firstItem="jIr-sO-3bb" firstAttribute="top" secondItem="MJx-EB-GgF" secondAttribute="bottom" constant="8" id="wqx-20-r7C"/>
+                                <constraint firstAttribute="trailing" secondItem="eHj-yn-2fM" secondAttribute="trailing" constant="9" id="x3x-BF-YRc"/>
+                                <constraint firstItem="B2R-gi-ikb" firstAttribute="top" secondItem="UOd-qf-ERR" secondAttribute="bottom" constant="10" id="x4w-UH-XPi"/>
+                                <constraint firstItem="qBB-uO-5eL" firstAttribute="leading" secondItem="ske-sA-kGY" secondAttribute="leading" constant="9" id="zZK-NG-7VR"/>
+                                <constraint firstAttribute="trailing" secondItem="YQ4-JB-ztp" secondAttribute="trailing" constant="9" id="zg5-ZA-2Qj"/>
+                                <constraint firstItem="Ryi-7r-qvg" firstAttribute="top" secondItem="dIb-eJ-ks9" secondAttribute="bottom" constant="8" id="ztf-7D-9ez"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ske-sA-kGY" secondAttribute="bottom" constant="-485" id="Lpk-pP-C1r"/>
+                        <constraint firstItem="ske-sA-kGY" firstAttribute="width" secondItem="aTV-MD-mYH" secondAttribute="width" id="X0b-bO-Bxu"/>
+                        <constraint firstAttribute="trailing" secondItem="ske-sA-kGY" secondAttribute="trailing" id="ahE-1K-KDE"/>
+                        <constraint firstItem="ske-sA-kGY" firstAttribute="top" secondItem="aTV-MD-mYH" secondAttribute="top" id="cdi-Q1-XrE"/>
+                        <constraint firstItem="ske-sA-kGY" firstAttribute="leading" secondItem="aTV-MD-mYH" secondAttribute="leading" id="llA-83-0qD"/>
+                        <constraint firstItem="ske-sA-kGY" firstAttribute="leading" secondItem="aTV-MD-mYH" secondAttribute="leading" id="pER-W6-3xC"/>
+                        <constraint firstAttribute="trailing" secondItem="ske-sA-kGY" secondAttribute="trailing" id="sJi-to-TJe"/>
+                        <constraint firstItem="ske-sA-kGY" firstAttribute="top" secondItem="aTV-MD-mYH" secondAttribute="top" id="sYU-Np-M6u"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e3k-7g-Qpe" secondAttribute="trailing" constant="9" id="2H4-ON-7FO"/>
+                <constraint firstItem="e3k-7g-Qpe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="DHl-B1-2rt"/>
+                <constraint firstItem="aTV-MD-mYH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EHx-Ip-82W"/>
+                <constraint firstItem="aTV-MD-mYH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="OxL-AD-a1V"/>
+                <constraint firstItem="wbS-ox-wLr" firstAttribute="top" secondItem="e3k-7g-Qpe" secondAttribute="bottom" constant="6" id="TrO-YE-3jT"/>
+                <constraint firstItem="wbS-ox-wLr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UqE-bo-Zz3"/>
+                <constraint firstItem="wbS-ox-wLr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lQs-kZ-qTM"/>
+                <constraint firstItem="aTV-MD-mYH" firstAttribute="top" secondItem="wbS-ox-wLr" secondAttribute="bottom" constant="8" id="m4s-44-RhO"/>
+                <constraint firstItem="aTV-MD-mYH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="qgF-xT-eah"/>
+                <constraint firstItem="e3k-7g-Qpe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="yDQ-IE-dcB"/>
+            </constraints>
+            <point key="canvasLocation" x="-433" y="-103"/>
+        </view>
+    </objects>
+</document>

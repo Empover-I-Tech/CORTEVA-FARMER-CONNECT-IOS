@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AgroProductMasterEntity" representedClassName="AgroProductMasterEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="caution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="character" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropAndDiseaseNamesArray" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="cropAndDiseaseNamesForMobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productDeleted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productUse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resultAndEffect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="work" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CropAdvisoryDetails" representedClassName="CropAdvisoryDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="caRequestMasterId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropAdvisoryStages" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="cropId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybridId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybridName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sowingDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DiseasePrescriptionsEntity" representedClassName="DiseasePrescriptionsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="biologicalControl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chemicalControl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseBiologicalName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseDeleted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseImageFile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diseaseType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hazadDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hosts" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inANutshell" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preventiveMeasures" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productMapping" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productMappingImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="symptoms" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trigger" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FABDetails" representedClassName="FABDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="cropId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cropName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fabData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="hybridId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hybridName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NotificationsEntity" representedClassName="NotificationsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="createdOn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationMsg" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AgroProductMasterEntity" positionX="-63" positionY="72" width="128" height="285"/>
+        <element name="DiseasePrescriptionsEntity" positionX="-54" positionY="144" width="128" height="375"/>
+        <element name="FABDetails" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="CropAdvisoryDetails" positionX="-54" positionY="135" width="128" height="240"/>
+        <element name="NotificationsEntity" positionX="-45" positionY="144" width="128" height="90"/>
+    </elements>
+</model>
