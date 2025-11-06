@@ -9,13 +9,17 @@
 import UIKit
 import Alamofire
 import SDWebImage
-import Acvission
-import AcvissCore
-import ZXingObjC
+//import Acvission
+//import AcvissCore
+//import ZXingObjC
 import Kingfisher
 import CoreLocation
+import EmpoverCameraScannerSDK
 
-class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate, AcvissionDelegate, AreaEntryDelegate {
+class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate,AreaEntryDelegate,CameraScannerDelegate {
+    //AcvissionDelegate
+    
+    var scannerView: CameraScannerView?
 
     @IBOutlet weak var  globaloDataLbl: UILabel!
     @IBOutlet var RetailerStack: UIStackView!
@@ -164,7 +168,8 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     @IBOutlet weak var sampleReportProductConfirmationTxt: UITextField!
     
     @IBAction func sampleReportScanBtnAction(_ sender: Any) {
-        self.openAcvission()
+        //self.openAcvission()
+        self.openEmpoverScanner()
     }
     
     @IBOutlet weak var geoTagReportDateTxt: UITextField!
@@ -1005,140 +1010,237 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     }
     
     
-    func openAcvission(){
+//    func openAcvission(){
         ///Note: Make sure correct values are present in Acviss-Credentials.plist
         ///Acvission Integration: Step 2: Instantiate VisionViewController from Acvission
         ///
-        let userObj = Constatnts.getUserObject()
-        let userId = userObj.customerId as! String
-        let mobileNum = userObj.mobileNumber! as String
-        let usr =  AcvissCore.User.init(
-                        linkedId: userId,
-                        token: "",
-                        mobile:(countryCode: "", number: mobileNum),
-                        fullName: "",
-                        email: ""
-                    )
-        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
-        let acvission_configuration = Acvission.Configuration.init(
-            environment: .Production,
-            language: .English,
-            user: usr,
-            mode: Acvission.ScannerMode.Default,
-            regex: regularExpression,
-            scanMultiple: false,
-            enableCustomerSupportButton: true,
-            //type: Acvission.ScannerMode.OnlyVerify,
-            enableReportInvalid: false,
-            enableAudioInstructions: false,
-            enableBlurredFocus: true,
-            enableBackButton: false
-        )
-        Acvission.shared.instantiate(
-            with: acvission_configuration,
-            over: self,
-            style: .Show,
-            delegate: self
-        )
-    }
-    func onVerificationCompletion(raw: [String : Any], responseCode: ResponseCodeShared) {
-        print(" onVericationCompletion33: ==>")
-       // print(result as Any)
-        
-        if statusMsgAlert != nil{
-            self.statusMsgAlert?.removeFromSuperview()
-        }
-    
-        if raw != nil{
-            
-            let rawResult = raw as Dictionary
-            var message = ""
-            var ststusLogo = UIImage(named: "GenuinityFailure")
-            let userObj = Constatnts.getUserObject()
-            
-            let fireBaseParams = [MOBILE_NUMBER:userObj.mobileNumber!, USER_ID:userObj.customerId!, Genunity_Status_Code:responseCode.rawValue, Product_Deatils:rawResult["product_details"] ?? "",Serial_Number:rawResult["serial_number"] ?? ""] as [String : Any]
-            
-            if responseCode.rawValue == Genunity_Status_Code_100{
-
-            }
-            else if responseCode.rawValue == Genunity_Status_Code_101 || responseCode.rawValue as? Int == Genunity_Status_Code_102{
-
-            }
-            else if responseCode.rawValue == Genunity_Status_Code_103{
-
-            }
-            else if responseCode.rawValue == Genunity_Status_Code_104{ //External
-
-            }
-            else if responseCode.rawValue == Genunity_Status_Code_105 { //AttemptsError
-
-            }
-            else{
-                message = rawResult["message"] as! String
-            }
-            
-            let paramsStr = try! JSONSerialization.data(withJSONObject: rawResult, options: .prettyPrinted)
-            
-            let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
-            print("String result12    \(jsonString)")
-            
-        
-            Singleton.submitScannedAcvissBarcodeResultDataToServerNewSampleTracking(scanResult: raw as Dictionary, completeResponse: jsonString, selectedLabel: "", moduleType: self.moduleType, responseCode: responseCode.rawValue) { (status, responseDictionary, statusMessage) in
-            
-                if status == true{
-                    self.dictEncashResponse = NSDictionary()
-                    print(responseDictionary)
-                    
-                    self.dictEncashResponse = responseDictionary ?? NSDictionary()
-                    self.scanResponseAcviss = responseDictionary ?? NSDictionary()
-                    
-                }else{
-                    self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
-                }
-            }
-        }
-    }
+//        let userObj = Constatnts.getUserObject()
+//        let userId = userObj.customerId as! String
+//        let mobileNum = userObj.mobileNumber! as String
+//        let usr =  AcvissCoreCertify.User.init(
+//                        linkedId: userId,
+//                        token: "",
+//                        mobile:(countryCode: "", number: mobileNum),
+//                        fullName: "",
+//                        email: ""
+//                    )
+//        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
+//        let acvission_configuration = Acvission.Configuration.init(
+//            environment: .Production,
+//            language: .English,
+//            user: usr,
+//            mode: Acvission.ScannerMode.Default,
+//            regex: regularExpression,
+//            scanMultiple: false,
+//            enableCustomerSupportButton: true,
+//            //type: Acvission.ScannerMode.OnlyVerify,
+//            enableReportInvalid: false,
+//            enableAudioInstructions: false,
+//            enableBlurredFocus: true,
+//            enableBackButton: false
+//        )
+//        Acvission.shared.instantiate(
+//            with: acvission_configuration,
+//            over: self,
+//            style: .Show,
+//            delegate: self
+//        )
+//    }
+//    func onVerificationCompletion(raw: [String : Any], responseCode: ResponseCodeShared) {
+//        print(" onVericationCompletion33: ==>")
+//       // print(result as Any)
+//        
+//        if statusMsgAlert != nil{
+//            self.statusMsgAlert?.removeFromSuperview()
+//        }
+//    
+//        if raw != nil{
+//            
+//            let rawResult = raw as Dictionary
+//            var message = ""
+//            var ststusLogo = UIImage(named: "GenuinityFailure")
+//            let userObj = Constatnts.getUserObject()
+//            
+//            let fireBaseParams = [MOBILE_NUMBER:userObj.mobileNumber!, USER_ID:userObj.customerId!, Genunity_Status_Code:responseCode.rawValue, Product_Deatils:rawResult["product_details"] ?? "",Serial_Number:rawResult["serial_number"] ?? ""] as [String : Any]
+//            
+//            if responseCode.rawValue == Genunity_Status_Code_100{
+//
+//            }
+//            else if responseCode.rawValue == Genunity_Status_Code_101 || responseCode.rawValue as? Int == Genunity_Status_Code_102{
+//
+//            }
+//            else if responseCode.rawValue == Genunity_Status_Code_103{
+//
+//            }
+//            else if responseCode.rawValue == Genunity_Status_Code_104{ //External
+//
+//            }
+//            else if responseCode.rawValue == Genunity_Status_Code_105 { //AttemptsError
+//
+//            }
+//            else{
+//                message = rawResult["message"] as? String ?? ""
+//            }
+//            
+//            let paramsStr = try! JSONSerialization.data(withJSONObject: rawResult["data"] ?? "", options: .prettyPrinted)
+//            
+//            let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+//            print("String result12    \(jsonString)")
+//            
+//        
+//            Singleton.submitScannedAcvissBarcodeResultDataToServerNewSampleTracking(scanResult: raw as Dictionary, completeResponse: jsonString, selectedLabel: "", moduleType: self.moduleType, responseCode: responseCode.rawValue) { (status, responseDictionary, statusMessage) in
+//            
+//                if status == true{
+//                    self.dictEncashResponse = NSDictionary()
+//                    print(responseDictionary)
+//                    
+//                    self.dictEncashResponse = responseDictionary ?? NSDictionary()
+//                    self.scanResponseAcviss = responseDictionary ?? NSDictionary()
+//                    
+//                }else{
+//                    self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
+//                }
+//            }
+//        }
+//    }
     
     ///Only detected code's value for Generic or Regex Match
-    func onDetectionOfExemptedCode(_ exemptedCodeDetails: ExemptedCode) {
-        
-        if statusMsgAlert != nil{
-            self.statusMsgAlert?.removeFromSuperview()
-        }
-        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
-        let checkForRegexMatch = regularExpression.filter{$0 == exemptedCodeDetails.matchedRegEx}
-        if checkForRegexMatch.count > 0{
-            let parameters = ["barCodeScannedValue":exemptedCodeDetails.barCodeScannedValue,"matchedRegEx":exemptedCodeDetails.matchedRegEx,"message":exemptedCodeDetails.message]
-            let scanResult = parameters as Dictionary
-            self.saveScanResult = parameters as Dictionary
-            let paramsStr = try! JSONSerialization.data(withJSONObject: scanResult, options: .prettyPrinted)
-            let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
-            self.saveJsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
-            NSLog("the acviss jsonString RESPONSE:", jsonString)
-            DispatchQueue.main.async {
-               // self.navigationController?.popViewController(animated: true)
-            }
-            Singleton.submitScannedAcvissBarcodeResultDataToServerNewSampleTracking(scanResult: scanResult as Dictionary, completeResponse: jsonString, selectedLabel: "", moduleType: self.moduleType, responseCode: 0) { (status, responseDictionary, statusMessage) in
-               // NSLog("the acviss Resp:", jsonString)
-                if status == true{
-                    self.dictEncashResponse = NSDictionary()
-                    self.dictEncashResponse = responseDictionary ?? NSDictionary()
-                    self.scanResponseAcviss = responseDictionary ?? NSDictionary()
-        
-                    self.sampleReportProductConfirmationTxt.text = self.dictEncashResponse?.value(forKey: "prodSerialNumber") as? String
-                    
-                }else{
-                    self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
-                }
-            }
-        }
-    }
+//    func onDetectionOfExemptedCode(_ exemptedCodeDetails: ExemptedCode) {
+//        
+//        if statusMsgAlert != nil{
+//            self.statusMsgAlert?.removeFromSuperview()
+//        }
+//        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
+//        let checkForRegexMatch = regularExpression.filter{$0 == exemptedCodeDetails.matchedRegEx}
+//        if checkForRegexMatch.count > 0{
+//            let parameters = ["barCodeScannedValue":exemptedCodeDetails.barCodeScannedValue,"matchedRegEx":exemptedCodeDetails.matchedRegEx,"message":exemptedCodeDetails.message]
+//            let scanResult = parameters as Dictionary
+//            self.saveScanResult = parameters as Dictionary
+//            let paramsStr = try! JSONSerialization.data(withJSONObject: scanResult, options: .prettyPrinted)
+//            let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+//            self.saveJsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+//            NSLog("the acviss jsonString RESPONSE:", jsonString)
+//            DispatchQueue.main.async {
+//               // self.navigationController?.popViewController(animated: true)
+//            }
+//            Singleton.submitScannedAcvissBarcodeResultDataToServerNewSampleTracking(scanResult: scanResult as Dictionary, completeResponse: jsonString, selectedLabel: "", moduleType: self.moduleType, responseCode: 0) { (status, responseDictionary, statusMessage) in
+//               // NSLog("the acviss Resp:", jsonString)
+//                if status == true{
+//                    self.dictEncashResponse = NSDictionary()
+//                    self.dictEncashResponse = responseDictionary ?? NSDictionary()
+//                    self.scanResponseAcviss = responseDictionary ?? NSDictionary()
+//        
+//                    self.sampleReportProductConfirmationTxt.text = self.dictEncashResponse?.value(forKey: "prodSerialNumber") as? String
+//                    
+//                }else{
+//                    self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
+//                }
+//            }
+//        }
+//    }
     
     ///Multiple Scans
-    func onVerificationCompletion(results: [(model: LabelData?, raw: [String : Any])]) {
-        print("onVerificationCompletion:===>")
-    }
+//    func onVerificationCompletion(results: [(model: LabelData?, raw: [String : Any])]) {
+//        print("onVerificationCompletion:===>")
+//    }
  
+    //MARK: - Empover Scanner
+    func openEmpoverScanner(){
+        let regexPatterns = [
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)",
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+            "https:\\/\\/roots-cpm.ecubix.com\\/?.*",
+            "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
+            "^[A-Z0-9]{8}$",
+            "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
+            "^([0-9A-Z]*)([A-Zs]*)[0-9A-Z]*[0-9A-Z]*[0-9]*[0-9A-Za-z]*",
+            "^https?://.*",  // any http/https URL
+            "^[A-Za-z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=%\\s]+$",  // any printable token/text
+            "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*"
+        ]
+
+        let user = ScannerUser(linkedId: "2413271", authId: "AUTHID5566778899", token: "e1c5a7d9b3f48e2c0d6b9f1a3e7c5d4b", fullName: "", email: "", deviceType: "IOS", projectId: "PROJ1004", projectName: "Farmer Connect", userId: "", mobileNumber: "9550986390")
+        
+        let config = ScannerConfiguration(regexPatterns: regexPatterns, environment: .test, user: user, scanMultiple: false, scannerType: "DEFAULT", referralCode: "", language: "en")
+
+        scannerView = CameraScannerView(frame: view.bounds)
+        scannerView?.delegate = self
+        scannerView?.configure(with: config)
+        view.addSubview(scannerView!)
+        scannerView?.startScanning()
+    }
+    func didDetectQRCode(_ code: String) {
+        print("Empover Scanner Detected QR Code: \(code)")
+    }
+    
+    func didFailWithError(_ error: any Error) {
+        print("Empover Scanner Error: \(error.localizedDescription)")
+    }
+    
+    func didTapBackButton() {
+        scannerView?.stopScanning()
+        scannerView?.removeFromSuperview()
+        scannerView = nil
+        dismiss(animated: true)
+    }
+    
+    func didReceiveAPIResponse(_ response: [String : Any]) {
+        print("API Response: \(response)")
+        scannerView?.stopScanning()
+        DispatchQueue.main.async {
+            let exemptedCodeDetails = response["exemptedCode"] as? EmpoverCameraScannerSDK.ExemptedCode
+            print("Scanned value:", exemptedCodeDetails!.message)
+            print("Scanned matchedRegEx value:", exemptedCodeDetails!.matchedRegEx)
+            self.scannerView?.stopScanning()
+            self.scannerView?.removeFromSuperview()
+            self.scannerView = nil
+            self.dismiss(animated: true)
+            
+            if self.statusMsgAlert != nil{
+                        self.statusMsgAlert?.removeFromSuperview()
+                    }
+                    let regularExpression = [
+                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)",
+                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+                        "https:\\/\\/roots-cpm.ecubix.com\\/?.*",
+                        "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
+                        "^[A-Z0-9]{8}$",
+                        "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
+                        "^([0-9A-Z]*)([A-Zs]*)[0-9A-Z]*[0-9A-Z]*[0-9]*[0-9A-Za-z]*",
+                        "^https?://.*",
+                        "^[A-Za-z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=%\\s]+$",
+                        "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*"
+                    ]
+            let checkForRegexMatch = regularExpression.filter{$0 == exemptedCodeDetails!.matchedRegEx}
+                    if checkForRegexMatch.count > 0{
+                        let parameters = ["barCodeScannedValue":exemptedCodeDetails!.barCodeScannedValue,"matchedRegEx":exemptedCodeDetails!.matchedRegEx,"message":exemptedCodeDetails!.message]
+                        let scanResult = parameters as Dictionary
+                        self.saveScanResult = parameters as Dictionary
+                        let paramsStr = try! JSONSerialization.data(withJSONObject: scanResult, options: .prettyPrinted)
+                        let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+                        self.saveJsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+                        NSLog("the acviss jsonString RESPONSE:", jsonString)
+                        DispatchQueue.main.async {
+                           // self.navigationController?.popViewController(animated: true)
+                        }
+                        Singleton.submitScannedAcvissBarcodeResultDataToServerNewSampleTracking(scanResult: scanResult as Dictionary, completeResponse: jsonString, selectedLabel: "", moduleType: self.moduleType, responseCode: 0) { (status, responseDictionary, statusMessage) in
+                           // NSLog("the acviss Resp:", jsonString)
+                            if status == true{
+                                self.dictEncashResponse = NSDictionary()
+                                self.dictEncashResponse = responseDictionary ?? NSDictionary()
+                                self.scanResponseAcviss = responseDictionary ?? NSDictionary()
+            
+                                self.sampleReportProductConfirmationTxt.text = self.dictEncashResponse?.value(forKey: "prodSerialNumber") as? String
+            
+                            }else{
+                                self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
+                            }
+                        }
+                    }
+                }
+    }
     
     func floatRatingView(_ ratingView: FloatRatingView, isUpdating rating: Double) {
         //liveLabel.text = String(format: "%.2f", self.floatRatingView.rating)

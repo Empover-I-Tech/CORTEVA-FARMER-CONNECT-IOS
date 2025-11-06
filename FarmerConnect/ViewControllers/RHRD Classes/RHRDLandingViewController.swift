@@ -9,13 +9,17 @@
 
 import UIKit
 //import UQScannerFramework
-
-import Acvission
-import AcvissCore
 import Alamofire
-import ZXingObjC
+//import Acvission
+//import AcvissCore
+//import ZXingObjC
+import EmpoverCameraScannerSDK
 
-class RHRDLandingViewController: BaseViewController,UIScrollViewDelegate ,RewardsPopUpProtocol, UIPopoverPresentationControllerDelegate,UIPopoverControllerDelegate,AcvissionDelegate{  //UQScannerDelegate
+class RHRDLandingViewController: BaseViewController,UIScrollViewDelegate ,RewardsPopUpProtocol, UIPopoverPresentationControllerDelegate,UIPopoverControllerDelegate,CameraScannerDelegate{
+    //AcvissionDelegate
+    //UQScannerDelegate
+    
+    var scannerView: CameraScannerView?
     
     @IBOutlet weak var lbl_myProfile: UILabel!
     @IBOutlet weak var lbl_dasboard: UILabel!
@@ -355,7 +359,8 @@ class RHRDLandingViewController: BaseViewController,UIScrollViewDelegate ,Reward
     //MARK:- SCAN AND WIN
     @IBAction func buyPexalonACtion(_ sender: Any) {
         //openGenunityCheckScanner()
-        self.openAcvission()
+        //self.openAcvission()
+        self.openEmpoverScanner()
     }
     
     //MARK:- SHARE SUCCESS STORY
@@ -480,192 +485,314 @@ class RHRDLandingViewController: BaseViewController,UIScrollViewDelegate ,Reward
     }*/
     
     //MARK: Acviss delegate methods
-    func openAcvission(){
-        let userObj = Constatnts.getUserObject()
-        let userId = userObj.customerId as? String ?? ""
-        let mobileNum = userObj.mobileNumber! as String
-        let usr =  AcvissCore.User.init(
-            linkedId: userId,
-                        token: "",
-                        mobile: (countryCode: "", number: mobileNum),
-                        fullName: "",
-                        email: ""
-                    )
-        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
-        let acvission_configuration = Acvission.Configuration.init(
-            environment: .Production,
-            language: .English,
-            user: usr,
-            mode: Acvission.ScannerMode.Default,
-            regex: regularExpression,
-            scanMultiple: false,
-            enableCustomerSupportButton: true,
-            //type: Acvission.ScannerMode.OnlyVerify,
-            enableReportInvalid: false,
-            enableAudioInstructions: false,
-            enableBlurredFocus: true,
-            enableBackButton: false
-        )
-        Acvission.shared.instantiate(
-            with: acvission_configuration,
-            over: self,
-            style: .Show,
-            delegate: self
-        )
-    }
-    func onVerificationCompletion(raw: [String : Any], responseCode: ResponseCodeShared) {
-        
-        if statusMsgAlert != nil{
-            self.statusMsgAlert?.removeFromSuperview()
-        }
-        
-        if raw != nil{
-        var rawResult = raw as Dictionary
-        
-        var message = String(format: "%@", rawResult["message"] as! CVarArg)
-        var ststusLogo = UIImage(named: "GenuinityFailure")
-        
-        let userObj = Constatnts.getUserObject()
-        let fireBaseParams = [MOBILE_NUMBER:userObj.mobileNumber!,USER_ID:userObj.customerId!,Genunity_Status_Code: responseCode.rawValue ?? "",Product_Deatils:rawResult["product_details"] ?? "",Serial_Number:rawResult["serial_number"] ?? ""] as [String : Any]
-        
-        if responseCode.rawValue as? Int == Genunity_Status_Code_100{
-            message = String(format: "%@ \n Serial number: %@",GenunitySuccessMessage, rawResult["serial_number"] as! CVarArg )
-            ststusLogo = UIImage(named: "GenuinitySuccess")
-            self.registerFirebaseEvents(Genuinity_Check_Success, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
-        }
-        else if responseCode.rawValue as? Int == Genunity_Status_Code_101 || responseCode.rawValue as? Int == Genunity_Status_Code_102{
-            message = String(format: GenunityFailureMessage, rawResult["message"] as! CVarArg)
-            ststusLogo = UIImage(named: "GenuinityFailure")
-            if responseCode.rawValue as? Int == Genunity_Status_Code_101 {
-                self.registerFirebaseEvents(Genuine_Label_Inactive, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
-            }
-            else{
-                self.registerFirebaseEvents(Scanned_Label_Invalid, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
-            }
-        }
-        else if responseCode.rawValue as? Int == Genunity_Status_Code_103{
-            message = String(format: GenunityAttemptsExceedMessage, rawResult["message"] as! CVarArg )
-            ststusLogo = UIImage(named: "GenunityAttempts")
-            self.registerFirebaseEvents(GC_Scan_Limt_Exceeded, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
-        }
-        else if responseCode.rawValue as? Int == Genunity_Status_Code_104{
-            message = rawResult["message"] as! String
-            ststusLogo = UIImage(named: "GenuinityFailure")
-            self.registerFirebaseEvents(GC_Not_Geniune, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
-        }
-        else if responseCode.rawValue as? Int == Genunity_Status_Code_105{
-            message = String(format: "%@", rawResult["message"] as! CVarArg)
-            ststusLogo = UIImage(named: "GenuinityFailure")
-            self.registerFirebaseEvents(message, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
-        }
-        else{
-            message = rawResult["message"] as! String
-        }
-        
-        let paramsStr = try! JSONSerialization.data(withJSONObject: rawResult, options: .prettyPrinted)
-        
-        let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
-        
-        print("String result    \(jsonString)")
-        
-        Singleton.submitScannedUniquoBarcodeResultDataToServerRHRDCEP(scanResult: raw as Dictionary, userMessage: message, moduleType: "RHRD", completeResponse: jsonString, selectedLabel: "", responseCode: responseCode.rawValue) { (status, responseDictionary, statusMessage) in
-            
-            if status == true{
-                self.dictEncashResponse = NSDictionary()
-                print(responseDictionary)
-                
-                self.dictEncashResponse = responseDictionary ?? NSDictionary()
-                var strCashReward = ""
-                if self.dictEncashResponse?.value(forKey: "rewardPoints") as? String != "" && self.dictEncashResponse?.value(forKey: "rewardPoints")  != nil {
-                    let rupee = "\u{20B9} "
-                    
-                    strCashReward  = String(format: "Cash Back : %@%@/-",rupee,self.dictEncashResponse?.value(forKey: "rewardPoints") as? CVarArg ?? "")
-                }else {
-                    strCashReward = ""
-                }
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                if statusMessage == STATUS_CODE_205{
-                    let selectLableVC = self.storyboard?.instantiateViewController(withIdentifier: "RewardsPopupVC") as! RewardsPopupVC
-                    selectLableVC.delegate = self
-                    selectLableVC.dictEncashResponse = self.dictEncashResponse
-                    selectLableVC.labelsArray = responseDictionary?.value(forKey: "unUsedPacketLabels") as? [String] ?? []
-                    selectLableVC.windowTitle = responseDictionary?.value(forKey: "windowTitle") as? String ?? ""
-                    selectLableVC.modalPresentationStyle = .overCurrentContext
-                    self.present(selectLableVC, animated: true, completion: nil)
-                    return
-                }
-                var stausLogo = UIImage(named: "GenuinityFailure")
-                if self.dictEncashResponse?["uq_responseCode"] as? Int == 100{
-                    stausLogo = UIImage(named: "GenuinitySuccess")
-                }else{
-                    stausLogo = UIImage(named: "GenuinityFailure")
-                }
-                self.statusMsgAlert = CustomAlert.genunityCheckResultPopup(self, frame: appDelegate.window?.frame ?? self.view.frame, title: NSLocalizedString("genuinity_check", comment: "") as NSString, message: responseDictionary?.value(forKey: "uq_message") as? NSString ?? "N/A", buttonTitle1: responseDictionary?.value(forKey: "buttonTitle1") as? NSString ?? "", buttonTitle2: responseDictionary?.value(forKey: "buttonTitle2") as? NSString ?? "" , imgCorteva: UIImage(named:"corteva")!, statusLogo: stausLogo!, hideClose: true, rewardMessage: responseDictionary?.value(forKey: "primaryRewardMsg") as? NSString ?? "", rewardMessage1: responseDictionary?.value(forKey: "secondaryRewardMsg") as? NSString ?? "", showEncashBtn: responseDictionary?.value(forKey: "showClickableLink") as? Bool ?? false,prodSerialNo: responseDictionary?.value(forKey: "prodSerialNumber") as? NSString ?? "",cashBackMsg: strCashReward as NSString, productName: responseDictionary?.value(forKey: "productName") as? NSString ?? "",  enableSprayService: responseDictionary?.value(forKey: "enableSprayService") as? Bool ?? false) as? UIView
-                appDelegate.window?.rootViewController?.view.addSubview(self.statusMsgAlert!)
-                //            self.view.addSubview(self.statusMsgAlert!)
-            }else{
-                self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
-            }
-        }
-        }
-    }
+//   func openAcvission(){
+//        let userObj = Constatnts.getUserObject()
+//        let userId = userObj.customerId as? String ?? ""
+//        let mobileNum = userObj.mobileNumber! as String
+//        let usr =  AcvissCoreCertify.User.init(
+//            linkedId: userId,
+//                        token: "",
+//                        mobile: (countryCode: "", number: mobileNum),
+//                        fullName: "",
+//                        email: ""
+//                    )
+//        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
+//        let acvission_configuration = Acvission.Configuration.init(
+//            environment: .Production,
+//            language: .English,
+//            user: usr,
+//            mode: Acvission.ScannerMode.Default,
+//            regex: regularExpression,
+//            scanMultiple: false,
+//            enableCustomerSupportButton: true,
+//            //type: Acvission.ScannerMode.OnlyVerify,
+//            enableReportInvalid: false,
+//            enableAudioInstructions: false,
+//            enableBlurredFocus: true,
+//            enableBackButton: false
+//        )
+//        Acvission.shared.instantiate(
+//            with: acvission_configuration,
+//            over: self,
+//            style: .Show,
+//            delegate: self
+//        )
+//    }
+//    func onVerificationCompletion(raw: [String : Any], responseCode: ResponseCodeShared) {
+//        
+//        if statusMsgAlert != nil{
+//            self.statusMsgAlert?.removeFromSuperview()
+//        }
+//        
+//        if raw != nil{
+//        var rawResult = raw as Dictionary
+//        
+//        var message = String(format: "%@", rawResult["message"] as! CVarArg)
+//        var ststusLogo = UIImage(named: "GenuinityFailure")
+//        
+//        let userObj = Constatnts.getUserObject()
+//        let fireBaseParams = [MOBILE_NUMBER:userObj.mobileNumber!,USER_ID:userObj.customerId!,Genunity_Status_Code: responseCode.rawValue ?? "",Product_Deatils:rawResult["product_details"] ?? "",Serial_Number:rawResult["serial_number"] ?? ""] as [String : Any]
+//        
+//        if responseCode.rawValue as? Int == Genunity_Status_Code_100{
+//            message = String(format: "%@ \n Serial number: %@",GenunitySuccessMessage, rawResult["serial_number"] as? String ?? "")
+//            ststusLogo = UIImage(named: "GenuinitySuccess")
+//            self.registerFirebaseEvents(Genuinity_Check_Success, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
+//        }
+//        else if responseCode.rawValue as? Int == Genunity_Status_Code_101 || responseCode.rawValue as? Int == Genunity_Status_Code_102{
+//            message = String(format: GenunityFailureMessage, rawResult["message"] as? String ?? "")
+//            ststusLogo = UIImage(named: "GenuinityFailure")
+//            if responseCode.rawValue as? Int == Genunity_Status_Code_101 {
+//                self.registerFirebaseEvents(Genuine_Label_Inactive, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
+//            }
+//            else{
+//                self.registerFirebaseEvents(Scanned_Label_Invalid, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
+//            }
+//        }
+//        else if responseCode.rawValue as? Int == Genunity_Status_Code_103{
+//            message = String(format: GenunityAttemptsExceedMessage, rawResult["message"] as? String ?? "")
+//            ststusLogo = UIImage(named: "GenunityAttempts")
+//            self.registerFirebaseEvents(GC_Scan_Limt_Exceeded, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
+//        }
+//        else if responseCode.rawValue as? Int == Genunity_Status_Code_104{
+//            message = rawResult["message"] as? String ?? ""
+//            ststusLogo = UIImage(named: "GenuinityFailure")
+//            self.registerFirebaseEvents(GC_Not_Geniune, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
+//        }
+//        else if responseCode.rawValue as? Int == Genunity_Status_Code_105{
+//            message = (rawResult["message"] as? String) ?? ""
+////            message = String(format: "%@", rawResult["message"] as! CVarArg)
+//            ststusLogo = UIImage(named: "GenuinityFailure")
+//            self.registerFirebaseEvents(message, "", "", Genuinity_Check, parameters: fireBaseParams as NSDictionary)
+//        }
+//        else{
+//            message = rawResult["message"] as? String ?? ""
+//        }
+//        
+//        let paramsStr = try! JSONSerialization.data(withJSONObject: rawResult["data"] ?? "", options: .prettyPrinted)
+//        
+//        let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+//        
+//        print("String result    \(jsonString)")
+//        
+//        Singleton.submitScannedUniquoBarcodeResultDataToServerRHRDCEP(scanResult: raw as Dictionary, userMessage: message, moduleType: "RHRD", completeResponse: jsonString, selectedLabel: "", responseCode: responseCode.rawValue) { (status, responseDictionary, statusMessage) in
+//            
+//            if status == true{
+//                self.dictEncashResponse = NSDictionary()
+//                print(responseDictionary)
+//                
+//                self.dictEncashResponse = responseDictionary ?? NSDictionary()
+//                var strCashReward = ""
+//                if self.dictEncashResponse?.value(forKey: "rewardPoints") as? String != "" && self.dictEncashResponse?.value(forKey: "rewardPoints")  != nil {
+//                    let rupee = "\u{20B9} "
+//                    
+//                    strCashReward  = String(format: "Cash Back : %@%@/-",rupee,self.dictEncashResponse?.value(forKey: "rewardPoints") as? CVarArg ?? "")
+//                }else {
+//                    strCashReward = ""
+//                }
+//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                if statusMessage == STATUS_CODE_205{
+//                    let selectLableVC = self.storyboard?.instantiateViewController(withIdentifier: "RewardsPopupVC") as! RewardsPopupVC
+//                    selectLableVC.delegate = self
+//                    selectLableVC.dictEncashResponse = self.dictEncashResponse
+//                    selectLableVC.labelsArray = responseDictionary?.value(forKey: "unUsedPacketLabels") as? [String] ?? []
+//                    selectLableVC.windowTitle = responseDictionary?.value(forKey: "windowTitle") as? String ?? ""
+//                    selectLableVC.modalPresentationStyle = .overCurrentContext
+//                    self.present(selectLableVC, animated: true, completion: nil)
+//                    return
+//                }
+//                var stausLogo = UIImage(named: "GenuinityFailure")
+//                if self.dictEncashResponse?["uq_responseCode"] as? Int == 100{
+//                    stausLogo = UIImage(named: "GenuinitySuccess")
+//                }else{
+//                    stausLogo = UIImage(named: "GenuinityFailure")
+//                }
+//                self.statusMsgAlert = CustomAlert.genunityCheckResultPopup(self, frame: appDelegate.window?.frame ?? self.view.frame, title: NSLocalizedString("genuinity_check", comment: "") as NSString, message: responseDictionary?.value(forKey: "uq_message") as? NSString ?? "N/A", buttonTitle1: responseDictionary?.value(forKey: "buttonTitle1") as? NSString ?? "", buttonTitle2: responseDictionary?.value(forKey: "buttonTitle2") as? NSString ?? "" , imgCorteva: UIImage(named:"corteva")!, statusLogo: stausLogo!, hideClose: true, rewardMessage: responseDictionary?.value(forKey: "primaryRewardMsg") as? NSString ?? "", rewardMessage1: responseDictionary?.value(forKey: "secondaryRewardMsg") as? NSString ?? "", showEncashBtn: responseDictionary?.value(forKey: "showClickableLink") as? Bool ?? false,prodSerialNo: responseDictionary?.value(forKey: "prodSerialNumber") as? NSString ?? "",cashBackMsg: strCashReward as NSString, productName: responseDictionary?.value(forKey: "productName") as? NSString ?? "",  enableSprayService: responseDictionary?.value(forKey: "enableSprayService") as? Bool ?? false) as? UIView
+//                appDelegate.window?.rootViewController?.view.addSubview(self.statusMsgAlert!)
+//                //            self.view.addSubview(self.statusMsgAlert!)
+//            }else{
+//                self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
+//            }
+//        }
+//        }
+//    }
     ///Only detected code's value for Generic or Regex Match
-    func onDetectionOfExemptedCode(_ exemptedCodeDetails: ExemptedCode) {
-        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
-        var checkForRegexMatch = regularExpression.filter{$0 == exemptedCodeDetails.matchedRegEx}
-        if checkForRegexMatch.count > 0{
-            var parameters = ["barCodeScannedValue":exemptedCodeDetails.barCodeScannedValue,"matchedRegEx":exemptedCodeDetails.matchedRegEx,"message":exemptedCodeDetails.message]
-            var scanResult = parameters as Dictionary
-            let paramsStr = try! JSONSerialization.data(withJSONObject: scanResult, options: .prettyPrinted)
-            let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
-            DispatchQueue.main.async {
-                self.navigationController?.popViewController(animated: true)
-            }
-            Singleton.submitScannedUniquoBarcodeResultDataToServerRHRDCEP(scanResult: scanResult as Dictionary, userMessage: exemptedCodeDetails.message, moduleType: "RHRD", completeResponse: jsonString, selectedLabel: "", responseCode: 0) { (status, responseDictionary, statusMessage) in
-                
-                if status == true{
-                    self.dictEncashResponse = NSDictionary()
-                    self.dictEncashResponse = responseDictionary ?? NSDictionary()
-                    var strCashReward = ""
-                    if self.dictEncashResponse?.value(forKey: "rewardPoints") as? String != "" && self.dictEncashResponse?.value(forKey: "rewardPoints")  != nil {
-                        let rupee = "\u{20B9} "
-                        
-                        strCashReward  = String(format: "Cash Back : %@%@/-",rupee,self.dictEncashResponse?.value(forKey: "rewardPoints") as? CVarArg ?? "")
-                    }else {
-                        strCashReward = ""
-                    }
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    if statusMessage == STATUS_CODE_205{
-                        let selectLableVC = self.storyboard?.instantiateViewController(withIdentifier: "RewardsPopupVC") as! RewardsPopupVC
-                        selectLableVC.delegate = self
-                        selectLableVC.dictEncashResponse = self.dictEncashResponse
-                        selectLableVC.labelsArray = responseDictionary?.value(forKey: "unUsedPacketLabels") as? [String] ?? []
-                        selectLableVC.windowTitle = responseDictionary?.value(forKey: "windowTitle") as? String ?? ""
-                        selectLableVC.modalPresentationStyle = .overCurrentContext
-                        self.present(selectLableVC, animated: true, completion: nil)
-                        return
-                    }
-                    var stausLogo = UIImage(named: "GenuinityFailure")
-                    if Int(self.dictEncashResponse?["uq_responseCode"] as? String ?? "") == 100{
-                        stausLogo = UIImage(named: "GenuinitySuccess")
-                    }else{
-                        stausLogo = UIImage(named: "GenuinityFailure")
-                    }
-                    self.statusMsgAlert = CustomAlert.genunityCheckResultPopup(self, frame: appDelegate.window?.frame ?? self.view.frame, title: NSLocalizedString("genuinity_check", comment: "") as NSString, message: responseDictionary?.value(forKey: "uq_message") as? NSString ?? "N/A", buttonTitle1: responseDictionary?.value(forKey: "buttonTitle1") as? NSString ?? "", buttonTitle2: responseDictionary?.value(forKey: "buttonTitle2") as? NSString ?? "" , imgCorteva: UIImage(named:"corteva")!, statusLogo: stausLogo!, hideClose: true, rewardMessage: responseDictionary?.value(forKey: "primaryRewardMsg") as? NSString ?? "", rewardMessage1: responseDictionary?.value(forKey: "secondaryRewardMsg") as? NSString ?? "", showEncashBtn: responseDictionary?.value(forKey: "showClickableLink") as? Bool ?? false,prodSerialNo: responseDictionary?.value(forKey: "prodSerialNumber") as? NSString ?? "",cashBackMsg: strCashReward as NSString, productName: responseDictionary?.value(forKey: "productName") as? NSString ?? "",  enableSprayService: responseDictionary?.value(forKey: "enableSprayService") as? Bool ?? false) as? UIView
-                    appDelegate.window?.rootViewController?.view.addSubview(self.statusMsgAlert!)
-                    //            self.view.addSubview(self.statusMsgAlert!)
-                }else{
-                    self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
-                }
-            }
-        }
-        
-    }
+//    func onDetectionOfExemptedCode(_ exemptedCodeDetails: ExemptedCode) {
+//        let regularExpression = ["^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)","https:\\/\\/roots-cpm.ecubix.com\\/?.*","http:\\/\\/6\\.ivcs\\.ai\\/?.*"]
+//        var checkForRegexMatch = regularExpression.filter{$0 == exemptedCodeDetails.matchedRegEx}
+//        if checkForRegexMatch.count > 0{
+//            var parameters = ["barCodeScannedValue":exemptedCodeDetails.barCodeScannedValue,"matchedRegEx":exemptedCodeDetails.matchedRegEx,"message":exemptedCodeDetails.message]
+//            var scanResult = parameters as Dictionary
+//            let paramsStr = try! JSONSerialization.data(withJSONObject: scanResult, options: .prettyPrinted)
+//            let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+//            DispatchQueue.main.async {
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//            Singleton.submitScannedUniquoBarcodeResultDataToServerRHRDCEP(scanResult: scanResult as Dictionary, userMessage: exemptedCodeDetails.message, moduleType: "RHRD", completeResponse: jsonString, selectedLabel: "", responseCode: 0) { (status, responseDictionary, statusMessage) in
+//                
+//                if status == true{
+//                    self.dictEncashResponse = NSDictionary()
+//                    self.dictEncashResponse = responseDictionary ?? NSDictionary()
+//                    var strCashReward = ""
+//                    if self.dictEncashResponse?.value(forKey: "rewardPoints") as? String != "" && self.dictEncashResponse?.value(forKey: "rewardPoints")  != nil {
+//                        let rupee = "\u{20B9} "
+//                        
+//                        strCashReward  = String(format: "Cash Back : %@%@/-",rupee,self.dictEncashResponse?.value(forKey: "rewardPoints") as? CVarArg ?? "")
+//                    }else {
+//                        strCashReward = ""
+//                    }
+//                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                    if statusMessage == STATUS_CODE_205{
+//                        let selectLableVC = self.storyboard?.instantiateViewController(withIdentifier: "RewardsPopupVC") as! RewardsPopupVC
+//                        selectLableVC.delegate = self
+//                        selectLableVC.dictEncashResponse = self.dictEncashResponse
+//                        selectLableVC.labelsArray = responseDictionary?.value(forKey: "unUsedPacketLabels") as? [String] ?? []
+//                        selectLableVC.windowTitle = responseDictionary?.value(forKey: "windowTitle") as? String ?? ""
+//                        selectLableVC.modalPresentationStyle = .overCurrentContext
+//                        self.present(selectLableVC, animated: true, completion: nil)
+//                        return
+//                    }
+//                    var stausLogo = UIImage(named: "GenuinityFailure")
+//                    if Int(self.dictEncashResponse?["uq_responseCode"] as? String ?? "") == 100{
+//                        stausLogo = UIImage(named: "GenuinitySuccess")
+//                    }else{
+//                        stausLogo = UIImage(named: "GenuinityFailure")
+//                    }
+//                    self.statusMsgAlert = CustomAlert.genunityCheckResultPopup(self, frame: appDelegate.window?.frame ?? self.view.frame, title: NSLocalizedString("genuinity_check", comment: "") as NSString, message: responseDictionary?.value(forKey: "uq_message") as? NSString ?? "N/A", buttonTitle1: responseDictionary?.value(forKey: "buttonTitle1") as? NSString ?? "", buttonTitle2: responseDictionary?.value(forKey: "buttonTitle2") as? NSString ?? "" , imgCorteva: UIImage(named:"corteva")!, statusLogo: stausLogo!, hideClose: true, rewardMessage: responseDictionary?.value(forKey: "primaryRewardMsg") as? NSString ?? "", rewardMessage1: responseDictionary?.value(forKey: "secondaryRewardMsg") as? NSString ?? "", showEncashBtn: responseDictionary?.value(forKey: "showClickableLink") as? Bool ?? false,prodSerialNo: responseDictionary?.value(forKey: "prodSerialNumber") as? NSString ?? "",cashBackMsg: strCashReward as NSString, productName: responseDictionary?.value(forKey: "productName") as? NSString ?? "",  enableSprayService: responseDictionary?.value(forKey: "enableSprayService") as? Bool ?? false) as? UIView
+//                    appDelegate.window?.rootViewController?.view.addSubview(self.statusMsgAlert!)
+//                    //            self.view.addSubview(self.statusMsgAlert!)
+//                }else{
+//                    self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
+//                }
+//            }
+//        }
+//        
+//    }
     
     ///Multiple Scans
-    func onVerificationCompletion(results: [(model: LabelData?, raw: [String : Any])]) {
-        print("onVerificationCompletion:===>")
-        print(results)
+//    func onVerificationCompletion(results: [(model: LabelData?, raw: [String : Any])]) {
+//        print("onVerificationCompletion:===>")
+//        print(results)
+//    }
+    
+    //MARK: - Empover Scanner
+    func openEmpoverScanner(){
+        let regexPatterns = [
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)",
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+            "https:\\/\\/roots-cpm.ecubix.com\\/?.*",
+            "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
+            "^[A-Z0-9]{8}$",
+            "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
+            "^([0-9A-Z]*)([A-Zs]*)[0-9A-Z]*[0-9A-Z]*[0-9]*[0-9A-Za-z]*",
+            "^https?://.*",  // any http/https URL
+            "^[A-Za-z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=%\\s]+$",  // any printable token/text
+            "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*"
+        ]
+
+        let user = ScannerUser(linkedId: "2413271", authId: "AUTHID5566778899", token: "e1c5a7d9b3f48e2c0d6b9f1a3e7c5d4b", fullName: "", email: "", deviceType: "IOS", projectId: "PROJ1004", projectName: "Farmer Connect", userId: "", mobileNumber: "9550986390")
+        
+        let config = ScannerConfiguration(regexPatterns: regexPatterns, environment: .test, user: user, scanMultiple: false, scannerType: "DEFAULT", referralCode: "", language: "en")
+
+        scannerView = CameraScannerView(frame: view.bounds)
+        scannerView?.delegate = self
+        scannerView?.configure(with: config)
+        view.addSubview(scannerView!)
+        scannerView?.startScanning()
+    }
+    func didDetectQRCode(_ code: String) {
+        print("Empover Scanner Detected QR Code: \(code)")
+    }
+    
+    func didFailWithError(_ error: any Error) {
+        print("Empover Scanner Error: \(error.localizedDescription)")
+    }
+    
+    func didTapBackButton() {
+        scannerView?.stopScanning()
+        scannerView?.removeFromSuperview()
+        scannerView = nil
+        dismiss(animated: true)
+    }
+    
+    func didReceiveAPIResponse(_ response: [String : Any]) {
+        print("API Response: \(response)")
+        scannerView?.stopScanning()
+        DispatchQueue.main.async {
+            let exemptedCodeDetails = response["exemptedCode"] as? EmpoverCameraScannerSDK.ExemptedCode
+            print("Scanned value:", exemptedCodeDetails!.message)
+            print("Scanned matchedRegEx value:", exemptedCodeDetails!.matchedRegEx)
+            self.scannerView?.stopScanning()
+            self.scannerView?.removeFromSuperview()
+            self.scannerView = nil
+            self.dismiss(animated: true)
+            
+            if self.statusMsgAlert != nil{
+                self.statusMsgAlert?.removeFromSuperview()
+            }
+
+                    let regularExpression = [
+                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)",
+                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
+                        "https:\\/\\/roots-cpm.ecubix.com\\/?.*",
+                        "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
+                        "^[A-Z0-9]{8}$",
+                        "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
+                        "^([0-9A-Z]*)([A-Zs]*)[0-9A-Z]*[0-9A-Z]*[0-9]*[0-9A-Za-z]*",
+                        "^https?://.*",
+                        "^[A-Za-z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=%\\s]+$",
+                        "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*"
+                    ]
+                    var checkForRegexMatch = regularExpression.filter{$0 == exemptedCodeDetails!.matchedRegEx}
+                    if checkForRegexMatch.count > 0{
+                        var parameters = ["barCodeScannedValue":exemptedCodeDetails!.barCodeScannedValue,"matchedRegEx":exemptedCodeDetails!.matchedRegEx,"message":exemptedCodeDetails!.message]
+                        var scanResult = parameters as Dictionary
+                        let paramsStr = try! JSONSerialization.data(withJSONObject: scanResult, options: .prettyPrinted)
+                        let jsonString = NSString(data: paramsStr, encoding: String.Encoding.utf8.rawValue)! as String
+                        DispatchQueue.main.async {
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        Singleton.submitScannedUniquoBarcodeResultDataToServerRHRDCEP(scanResult: scanResult as Dictionary, userMessage: exemptedCodeDetails!.message, moduleType: "RHRD", completeResponse: jsonString, selectedLabel: "", responseCode: 0) { (status, responseDictionary, statusMessage) in
+            
+                            if status == true{
+                                self.dictEncashResponse = NSDictionary()
+                                self.dictEncashResponse = responseDictionary ?? NSDictionary()
+                                var strCashReward = ""
+                                if self.dictEncashResponse?.value(forKey: "rewardPoints") as? String != "" && self.dictEncashResponse?.value(forKey: "rewardPoints")  != nil {
+                                    let rupee = "\u{20B9} "
+            
+                                    strCashReward  = String(format: "Cash Back : %@%@/-",rupee,self.dictEncashResponse?.value(forKey: "rewardPoints") as? CVarArg ?? "")
+                                }else {
+                                    strCashReward = ""
+                                }
+                                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                                if statusMessage == STATUS_CODE_205{
+                                    let selectLableVC = self.storyboard?.instantiateViewController(withIdentifier: "RewardsPopupVC") as! RewardsPopupVC
+                                    selectLableVC.delegate = self
+                                    selectLableVC.dictEncashResponse = self.dictEncashResponse
+                                    selectLableVC.labelsArray = responseDictionary?.value(forKey: "unUsedPacketLabels") as? [String] ?? []
+                                    selectLableVC.windowTitle = responseDictionary?.value(forKey: "windowTitle") as? String ?? ""
+                                    selectLableVC.modalPresentationStyle = .overCurrentContext
+                                    self.present(selectLableVC, animated: true, completion: nil)
+                                    return
+                                }
+                                var stausLogo = UIImage(named: "GenuinityFailure")
+                                if Int(self.dictEncashResponse?["uq_responseCode"] as? String ?? "") == 100{
+                                    stausLogo = UIImage(named: "GenuinitySuccess")
+                                }else{
+                                    stausLogo = UIImage(named: "GenuinityFailure")
+                                }
+                                self.statusMsgAlert = CustomAlert.genunityCheckResultPopup(self, frame: appDelegate.window?.frame ?? self.view.frame, title: NSLocalizedString("genuinity_check", comment: "") as NSString, message: responseDictionary?.value(forKey: "uq_message") as? NSString ?? "N/A", buttonTitle1: responseDictionary?.value(forKey: "buttonTitle1") as? NSString ?? "", buttonTitle2: responseDictionary?.value(forKey: "buttonTitle2") as? NSString ?? "" , imgCorteva: UIImage(named:"corteva")!, statusLogo: stausLogo!, hideClose: true, rewardMessage: responseDictionary?.value(forKey: "primaryRewardMsg") as? NSString ?? "", rewardMessage1: responseDictionary?.value(forKey: "secondaryRewardMsg") as? NSString ?? "", showEncashBtn: responseDictionary?.value(forKey: "showClickableLink") as? Bool ?? false,prodSerialNo: responseDictionary?.value(forKey: "prodSerialNumber") as? NSString ?? "",cashBackMsg: strCashReward as NSString, productName: responseDictionary?.value(forKey: "productName") as? NSString ?? "",  enableSprayService: responseDictionary?.value(forKey: "enableSprayService") as? Bool ?? false) as? UIView
+                                appDelegate.window?.rootViewController?.view.addSubview(self.statusMsgAlert!)
+                                //            self.view.addSubview(self.statusMsgAlert!)
+                            }else{
+                                self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
+                            }
+                        }
+                    }
+           }
+      
     }
     
     func onBackPressed() {
@@ -681,8 +808,8 @@ class RHRDLandingViewController: BaseViewController,UIScrollViewDelegate ,Reward
         }
         
         //self.openGenunityCheckScanner()
-        self.openAcvission()
-        
+       // self.openAcvission()
+        self.openEmpoverScanner()
         
     }
     @objc func infoCloseButton(){

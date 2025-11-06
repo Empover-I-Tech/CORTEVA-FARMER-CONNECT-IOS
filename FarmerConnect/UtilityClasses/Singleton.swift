@@ -472,9 +472,9 @@ class Singleton: NSObject {
               let params =  ["data" : paramsStr]
               let urlString:String = String(format: "%@%@", arguments: [BASE_URL,Save_Genuinity_Check_Result_Acviss])
               
-//              print("the url",urlString)
-//              print("the parms",params)
-//              print("the headers",headers)
+              print("the url",urlString)
+              print("the parms",params)
+              print("the headers",headers)
               
               Alamofire.request(urlString, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
                   SwiftLoader.hide()

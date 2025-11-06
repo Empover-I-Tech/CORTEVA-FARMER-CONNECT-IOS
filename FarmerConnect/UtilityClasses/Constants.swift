@@ -169,24 +169,24 @@ var NEWS_BASEURL = "http://169.38.110.105:7070/RMAServiceAPI.asmx/" //http://tes
 //* 2021 * TEST BASE URL Crdeentials *//
 // --------------------------------- //
 
-//var BASE_URL = "https://pioneeractivity.in/rest/"
-////"https://pioneeractivity.in/RGL/rest/"
-////"https://uat.pioneeractivity.in/rest/"
-////"https://pioneeractivity.in/rest/"
-//var NEWS_BASEURL = "https://test.pioneerparivaar.com/RMAServiceAPI.asmx/"   //"http://169.38.110.105:7070/RMAServiceAPI.asmx/" //"http://test.pioneerparivaar.com/RMAServiceAPI.asmx/" //"http://pioneerparivaar.com/RMAServiceAPI.asmx/" //Live
-//var CDI_BASE_URL = "https://pioneercdi.com/rest/" // "http://192.168.3.108:8080/CDI/rest/" // Live
-//var PARAMARSH_BASE_URL =  "https://pioneerparamarsh.com/" //"http://192.168.3.108:8080/IMS/" //Live
+var BASE_URL = "https://pioneeractivity.in/rest/"
+//"https://pioneeractivity.in/RGL/rest/"
+//"https://uat.pioneeractivity.in/rest/"
+//"https://pioneeractivity.in/rest/"
+var NEWS_BASEURL = "https://test.pioneerparivaar.com/RMAServiceAPI.asmx/"   //"http://169.38.110.105:7070/RMAServiceAPI.asmx/" //"http://test.pioneerparivaar.com/RMAServiceAPI.asmx/" //"http://pioneerparivaar.com/RMAServiceAPI.asmx/" //Live
+var CDI_BASE_URL = "https://pioneercdi.com/rest/" // "http://192.168.3.108:8080/CDI/rest/" // Live
+var PARAMARSH_BASE_URL =  "https://pioneerparamarsh.com/" //"http://192.168.3.108:8080/IMS/" //Live
 
 
 //-----------------------------------//
 //* 2021 * Live BASE URL Crdeentials *//
 // --------------------------------- //
 
-var BASE_URL = "https://pioneeractivity.com/rest/"
-var NEWS_BASEURL = "https://169.38.110.105:7070/RMAServiceAPI.asmx/"
-//https://test.pioneerparivaar.com/RMAServiceAPI.asmx/
-var CDI_BASE_URL =  "https://pioneercdi.com/rest/"
-var PARAMARSH_BASE_URL = "https://pioneerparamarsh.com/"
+//var BASE_URL = "https://pioneeractivity.com/rest/"
+//var NEWS_BASEURL = "https://169.38.110.105:7070/RMAServiceAPI.asmx/"
+////https://test.pioneerparivaar.com/RMAServiceAPI.asmx/
+//var CDI_BASE_URL =  "https://pioneercdi.com/rest/"
+//var PARAMARSH_BASE_URL = "https://pioneerparamarsh.com/"
  
 //* URLS END HERE *//
 
