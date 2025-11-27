@@ -485,11 +485,22 @@ class Singleton: NSObject {
                           let responseStatusCode = (json as! NSDictionary).value(forKey: "statusCode") as? String ?? ""
                          
                           if responseStatusCode == STATUS_CODE_200{
-                              let respData = (json as! NSDictionary).value(forKey: "response") as! NSString
-                              let decryptData  = Constatnts.decryptResult(StrJson: respData as String)
-                              print("The decryptData is here:",decryptData)
-                              let msg = ((json as! NSDictionary).value(forKey: "message") as? NSString)
-                              completionHandler(true,decryptData,msg as String? ?? "")
+                              
+                              let dict = json as! NSDictionary
+                                let response = dict["response"]
+
+                                // Check for null
+                                if response is NSNull || response == nil {
+                                    print("Response is NULL")
+                                    return
+                                }else{
+                                    let respData = (json as! NSDictionary).value(forKey: "response") as! NSString
+                                    let decryptData  = Constatnts.decryptResult(StrJson: respData as String)
+                                    print("The decryptData is here:",decryptData)
+                                    let msg = ((json as! NSDictionary).value(forKey: "message") as? NSString)
+                                    completionHandler(true,decryptData,msg as String? ?? "")
+                                }
+                            
                           }
                           else if responseStatusCode == STATUS_CODE_205{
                               let respData = (json as! NSDictionary).value(forKey: "response") as! NSString

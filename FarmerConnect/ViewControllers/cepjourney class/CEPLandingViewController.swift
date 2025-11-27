@@ -824,28 +824,62 @@ class CEPLandingViewController: BaseViewController,UIScrollViewDelegate ,Rewards
     //MARK: - Empover Scanner
     func openEmpoverScanner(){
         let regexPatterns = [
-            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)",
-            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
-            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
-            "https:\\/\\/roots-cpm.ecubix.com\\/?.*",
-            "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}\\.[iI]{1}[nN]{1}\\/)",
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}\\.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}\\.[iI]{1}[nN]{1}\\/)",
+            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}\\.[iI]{1}[nN]{1}\\/)",
             "^[A-Z0-9]{8}$",
             "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
-            "^([0-9A-Z]*)([A-Zs]*)[0-9A-Z]*[0-9A-Z]*[0-9]*[0-9A-Za-z]*",
-            "^https?://.*",  // any http/https URL
-            "^[A-Za-z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=%\\s]+$",  // any printable token/text
-            "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*"
+            "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*",
+            "https:\\/\\/roots-cpm\\.ecubix\\.com\\/?.*",
+            "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
+            "^sv1[A-Za-z0-9]{21,22}$",
+            "^[A-Za-z]v1.*$",
+            "(?i)^[A-Z0-9].*"
         ]
 
-        let user = ScannerUser(linkedId: "2413271", authId: "AUTHID5566778899", token: "e1c5a7d9b3f48e2c0d6b9f1a3e7c5d4b", fullName: "", email: "", deviceType: "IOS", projectId: "PROJ1004", projectName: "Farmer Connect", userId: "", mobileNumber: "9550986390")
+        let userObj = Constatnts.getUserObject()
+        let userId = userObj.customerId! as String
+        let mobileNum = userObj.mobileNumber! as String
         
-        let config = ScannerConfiguration(regexPatterns: regexPatterns, environment: .test, user: user, scanMultiple: false, scannerType: "DEFAULT", referralCode: "", language: "en")
+        let getUserID = userId
+        var getAuthId = ""
+        var getToken = ""
+        var getProjectId = ""
+        var getEnvironment: ScannerConfiguration.Environment = .test
+        var getProjectName = ""
+        var getLanguage = ""
+        
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        if BASE_URL == "https://pioneeractivity.com/rest/" {
+            print("Its is PROD")
+         getAuthId = "TYC67PL25OKMINBVCXS"
+         getToken = "QAZCWSX25EDCIRFV12TGB45YHNUJMKLOPIUYTREWQASDFGH"
+         getProjectId = "com.pioneer.india.directsales"
+         getEnvironment = .production
+         getProjectName = "Corteva Farmer Connect"
+         getLanguage = "en"
+        }
+        else{
+            print("Its is UAT")
+         getAuthId = "ABCDE125FGHIJKLMN"
+         getToken = "XQZCRTY25PLMINW8947ASD12KQWERTYUXMNBVCXZPOIUYTRE"
+         getProjectId = "PROJ1004"
+         getEnvironment = .test
+         getProjectName = "Farmer Connect"
+         getLanguage = "en"
 
-        scannerView = CameraScannerView(frame: view.bounds)
-        scannerView?.delegate = self
-        scannerView?.configure(with: config)
-        view.addSubview(scannerView!)
-        scannerView?.startScanning()
+        }
+        print("getUserID iss: \(getUserID)")
+         
+
+        let user = ScannerUser(linkedId: getUserID, authId: getAuthId, token: getToken, fullName: "", email: "", deviceType: "IOS", projectId: getProjectId, projectName: getProjectName, userId: getUserID, mobileNumber: mobileNum)
+        
+        let config = ScannerConfiguration(regexPatterns: regexPatterns, environment: getEnvironment, user: user, scanMultiple: false, scannerType: "DEFAULT", referralCode: "", language: getLanguage)
+        
+        let scannerVC = ScannerViewController(config: config, delegate: self) // 'self' must conform to CameraScannerDelegate
+        scannerVC.modalPresentationStyle = .fullScreen
+        present(scannerVC, animated: true, completion: nil)
     }
     func didDetectQRCode(_ code: String) {
         print("Empover Scanner Detected QR Code: \(code)")
@@ -879,20 +913,23 @@ class CEPLandingViewController: BaseViewController,UIScrollViewDelegate ,Rewards
             }
 
                     let regularExpression = [
-                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)",
-                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
-                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
-                        "https:\\/\\/roots-cpm.ecubix.com\\/?.*",
-                        "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
-                        "^[A-Z0-9]{8}$",
-                        "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
-                        "^([0-9A-Z]*)([A-Zs]*)[0-9A-Z]*[0-9A-Z]*[0-9]*[0-9A-Za-z]*",
-                        "^https?://.*",
-                        "^[A-Za-z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=%\\s]+$",
-                        "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*"
+                        "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}\\.[iI]{1}[nN]{1}\\/)",
+                                                  "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}\\.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}\\.[iI]{1}[nN]{1}\\/)",
+                                                  "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}\\.[iI]{1}[nN]{1}\\/)",
+                                                  "^[A-Z0-9]{8}$",
+                                                  "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
+                                                  "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*",
+                                                  "https:\\/\\/roots-cpm\\.ecubix\\.com\\/?.*",
+                                                  "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
+                                                  "^sv1[A-Za-z0-9]{21,22}$",
+                                                  "^[A-Za-z]v1.*$",
+                                                  "(?i)^[A-Z0-9].*"
                     ]
-                    let checkForRegexMatch = regularExpression.filter{$0 == exemptedCodeDetails!.matchedRegEx}
-                    if checkForRegexMatch.count > 0{
+//            let server = exemptedCodeDetails?.matchedRegEx ?? ""
+//            let checkForRegexMatch = regularExpression.filter {
+//                $0.replacingOccurrences(of: "\\.", with: ".") == server.replacingOccurrences(of: "\\.", with: ".")
+//            }
+                  //  if checkForRegexMatch.count > 0{
                         let parameters = ["barCodeScannedValue":exemptedCodeDetails!.barCodeScannedValue,"matchedRegEx":exemptedCodeDetails!.matchedRegEx,"message":exemptedCodeDetails!.message]
                         let scanResult = parameters as Dictionary
                         let paramsStr = try! JSONSerialization.data(withJSONObject: scanResult, options: .prettyPrinted)
@@ -938,7 +975,7 @@ class CEPLandingViewController: BaseViewController,UIScrollViewDelegate ,Rewards
                                 self.view.makeToast(statusMessage ?? "Oops! Some thing went wrong. Please try again.")
                             }
                         }
-                    }
+                   // }
         }
       
     }

@@ -74,7 +74,8 @@
         "moduleName": "EmpoverCameraScannerSDK",
         "isOpen": true,
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
@@ -110,6 +111,517 @@
         "printedName": "AVFoundation",
         "declKind": "Import",
         "moduleName": "EmpoverCameraScannerSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "ImageIO",
+        "printedName": "ImageIO",
+        "declKind": "Import",
+        "moduleName": "EmpoverCameraScannerSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HelpGIFViewController",
+        "printedName": "HelpGIFViewController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "gifName",
+            "printedName": "gifName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC7gifName33_DF8ABD070AF0F5BECD668ED0115583DCLLSSSgvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC7gifName33_DF8ABD070AF0F5BECD668ED0115583DCLLSSSgvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "titleText",
+            "printedName": "titleText",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC9titleText33_DF8ABD070AF0F5BECD668ED0115583DCLLSSvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC9titleText33_DF8ABD070AF0F5BECD668ED0115583DCLLSSvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "messageText",
+            "printedName": "messageText",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC11messageText33_DF8ABD070AF0F5BECD668ED0115583DCLLSSvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC11messageText33_DF8ABD070AF0F5BECD668ED0115583DCLLSSvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 2,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(gifName:title:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HelpGIFViewController",
+                "printedName": "EmpoverCameraScannerSDK.HelpGIFViewController",
+                "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)HelpGIFViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC7gifName5title7messageACSSSg_S2Stcfc",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC7gifName5title7messageACSSSg_S2Stcfc",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "EmpoverCameraScannerSDK.HelpGIFViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HelpGIFViewController",
+                    "printedName": "EmpoverCameraScannerSDK.HelpGIFViewController",
+                    "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)HelpGIFViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)HelpGIFViewController(im)initWithCoder:",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "container",
+            "printedName": "container",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC9container33_DF8ABD070AF0F5BECD668ED0115583DCLLSo6UIViewCvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC9container33_DF8ABD070AF0F5BECD668ED0115583DCLLSo6UIViewCvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 3,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "gifView",
+            "printedName": "gifView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImageView",
+                "printedName": "UIKit.UIImageView",
+                "usr": "c:objc(cs)UIImageView"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC7gifView33_DF8ABD070AF0F5BECD668ED0115583DCLLSo07UIImageI0Cvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC7gifView33_DF8ABD070AF0F5BECD668ED0115583DCLLSo07UIImageI0Cvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 4,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "titleLabel",
+            "printedName": "titleLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UILabel",
+                "printedName": "UIKit.UILabel",
+                "usr": "c:objc(cs)UILabel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC10titleLabel33_DF8ABD070AF0F5BECD668ED0115583DCLLSo7UILabelCvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC10titleLabel33_DF8ABD070AF0F5BECD668ED0115583DCLLSo7UILabelCvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 5,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "messageLabel",
+            "printedName": "messageLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UILabel",
+                "printedName": "UIKit.UILabel",
+                "usr": "c:objc(cs)UILabel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC12messageLabel33_DF8ABD070AF0F5BECD668ED0115583DCLLSo7UILabelCvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC12messageLabel33_DF8ABD070AF0F5BECD668ED0115583DCLLSo7UILabelCvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 6,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "okButton",
+            "printedName": "okButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIButton",
+                "printedName": "UIKit.UIButton",
+                "usr": "c:objc(cs)UIButton"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK21HelpGIFViewControllerC8okButton33_DF8ABD070AF0F5BECD668ED0115583DCLLSo8UIButtonCvp",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC8okButton33_DF8ABD070AF0F5BECD668ED0115583DCLLSo8UIButtonCvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 7,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)HelpGIFViewController(im)viewDidLoad",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC11viewDidLoadyyF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HelpGIFViewController",
+                "printedName": "EmpoverCameraScannerSDK.HelpGIFViewController",
+                "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)HelpGIFViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)HelpGIFViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)HelpGIFViewController",
+        "mangledName": "$s23EmpoverCameraScannerSDK21HelpGIFViewControllerC",
+        "moduleName": "EmpoverCameraScannerSDK",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "Final",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -2186,6 +2698,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "UITraitChangeObservable",
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
@@ -2197,6 +2716,632 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "EmpoverCameraScannerSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScannerViewController",
+        "printedName": "ScannerViewController",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(config:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScannerViewController",
+                "printedName": "EmpoverCameraScannerSDK.ScannerViewController",
+                "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScannerConfiguration",
+                "printedName": "EmpoverCameraScannerSDK.ScannerConfiguration",
+                "usr": "s:23EmpoverCameraScannerSDK0C13ConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any EmpoverCameraScannerSDK.CameraScannerDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CameraScannerDelegate",
+                    "printedName": "any EmpoverCameraScannerSDK.CameraScannerDelegate",
+                    "usr": "s:23EmpoverCameraScannerSDK0bC8DelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23EmpoverCameraScannerSDK0C14ViewControllerC6config8delegateAcA0C13ConfigurationV_AA0bC8Delegate_pSgtcfc",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC6config8delegateAcA0C13ConfigurationV_AA0bC8Delegate_pSgtcfc",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "EmpoverCameraScannerSDK.ScannerViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ScannerViewController",
+                    "printedName": "EmpoverCameraScannerSDK.ScannerViewController",
+                    "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)initWithCoder:",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "loadView",
+            "printedName": "loadView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)loadView",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC04loadE0yyF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "loadView",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)viewDidLoad",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC11viewDidLoadyyF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)viewWillAppear:",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC14viewWillAppearyySbF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillDisappear",
+            "printedName": "viewWillDisappear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)viewWillDisappear:",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC17viewWillDisappearyySbF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewWillDisappear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "prefersStatusBarHidden",
+            "printedName": "prefersStatusBarHidden",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(py)prefersStatusBarHidden",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC22prefersStatusBarHiddenSbvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "prefersStatusBarHidden",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)prefersStatusBarHidden",
+                "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC22prefersStatusBarHiddenSbvg",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "overriding": true,
+                "isOpen": true,
+                "objc_name": "prefersStatusBarHidden",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "preferredStatusBarUpdateAnimation",
+            "printedName": "preferredStatusBarUpdateAnimation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIStatusBarAnimation",
+                "printedName": "UIKit.UIStatusBarAnimation",
+                "usr": "c:@E@UIStatusBarAnimation"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(py)preferredStatusBarUpdateAnimation",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC33preferredStatusBarUpdateAnimationSo08UIStatusiK0Vvp",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "preferredStatusBarUpdateAnimation",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIStatusBarAnimation",
+                    "printedName": "UIKit.UIStatusBarAnimation",
+                    "usr": "c:@E@UIStatusBarAnimation"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)preferredStatusBarUpdateAnimation",
+                "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC33preferredStatusBarUpdateAnimationSo08UIStatusiK0Vvg",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "overriding": true,
+                "isOpen": true,
+                "objc_name": "preferredStatusBarUpdateAnimation",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScannerViewController",
+                "printedName": "EmpoverCameraScannerSDK.ScannerViewController",
+                "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "didDetectQRCode",
+            "printedName": "didDetectQRCode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23EmpoverCameraScannerSDK0C14ViewControllerC15didDetectQRCodeyySSF",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC15didDetectQRCodeyySSF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didFailWithError",
+            "printedName": "didFailWithError(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23EmpoverCameraScannerSDK0C14ViewControllerC16didFailWithErroryys0J0_pF",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC16didFailWithErroryys0J0_pF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didTapBackButton",
+            "printedName": "didTapBackButton()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23EmpoverCameraScannerSDK0C14ViewControllerC16didTapBackButtonyyF",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC16didTapBackButtonyyF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceiveAPIResponse",
+            "printedName": "didReceiveAPIResponse(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23EmpoverCameraScannerSDK0C14ViewControllerC21didReceiveAPIResponseyySDySSypGF",
+            "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC21didReceiveAPIResponseyySDySSypGF",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@EmpoverCameraScannerSDK@objc(cs)ScannerViewController",
+        "mangledName": "$s23EmpoverCameraScannerSDK0C14ViewControllerC",
+        "moduleName": "EmpoverCameraScannerSDK",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CameraScannerDelegate",
+            "printedName": "CameraScannerDelegate",
+            "usr": "s:23EmpoverCameraScannerSDK0bC8DelegateP",
+            "mangledName": "$s23EmpoverCameraScannerSDK0bC8DelegateP"
           }
         ]
       },
@@ -2648,8 +3793,8 @@
           },
           {
             "kind": "Var",
-            "name": "empoverScannerLogo",
-            "printedName": "empoverScannerLogo",
+            "name": "cortevaLogo",
+            "printedName": "cortevaLogo",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2659,8 +3804,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV07empoverC4LogoACvpZ",
-            "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV07empoverC4LogoACvpZ",
+            "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV11cortevaLogoACvpZ",
+            "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV11cortevaLogoACvpZ",
             "moduleName": "EmpoverCameraScannerSDK",
             "static": true,
             "declAttributes": [
@@ -2685,8 +3830,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV07empoverC4LogoACvgZ",
-                "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV07empoverC4LogoACvgZ",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV11cortevaLogoACvgZ",
+                "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV11cortevaLogoACvgZ",
                 "moduleName": "EmpoverCameraScannerSDK",
                 "static": true,
                 "implicit": true,
@@ -2700,8 +3845,8 @@
           },
           {
             "kind": "Var",
-            "name": "flash",
-            "printedName": "flash",
+            "name": "flashoff",
+            "printedName": "flashoff",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2711,8 +3856,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV5flashACvpZ",
-            "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV5flashACvpZ",
+            "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV8flashoffACvpZ",
+            "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV8flashoffACvpZ",
             "moduleName": "EmpoverCameraScannerSDK",
             "static": true,
             "declAttributes": [
@@ -2737,8 +3882,164 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV5flashACvgZ",
-                "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV5flashACvgZ",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV8flashoffACvgZ",
+                "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV8flashoffACvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flashon",
+            "printedName": "flashon",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "EmpoverCameraScannerSDK.ImageResource",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV7flashonACvpZ",
+            "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV7flashonACvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "EmpoverCameraScannerSDK.ImageResource",
+                    "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV7flashonACvgZ",
+                "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV7flashonACvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "speakeroff",
+            "printedName": "speakeroff",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "EmpoverCameraScannerSDK.ImageResource",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV10speakeroffACvpZ",
+            "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV10speakeroffACvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "EmpoverCameraScannerSDK.ImageResource",
+                    "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV10speakeroffACvgZ",
+                "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV10speakeroffACvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "speakeron",
+            "printedName": "speakeron",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "EmpoverCameraScannerSDK.ImageResource",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV9speakeronACvpZ",
+            "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV9speakeronACvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "EmpoverCameraScannerSDK.ImageResource",
+                    "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV9speakeronACvgZ",
+                "mangledName": "$s23EmpoverCameraScannerSDK13ImageResourceV9speakeronACvgZ",
                 "moduleName": "EmpoverCameraScannerSDK",
                 "static": true,
                 "implicit": true,
@@ -2793,6 +4094,455 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIImage",
+        "printedName": "UIImage",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "animatedGIF",
+            "printedName": "animatedGIF(named:in:classForBundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any AnyObject.Type)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExistentialMetatype",
+                    "printedName": "any AnyObject.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "AnyObject"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE11animatedGIF5named2in14classForBundleABSgSS_So8NSBundleCSgyXlXpSgtFZ",
+            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE11animatedGIF5named2in14classForBundleABSgSS_So8NSBundleCSgyXlXpSgtFZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "cortevaLogo",
+            "printedName": "cortevaLogo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE11cortevaLogoABvpZ",
+            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE11cortevaLogoABvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE11cortevaLogoABvgZ",
+                "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE11cortevaLogoABvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flashoff",
+            "printedName": "flashoff",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE8flashoffABvpZ",
+            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE8flashoffABvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE8flashoffABvgZ",
+                "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE8flashoffABvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flashon",
+            "printedName": "flashon",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE7flashonABvpZ",
+            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE7flashonABvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE7flashonABvgZ",
+                "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE7flashonABvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "speakeroff",
+            "printedName": "speakeroff",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE10speakeroffABvpZ",
+            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE10speakeroffABvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE10speakeroffABvgZ",
+                "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE10speakeroffABvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "speakeron",
+            "printedName": "speakeron",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE9speakeronABvpZ",
+            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE9speakeronABvpZ",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE9speakeronABvgZ",
+                "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE9speakeronABvgZ",
+                "moduleName": "EmpoverCameraScannerSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(resource:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "EmpoverCameraScannerSDK.ImageResource",
+                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE8resourceAbC13ImageResourceV_tcfc",
+            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE8resourceAbC13ImageResourceV_tcfc",
+            "moduleName": "EmpoverCameraScannerSDK",
+            "declAttributes": [
+              "Convenience",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIImage",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIImage",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByImageLiteral",
+            "printedName": "_ExpressibleByImageLiteral",
+            "usr": "s:s26_ExpressibleByImageLiteralP",
+            "mangledName": "$ss26_ExpressibleByImageLiteralP"
           }
         ]
       },
@@ -3105,237 +4855,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "UIImage",
-        "printedName": "UIImage",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "empoverScannerLogo",
-            "printedName": "empoverScannerLogo",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UIImage",
-                "printedName": "UIKit.UIImage",
-                "usr": "c:objc(cs)UIImage"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE07empoverD4LogoABvpZ",
-            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE07empoverD4LogoABvpZ",
-            "moduleName": "EmpoverCameraScannerSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIImage",
-                    "printedName": "UIKit.UIImage",
-                    "usr": "c:objc(cs)UIImage"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE07empoverD4LogoABvgZ",
-                "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE07empoverD4LogoABvgZ",
-                "moduleName": "EmpoverCameraScannerSDK",
-                "static": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "flash",
-            "printedName": "flash",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UIImage",
-                "printedName": "UIKit.UIImage",
-                "usr": "c:objc(cs)UIImage"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE5flashABvpZ",
-            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE5flashABvpZ",
-            "moduleName": "EmpoverCameraScannerSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIImage",
-                    "printedName": "UIKit.UIImage",
-                    "usr": "c:objc(cs)UIImage"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE5flashABvgZ",
-                "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE5flashABvgZ",
-                "moduleName": "EmpoverCameraScannerSDK",
-                "static": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(resource:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UIImage",
-                "printedName": "UIKit.UIImage",
-                "usr": "c:objc(cs)UIImage"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ImageResource",
-                "printedName": "EmpoverCameraScannerSDK.ImageResource",
-                "usr": "s:23EmpoverCameraScannerSDK13ImageResourceV"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:So7UIImageC23EmpoverCameraScannerSDKE8resourceAbC13ImageResourceV_tcfc",
-            "mangledName": "$sSo7UIImageC23EmpoverCameraScannerSDKE8resourceAbC13ImageResourceV_tcfc",
-            "moduleName": "EmpoverCameraScannerSDK",
-            "declAttributes": [
-              "Convenience",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "init_kind": "Convenience"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:objc(cs)UIImage",
-        "moduleName": "UIKit",
-        "isOpen": true,
-        "intro_iOS": "2.0",
-        "objc_name": "UIImage",
-        "declAttributes": [
-          "Available",
-          "ObjC",
-          "SynthesizedProtocol",
-          "NonSendable",
-          "Sendable",
-          "Dynamic"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "isExternal": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ExpressibleByImageLiteral",
-            "printedName": "_ExpressibleByImageLiteral",
-            "usr": "s:s26_ExpressibleByImageLiteralP",
-            "mangledName": "$ss26_ExpressibleByImageLiteralP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "Image",
         "printedName": "Image",
         "children": [
@@ -3476,269 +4995,465 @@
   "ConstValues": [
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4146,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2947,
+      "offset": 4175,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4234,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3032,
+      "offset": 4434,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4570,
+      "length": 2,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4689,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4745,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4882,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4982,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5038,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "StringLiteral",
+      "offset": 5168,
+      "length": 4,
+      "value": "\"OK\""
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5237,
+      "length": 2,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5314,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11245,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11353,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 3155,
+      "offset": 11422,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8668,
+      "offset": 11526,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 11574,
+      "length": 3,
+      "value": "0.6"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 11655,
+      "length": 4,
+      "value": "0.25"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 11739,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 11791,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11905,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12794,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12839,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21279,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8696,
+      "offset": 21307,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21318,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21330,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21417,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21472,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8707,
+      "offset": 21511,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 21619,
+      "length": 3,
+      "value": "0.6"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21691,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21725,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21871,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 21887,
+      "length": 4,
+      "value": "0.12"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21928,
+      "length": 3,
+      "value": "130"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21999,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22020,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22050,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22105,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22110,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22131,
+      "length": 2,
+      "value": "65"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22142,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22155,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22261,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22295,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22336,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22417,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22465,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22751,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22755,
+      "length": 3,
+      "value": "420"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22794,
+      "length": 2,
+      "value": "44"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22867,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22894,
       "length": 2,
       "value": "70"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8719,
+      "offset": 22967,
       "length": 2,
-      "value": "40"
+      "value": "12"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8783,
-      "length": 3,
-      "value": "200"
+      "offset": 23002,
+      "length": 2,
+      "value": "24"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8788,
+      "offset": 23142,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 8815,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8826,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8839,
-      "length": 2,
-      "value": "50"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8889,
-      "length": 2,
-      "value": "40"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8912,
-      "length": 2,
-      "value": "80"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8962,
-      "length": 2,
-      "value": "80"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8974,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9039,
-      "length": 3,
-      "value": "120"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9044,
+      "offset": 23231,
       "length": 1,
-      "value": "2"
+      "value": "0"
     },
     {
       "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 9065,
-      "length": 2,
-      "value": "40"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9077,
-      "length": 3,
-      "value": "120"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9090,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9156,
-      "length": 2,
-      "value": "56"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9161,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9184,
-      "length": 2,
-      "value": "50"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9195,
-      "length": 2,
-      "value": "56"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9207,
-      "length": 2,
-      "value": "40"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "FloatLiteral",
-      "offset": 9289,
-      "length": 3,
-      "value": "0.6"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9361,
+      "offset": 23281,
       "length": 1,
-      "value": "2"
+      "value": "3"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9395,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "FloatLiteral",
-      "offset": 9629,
-      "length": 3,
-      "value": "0.6"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9701,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9705,
-      "length": 2,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9740,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9744,
-      "length": 3,
-      "value": "250"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9756,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9769,
-      "length": 2,
-      "value": "50"
+      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/ScannerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2766,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 749,
-      "length": 20,
-      "value": "\"empoverScannerLogo\""
+      "offset": 735,
+      "length": 13,
+      "value": "\"cortevaLogo\""
     },
     {
       "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 889,
-      "length": 7,
-      "value": "\"flash\""
+      "offset": 874,
+      "length": 10,
+      "value": "\"flashoff\""
+    },
+    {
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1008,
+      "length": 9,
+      "value": "\"flashon\""
+    },
+    {
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1147,
+      "length": 12,
+      "value": "\"speakeroff\""
+    },
+    {
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1287,
+      "length": 11,
+      "value": "\"speakeron\""
     }
   ]
 }

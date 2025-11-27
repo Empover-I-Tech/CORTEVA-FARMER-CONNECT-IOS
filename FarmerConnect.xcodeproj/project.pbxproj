@@ -252,6 +252,8 @@
 		A32B377D211C751900ABD8B0 /* GerminationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32B377C211C751800ABD8B0 /* GerminationHeaderView.swift */; };
 		A32B377F211C751E00ABD8B0 /* GerminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32B377E211C751E00ABD8B0 /* GerminationViewController.swift */; };
 		A32B3781211C786700ABD8B0 /* GerminationClaimPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32B3780211C786600ABD8B0 /* GerminationClaimPolicyViewController.swift */; };
+		A33032F92ED7287700CB366A /* EmpoverCameraScannerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33032F72ED7278500CB366A /* EmpoverCameraScannerSDK.framework */; };
+		A33032FA2ED7287700CB366A /* EmpoverCameraScannerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A33032F72ED7278500CB366A /* EmpoverCameraScannerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A333FDEC205FC5440038655B /* Paramarsh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A333FDEB205FC5440038655B /* Paramarsh.storyboard */; };
 		A333FDF2205FC8AC0038655B /* ParamarshProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333FDF1205FC8AC0038655B /* ParamarshProfileViewController.swift */; };
 		A333FDF7205FE1A20038655B /* RaiseTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333FDF6205FE1A20038655B /* RaiseTicketViewController.swift */; };
@@ -306,8 +308,6 @@
 		A3963A391FF273DE00E8713D /* Classifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3963A381FF273DE00E8713D /* Classifications.swift */; };
 		A3A4679026D8AFD500B2383C /* FiledSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4678F26D8AFD500B2383C /* FiledSharingViewController.swift */; };
 		A3A98E672769D17C007475FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D282B1FEA2688003E6582 /* Constants.swift */; };
-		A3D692E42EBB4F1700B9349D /* EmpoverCameraScannerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D692E22EBB4F1400B9349D /* EmpoverCameraScannerSDK.framework */; };
-		A3D692E52EBB4F1700B9349D /* EmpoverCameraScannerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3D692E22EBB4F1400B9349D /* EmpoverCameraScannerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3E2C0B22CA2B2AB0023F0DC /* SampleTrackingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2C0B12CA2B2AB0023F0DC /* SampleTrackingListViewController.swift */; };
 		A3E2C0B42CA2B5520023F0DC /* SampleTrackingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2C0B32CA2B5520023F0DC /* SampleTrackingDetailsViewController.swift */; };
 		A3E2C0B62CA3EB130023F0DC /* SampleTrackingListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2C0B52CA3EB130023F0DC /* SampleTrackingListCollectionViewCell.swift */; };
@@ -549,7 +549,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A3D692E52EBB4F1700B9349D /* EmpoverCameraScannerSDK.framework in Embed Frameworks */,
+				A33032FA2ED7287700CB366A /* EmpoverCameraScannerSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,6 +887,7 @@
 		A32B377C211C751800ABD8B0 /* GerminationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerminationHeaderView.swift; sourceTree = "<group>"; };
 		A32B377E211C751E00ABD8B0 /* GerminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerminationViewController.swift; sourceTree = "<group>"; };
 		A32B3780211C786600ABD8B0 /* GerminationClaimPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerminationClaimPolicyViewController.swift; sourceTree = "<group>"; };
+		A33032F72ED7278500CB366A /* EmpoverCameraScannerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EmpoverCameraScannerSDK.framework; sourceTree = "<group>"; };
 		A333FDEB205FC5440038655B /* Paramarsh.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paramarsh.storyboard; sourceTree = "<group>"; };
 		A333FDF1205FC8AC0038655B /* ParamarshProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamarshProfileViewController.swift; sourceTree = "<group>"; };
 		A333FDF6205FE1A20038655B /* RaiseTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseTicketViewController.swift; sourceTree = "<group>"; };
@@ -976,7 +977,6 @@
 		A3910A4C2B6A11A40009D743 /* GiftCouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCouponTableViewCell.swift; sourceTree = "<group>"; };
 		A3963A381FF273DE00E8713D /* Classifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifications.swift; sourceTree = "<group>"; };
 		A3A4678F26D8AFD500B2383C /* FiledSharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiledSharingViewController.swift; sourceTree = "<group>"; };
-		A3D692E22EBB4F1400B9349D /* EmpoverCameraScannerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EmpoverCameraScannerSDK.framework; sourceTree = "<group>"; };
 		A3E2C0B12CA2B2AB0023F0DC /* SampleTrackingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTrackingListViewController.swift; sourceTree = "<group>"; };
 		A3E2C0B32CA2B5520023F0DC /* SampleTrackingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTrackingDetailsViewController.swift; sourceTree = "<group>"; };
 		A3E2C0B52CA3EB130023F0DC /* SampleTrackingListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTrackingListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1203,7 +1203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3D692E42EBB4F1700B9349D /* EmpoverCameraScannerSDK.framework in Frameworks */,
+				A33032F92ED7287700CB366A /* EmpoverCameraScannerSDK.framework in Frameworks */,
 				77FAED365751F72A51DC0A04 /* Pods_FarmerConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1404,7 +1404,8 @@
 		8447F1281FE7D3FB00C5E00C /* FarmerConnect */ = {
 			isa = PBXGroup;
 			children = (
-				A3D692E22EBB4F1400B9349D /* EmpoverCameraScannerSDK.framework */,
+				A33032F72ED7278500CB366A /* EmpoverCameraScannerSDK.framework */,
+				A37B49D42EC482C900B39CB0 /* Debug-iphoneos */,
 				D0EA35B6242C0E6A008CCB11 /* BaseclaseSDkViewController.swift */,
 				D07CC77524AE34EB00D43FC0 /* Subscribe-animation.gif */,
 				D0BDF9ED24F8C24000288E9B /* spraying.gif */,
@@ -2259,6 +2260,13 @@
 				A37AE41426FC432D001CFF8F /* RHRDFieldSharingViewController.swift */,
 			);
 			path = "RHRD Classes";
+			sourceTree = "<group>";
+		};
+		A37B49D42EC482C900B39CB0 /* Debug-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Debug-iphoneos";
 			sourceTree = "<group>";
 		};
 		A3963A371FF273B600E8713D /* Requester Model Classes */ = {
@@ -3984,13 +3992,19 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/FarmerConnect",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Intermediates.noindex/EmpoverCameraScannerSDK.build/Debug-iphoneos/EmpoverCameraScannerSDK.build/VerifyModule/EmpoverCameraScannerSDK_objective-c++_arm64-apple-ios15.6_gnu++20/Test",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Intermediates.noindex/EmpoverCameraScannerSDK.build/Debug-iphoneos/EmpoverCameraScannerSDK.build/VerifyModule/EmpoverCameraScannerSDK_objective-c_arm64-apple-ios15.6_gnu17/Test",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Index.noindex/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/FarmerConnect/Debug-iphoneos",
 				);
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = FarmerConnect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.7;
+				MARKETING_VERSION = 4.8;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect;
@@ -4024,13 +4038,19 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/FarmerConnect",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Intermediates.noindex/EmpoverCameraScannerSDK.build/Debug-iphoneos/EmpoverCameraScannerSDK.build/VerifyModule/EmpoverCameraScannerSDK_objective-c++_arm64-apple-ios15.6_gnu++20/Test",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphoneos",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Intermediates.noindex/EmpoverCameraScannerSDK.build/Debug-iphoneos/EmpoverCameraScannerSDK.build/VerifyModule/EmpoverCameraScannerSDK_objective-c_arm64-apple-ios15.6_gnu17/Test",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Index.noindex/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/FarmerConnect/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/FarmerConnect/Debug-iphoneos",
 				);
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = FarmerConnect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(BUILT_PRODUCTS_DIR)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.7;
+				MARKETING_VERSION = 4.8;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect;

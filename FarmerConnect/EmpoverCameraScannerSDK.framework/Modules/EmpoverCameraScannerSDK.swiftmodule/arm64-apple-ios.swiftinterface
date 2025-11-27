@@ -5,6 +5,7 @@ import AVFoundation
 import DeveloperToolsSupport
 @_exported import EmpoverCameraScannerSDK
 import Foundation
+import ImageIO
 import Swift
 import SwiftUI
 import UIKit
@@ -64,12 +65,32 @@ public struct ExemptedCode {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class CameraScannerView : UIKit.UIView, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
   @_Concurrency.MainActor @preconcurrency weak public var delegate: (any EmpoverCameraScannerSDK.CameraScannerDelegate)?
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
   @_Concurrency.MainActor @preconcurrency public func configure(with config: EmpoverCameraScannerSDK.ScannerConfiguration)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency public func startScanning()
   @_Concurrency.MainActor @preconcurrency public func stopScanning()
   @_Concurrency.MainActor @preconcurrency @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ScannerViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public init(config: EmpoverCameraScannerSDK.ScannerConfiguration, delegate: (any EmpoverCameraScannerSDK.CameraScannerDelegate)?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func loadView()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredStatusBarUpdateAnimation: UIKit.UIStatusBarAnimation {
+    @objc get
+  }
   @objc deinit
+}
+extension EmpoverCameraScannerSDK.ScannerViewController : EmpoverCameraScannerSDK.CameraScannerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func didDetectQRCode(_ code: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func didFailWithError(_ error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency public func didTapBackButton()
+  @_Concurrency.MainActor @preconcurrency public func didReceiveAPIResponse(_ response: [Swift.String : Any])
 }
 extension EmpoverCameraScannerSDK.ScannerConfiguration.Environment : Swift.Equatable {}
 extension EmpoverCameraScannerSDK.ScannerConfiguration.Environment : Swift.Hashable {}
