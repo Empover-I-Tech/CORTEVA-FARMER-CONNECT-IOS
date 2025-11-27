@@ -33,10 +33,16 @@ pod 'FBSDKCoreKit'
 
 #pod 'AcvissCore', :git =>   'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'react-15.3xcode'
 #pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'react-15.3xcode'
-#pod 'ZXingObjC'
 
-pod 'AcvissCore', :git =>   'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'appstore-xc15'
-pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'appstore-xc15'
+#pod 'AcvissCore', :git =>   'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'appstore-xc15'
+#pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'appstore-xc15'
+
+#pod 'AcvissCore', :git =>   'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'react-xc162'
+#pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'react-xc162-new'
+
+pod 'AcvissCore', :git => 'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'react-xc162'
+pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'react-xc162-error'
+
 pod 'ZXingObjC'
 
 

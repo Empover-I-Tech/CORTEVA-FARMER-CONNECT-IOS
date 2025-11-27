@@ -4028,19 +4028,25 @@ extension RewardsViewController  : UITableViewDelegate , UITableViewDataSource {
             self.seed2TopViewheightConstrain.constant = 50
             self.dsrTopViewHeightConstraint.constant = 50
             self.giftCouponHeightConstraint.constant = 50
-                                                       DispatchQueue.main.async {
+            
+     DispatchQueue.main.async {
                                                       
-                                                         
-                                                    
-                                                           self.tblViewEcouponTransactions.reloadSections(NSIndexSet(index: section) as IndexSet, with: .automatic)
-                                                        var heightConstant = CGFloat((self.successTransactionsEcoupon.count + self.claimTransactionsEcoupon.count + self.reclaimTransactionsEcoupon.count ) * 175) + CGFloat(self.couponCodesList.count*45)+125
-                                                                                                                                                                    self.lblNoRewardscoupon.isHidden = true
-                                                                                                                                                                     self.tblViewEcouponTransactions.isScrollEnabled = false
-                                                                                                                                                                    self.ecouponHeightConstraint.constant = heightConstant
+        self.tblViewEcouponTransactions.reloadSections(NSIndexSet(index: section) as IndexSet, with: .automatic)
+         
+//        let heightConstant = CGFloat((self.successTransactionsEcoupon.count + self.claimTransactionsEcoupon.count + self.reclaimTransactionsEcoupon.count ) * 175) + CGFloat(self.couponCodesList.count*45)+125
+         
+         let transactionHeight = ((self.successTransactionsEcoupon.count + self.claimTransactionsEcoupon.count + self.reclaimTransactionsEcoupon.count ) * 175)
+         let couponHeight = CGFloat(self.couponCodesList.count*45)
+
+         let heightConstant = CGFloat(transactionHeight) + CGFloat(couponHeight) + CGFloat(125)
+         
+            self.lblNoRewardscoupon.isHidden = true
+            self.tblViewEcouponTransactions.isScrollEnabled = false
+            self.ecouponHeightConstraint.constant = heightConstant
                                                         
-                                                        let height1 = self.rewardHeightConstraint.constant+self.ecouponHeightConstraint.constant
-                                                        let height2 = self.seedHeightConstraint.constant+self.seed2HeightConstraint.constant+self.dsrHeightConstraint.constant
-                                                        self.bgScroll.contentSize = CGSize(width: self.view.frame.size.width, height: height1+height2+1000)
+            let height1 = self.rewardHeightConstraint.constant+self.ecouponHeightConstraint.constant
+            let height2 = self.seedHeightConstraint.constant+self.seed2HeightConstraint.constant+self.dsrHeightConstraint.constant
+            self.bgScroll.contentSize = CGSize(width: self.view.frame.size.width, height: height1+height2+1000)
             
         }
     }

@@ -35,14 +35,14 @@
         func endBackgroundTask(_ identifier: UIBackgroundTaskIdentifier)
     }
 
-    extension UIApplication: BackgroundTaskCreator {}
+   // extension UIApplication: BackgroundTaskCreator {}
 #endif
 
 /// A `BackgroundHandler` handles background.
 class BackgroundHandler: NSObject {
     #if !os(OSX)
     /// The background task creator
-    var backgroundTaskCreator: BackgroundTaskCreator = UIApplication.shared
+    var backgroundTaskCreator: BackgroundTaskCreator = UIApplication.shared as! BackgroundTaskCreator
     #endif
 
     /// The backround task identifier if a background task started. Nil if not.

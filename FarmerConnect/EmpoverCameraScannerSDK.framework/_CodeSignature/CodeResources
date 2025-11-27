@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		lt/CVfj1y4yOLjChPo6a35noFEc=
+		rhQ0tgG8Mz85dwTpggqIbUzUgaY=
 		</data>
 		<key>Headers/EmpoverCameraScannerSDK.h</key>
 		<data>
@@ -18,31 +18,35 @@
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		knfKHvitxdE2pVWIL85hodzAqJA=
+		t9QDn/rVs1gz/aXeOKwB4x76tws=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		lumKMhqzOPwl7sN2a/HPreihVh0=
+		czNSNUMonYyRmxQVqLB1x7J2X9Q=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Pm20GjtlSzhJUeKCyBLPHOkvb4o=
+		D2VQLAPUfXuOyM274ZlC9CL8wlY=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		r774s/gU8ObnFtdSuBow3AgRgs0=
+		97bgnY2YalMSOZfRxymCq6tlR1E=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Pm20GjtlSzhJUeKCyBLPHOkvb4o=
+		D2VQLAPUfXuOyM274ZlC9CL8wlY=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		4c6ssLwB9YCR+Opx/Hm3ciObnPM=
+		B++xCg//wzYAu9cs087FyzZhafg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		swuF3FmLPfElrMvgwuQM5QXcEQA=
+		</data>
+		<key>scanningqrcode.gif</key>
+		<data>
+		JnfAnUYKUou3PqqINe4DYy0y308=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rKtiwZBDdvXfafnmDAegsHj50QX02ICv582YRfLv0PE=
+			iwwpxOfwQUVM7Csfq5jS4kO2/sZ+NoNNi6MgNgS+6w0=
 			</data>
 		</dict>
 		<key>Headers/EmpoverCameraScannerSDK.h</key>
@@ -65,42 +69,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8c87ceVqzctJFnQvtnDxogYaarUFR8vPCdMbOkxzEWM=
+			jjlcHN/LdZnLNKS29oCg1/V4rxumUJWVR7W567mR6pU=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ixFuWOZpO3S87bWIMmQcmHG6x2cdR9OkRrO8XjxCqpw=
+			rN4aHEkg3piR1CLfP0LWehlWO3PpHwIornChqd/l0vA=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/Ulm9Lltarw1GeqSOMv+Xgn+nwBB8PoDOF6NidpncRY=
+			uOqC9SNDrVOaHWgKGS1Hy9yEJ+UvSNodRuJo456QUmI=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X1XPOyEXbhqjN5xhrHshSwovwTd1jLANtzgt+I+kHWI=
+			vMuMDnLWWxdyL21W8he+RVLDau/4eCzPq9g68NPspMg=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/Ulm9Lltarw1GeqSOMv+Xgn+nwBB8PoDOF6NidpncRY=
+			uOqC9SNDrVOaHWgKGS1Hy9yEJ+UvSNodRuJo456QUmI=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GfTf/DkWmT+XPEbtfMzPaKB8MT4/6WLuIMtQfR1ajO4=
+			NwsRU6p1ZZJ/KpViCNuOdyIGIj07ve78uzgvlOiQTJs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -108,6 +112,13 @@
 			<key>hash2</key>
 			<data>
 			tXfw8WhJWEMZwRhYhiNIgMqHl9M2s8S+sPwb9+8lOt4=
+			</data>
+		</dict>
+		<key>scanningqrcode.gif</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wkhLQp6UR2OA7WyrHUpd7drn5JGNFv7YZI+Q03jaSdM=
 			</data>
 		</dict>
 	</dict>
