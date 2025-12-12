@@ -16,8 +16,8 @@ import Kingfisher
 import CoreLocation
 import EmpoverCameraScannerSDK
 
-class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate,AreaEntryDelegate,CameraScannerDelegate {
-    //AcvissionDelegate
+class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate,AreaEntryDelegate,CameraScannerDelegate {
+    //AcvissionDelegate,//FloatRatingViewDelegate
     
     var scannerView: CameraScannerView?
 
@@ -65,6 +65,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     @IBOutlet weak var  pravktaVSpacingConstraint: NSLayoutConstraint!
     @IBOutlet weak var  BigfarmerVSpacingConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var overAllHyrbidTopConstraint: NSLayoutConstraint!
     //Right side Value Lables
     @IBOutlet weak var sampleRequestLbl1: UILabel!
     @IBOutlet weak var sampleRequestLbl2: UILabel!
@@ -81,9 +82,36 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     @IBOutlet weak var harvestReportLbl2: UILabel!
     @IBOutlet weak var harvestReportLbl3: UILabel!
     @IBOutlet weak var harvestReportLbl4: UILabel!
-    @IBOutlet weak var harvestReportLbl5: UILabel!
+//    @IBOutlet weak var harvestReportLbl5: UILabel!
     @IBOutlet weak var harvestReportLbl6: UILabel!
     @IBOutlet weak var harvestReportLbl7: UILabel!
+    
+    @IBOutlet weak var harvestReportLblCompHybName: UILabel!
+    
+    @IBOutlet weak var harvestReportLbYieldComp: UILabel!
+    
+    @IBOutlet weak var harvestReportLblDidYouLike: UILabel!
+    
+    
+    @IBOutlet weak var harvestReportDisplyTopOrReason1: UILabel!
+    @IBOutlet weak var harvestReportLblTopOrReason1: UILabel!
+    
+    @IBOutlet weak var harvestReportDisplyTopOrReason2: UILabel!
+    @IBOutlet weak var harvestReportLblTopOrReason2: UILabel!
+    
+    @IBOutlet weak var harvestReportDisplyTop3: UILabel!
+    @IBOutlet weak var harvestReportLblTop3: UILabel!
+    
+    @IBOutlet weak var harvestReportLblDHowManyAcres: UILabel!
+    
+    @IBOutlet weak var harvestReportLblSampleDamaged: UILabel!
+    
+    @IBOutlet weak var harvestReportLblCompHybridName: UILabel!
+    
+    @IBOutlet weak var harvestReportLblDateOfHarvesting: UILabel!
+    
+    
+    @IBOutlet weak var harvestReportImg: UIImageView!
     
     //Edit Form Views
     
@@ -182,34 +210,6 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     
     @IBAction func geoTagUploadCropImgBtnAction(_ sender: Any) {
         self.camera()
-//        let userObj = Constatnts.getUserObject()
-//        let attributedString = NSAttributedString(string: NSLocalizedString("choose_option", comment: ""), attributes: [
-//            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20),
-//            NSAttributedStringKey.foregroundColor : UIColor.orange
-//        ])
-//        alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
-//        alertController.setValue(attributedString, forKey: "attributedMessage")
-//        let cameraButton = UIAlertAction(title: "Camera", style: .default, handler: { (action) -> Void in
-//            print("Camera button tapped")
-//            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//                self.camera()
-//            }
-//            else{
-//                print("not compatible")
-//            }
-//        })
-//        
-//        let  galleryButton = UIAlertAction(title: NSLocalizedString("gallery", comment: ""), style: .default, handler: { (action) -> Void in
-//            print("Gallery button tapped")
-//            self.photoLibrary()
-//        })
-//        let  cancelButton = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action) -> Void in
-//            print("Cancel button tapped")
-//        })
-//        alertController.addAction(cameraButton)
-//        alertController.addAction(galleryButton)
-//        alertController.addAction(cancelButton)
-//        self.navigationController!.present(alertController, animated: true, completion: nil)
     }
     
 
@@ -234,9 +234,100 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     
     @IBOutlet weak var harvestReportMandiTxt: UITextField!
     
-    @IBOutlet weak var ratingView: FloatRatingView!
+    @IBOutlet weak var harvestReportCompHybridNameTxt: UITextField!
+    @IBOutlet weak var harvestReportYieldCompHybridTxt: UITextField!
+    @IBOutlet weak var harvestReportDidYouLikeTxt: UITextField!
     
-    @IBOutlet weak var harvestReportTopFabTxt: UITextField!
+    @IBOutlet weak var harvestReportTopFabView: UIView!
+    
+    @IBOutlet weak var harvestReportTopFab1Txt: UITextField!
+
+    @IBOutlet weak var harvestReportTopFab2Txt: UITextField!
+    
+    @IBOutlet weak var harvestReportTopFab3Txt: UITextField!
+    
+    @IBOutlet weak var harvestReportReasonView: UIView!
+    
+    @IBOutlet weak var harvestReportReason1Txt: UITextField!
+    @IBOutlet weak var harvestReportReason2Txt: UITextField!
+    //    @IBOutlet weak var ratingView: FloatRatingView!
+    
+    
+//    @IBOutlet weak var harvestReportTopFabTxt: UITextField!
+    
+    
+    @IBOutlet weak var harvestReportRatingPoorBtn: UIButton!
+    
+    @IBAction func harvestReportRatingPoorBtnAction(_ sender: Any) {
+        harvestReportPoor = !harvestReportPoor
+        if(harvestReportPoor == false){
+            self.harvestReportRatingPoorBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+               }
+               else{
+                   self.harvestReportRatingPoorBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
+                   self.harvestReportRatingAverageBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingGoodBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingExcellentBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportAverage = false
+                   self.harvestReportGood = false
+                   self.harvestReportExcellent = false
+                   self.dataSection4HybridRating = "Poor"
+               }
+    }
+    @IBOutlet weak var harvestReportRatingAverageBtn: UIButton!
+    
+    @IBAction func harvestReportRatingAverageBtnAction(_ sender: Any) {
+        harvestReportAverage = !harvestReportAverage
+        if(harvestReportAverage == false){
+            self.harvestReportRatingAverageBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+               }
+               else{
+                   self.harvestReportRatingAverageBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
+                   self.harvestReportRatingPoorBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingGoodBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingExcellentBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportPoor = false
+                   self.harvestReportGood = false
+                   self.harvestReportExcellent = false
+                   self.dataSection4HybridRating = "Average"
+               }
+    }
+    @IBOutlet weak var harvestReportRatingGoodBtn: UIButton!
+    
+    @IBAction func harvestReportRatingGoodBtnAction(_ sender: Any) {
+        harvestReportGood = !harvestReportGood
+        if(harvestReportGood == false){
+            self.harvestReportRatingGoodBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+               }
+               else{
+                   self.harvestReportRatingGoodBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
+                   self.harvestReportRatingPoorBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingAverageBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingExcellentBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportPoor = false
+                   self.harvestReportAverage = false
+                   self.harvestReportExcellent = false
+                   self.dataSection4HybridRating = "Good"
+               }
+    }
+    @IBOutlet weak var harvestReportRatingExcellentBtn: UIButton!
+    
+    @IBAction func harvestReportRatingExcellentBtnAction(_ sender: Any) {
+        harvestReportExcellent = !harvestReportExcellent
+        if(harvestReportExcellent == false){
+            self.harvestReportRatingPoorBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+               }
+               else{
+                   self.harvestReportRatingExcellentBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
+                   self.harvestReportRatingPoorBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingAverageBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportRatingGoodBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportPoor = false
+                   self.harvestReportAverage = false
+                   self.harvestReportGood = false
+                   self.dataSection4HybridRating = "Excellent"
+               }
+    }
     
     @IBOutlet weak var harvestReportWillGrowYesBtn: UIButton!
     
@@ -268,6 +359,9 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
 
     }
     
+    @IBOutlet weak var harvestReporthowManyAcresView: UIView!
+    @IBOutlet weak var harvestReporthowManyAcresTxt: UITextField!
+    
     @IBOutlet weak var harvestReportWillRecommendYesBtn: UIButton!
     
     @IBAction func harvestReportWillRecommendYesBtnAction(_ sender: Any) {
@@ -297,6 +391,50 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                     self.dataSection4WillRecommend = "No"
                 }
     }
+    
+    
+    @IBOutlet weak var harvestReportSampleDanagedYesBtn: UIButton!
+
+    @IBAction func harvestReportSampleDanagedYesBtnAction(_ sender: Any) {
+        harvestReportSampleDamagedYes = !harvestReportSampleDamagedYes
+        if(harvestReportSampleDamagedYes == false){
+            self.harvestReportSampleDanagedYesBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+               }
+               else{
+                   self.harvestReportSampleDanagedYesBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
+                   self.harvestReportSampleDanagedNoBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                   self.harvestReportSampleDamagedNo = false
+                   self.dataSection4SampleDamaged = "Yes"
+               }
+    }
+    
+    @IBOutlet weak var harvestReportSampleDanagedNoBtn: UIButton!
+    
+    @IBAction func harvestReportSampleDanagedNoBtnAction(_ sender: Any) {
+        harvestReportSampleDamagedNo = !harvestReportSampleDamagedNo
+        if(harvestReportSampleDamagedNo == false){
+                self.harvestReportSampleDanagedNoBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                }
+                else{
+                self.harvestReportSampleDanagedNoBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
+                self.harvestReportSampleDanagedYesBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+                    self.harvestReportSampleDamagedYes = false
+                    self.dataSection4SampleDamaged = "No"
+                }
+    }
+    @IBOutlet weak var harvestReportsampleDamagedView: UIView!
+    
+    @IBOutlet weak var harvestReportCompHybridName: UITextField!
+    @IBOutlet weak var harvestReportDateofHarvestingTxt: UITextField!
+    
+    @IBOutlet weak var harvestReportImageView: UIImageView!
+    @IBOutlet weak var harvestReportUploadCropImgBtn: UIButton!
+    @IBAction func harvestReportUploadCropImgBtnAction(_ sender: Any) {
+        self.camera()
+    }
+    
+    
+    //////
     @IBOutlet weak var submitBtn: UIButton!
     @IBAction func submitBtnAction(_ sender: Any) {
         if(self.dataStatus == NSLocalizedString("sampleRequest", comment: "")){
@@ -403,20 +541,79 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                 self.view.makeToast("Please Enter Mandi price")
                 return
             }
-            else if(dataSection4HybridRating == 0.0){
+            else if(harvestReportCompHybridNameTxt.text == ""){
+                self.view.makeToast("Please Select Competition Hybrid Name")
+                return
+            }
+            else if(harvestReportYieldCompHybridTxt.text == ""){
+                self.view.makeToast("Please Enter Yield of Competition Hybrid (Qt/acre)")
+                return
+            }
+            else if(harvestReportDidYouLikeTxt.text == ""){
+                self.view.makeToast("Please Select Did You Like The Hybrid Performance")
+                return
+            }
+            else if(self.harvestReportLblDidYouLike.text == "Yes"){
+                if(harvestReportTopFab1Txt.text == ""){
+                    self.view.makeToast("Please Enter Top 1 Fab")
+                    return
+                }
+                else if(harvestReportTopFab2Txt.text == ""){
+                    self.view.makeToast("Please Enter Top 2 Fab")
+                    return
+                }
+                else if(harvestReportTopFab3Txt.text == ""){
+                    self.view.makeToast("Please Enter Top 3 Fab")
+                    return
+                }
+            }
+            else if(self.harvestReportLblDidYouLike.text == "No"){
+                if(harvestReportReason1Txt.text == ""){
+                    self.view.makeToast("Please Enter Reason 1")
+                    return
+                }
+            }
+
+            else if(dataSection4HybridRating == ""){
                 self.view.makeToast("Please Select Hybrid Rating")
                 return
             }
-            else if(harvestReportTopFabTxt.text == ""){
-                self.view.makeToast("Please Select Top 3 Fab selection")
-                return
-            }
+//            else if(harvestReportTopFabTxt.text == ""){
+//                self.view.makeToast("Please Select Top 3 Fab selection")
+//                return
+//            }
             else if(dataSection4WillGrow == ""){
                 self.view.makeToast("Please Select Will you grow next year")
                 return
             }
+            else if(dataSection4WillGrow == "Yes"){
+                if(harvestReporthowManyAcresTxt.text == ""){
+                    self.view.makeToast("Please Enter How Many Acres")
+                    return
+                }
+            }
             else if(dataSection4WillRecommend == ""){
                 self.view.makeToast("Please Select will you recommend to others")
+                return
+            }
+            else if(dataSection4SampleDamaged == ""){
+                self.view.makeToast("Please Select Sample Damaged")
+                return
+            }
+            else if(self.dataSection4SampleDamaged == "Yes"){
+                if(harvestReportCompHybridName.text == ""){
+                    self.view.makeToast("Please Select Reason")
+                    return
+                }
+                else if(harvestReportCompHybridName.text == "Germination"){
+                    if(harvestReportDateofHarvestingTxt.text == ""){
+                        self.view.makeToast("Please Select Germination Issue Date")
+                        return
+                    }
+                }
+            }
+            else if (DamageImageNameSending == ""){
+                self.view.makeToast("Please Upload Crop Image")
                 return
             }
             else{
@@ -430,6 +627,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                 self.view.makeToast(checkInterNet)
                 }
             }
+                       
         }
     }
 
@@ -439,6 +637,9 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     var getHybridListArray: NSArray?
     var getTopFabListArray: NSArray?
     
+    var getCompHyrbidArray: NSArray?
+    var getReasonArray: NSArray?
+
     var sampleReportYes = false
     var sampleReportNo = false
     
@@ -450,6 +651,14 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     
     var harvestReportWillRecommendYes = false
     var harvestReportWillRecommendNo = false
+    
+    var harvestReportPoor = false
+    var harvestReportAverage = false
+    var harvestReportGood = false
+    var harvestReportExcellent = false
+    
+    var harvestReportSampleDamagedYes = false
+    var harvestReportSampleDamagedNo = false
     
     //Section Value Variables
     var dataSection1Pravakta:String = ""
@@ -469,10 +678,13 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
 //    var dataSection4DateOfHarvesting:String = ""
 //    var dataSection4Yield:String = ""
 //    var dataSection4Mandi:String = ""
-    var dataSection4HybridRating:Double = 0.0
+    var dataSection4HybridRating:String = ""
 //    var dataSection4TopFab:String = ""
     var dataSection4WillGrow:String = ""
     var dataSection4WillRecommend:String = ""
+    
+    var dataSection4SampleDamaged:String = ""
+    
     var dataStatus:String = ""
     
     var statusIS:String = ""
@@ -481,7 +693,10 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     var hybridNameTblView = UITableView()
     var reportCropDropDownTblView = UITableView()
     var reportHybridNameTblView = UITableView()
-    var topFabTblView = UITableView()
+//    var topFabTblView = UITableView()
+    var reportCompHybridTblView = UITableView()
+    var reportDidYouLikeTblView = UITableView()
+    var reportHybridReasonTblView = UITableView()
     
     var cropID = ""
     var hybridID = ""
@@ -496,6 +711,13 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     var reportHybridArray = NSArray()
     var originalReportHybridArray = NSArray()
     var topFabArray = NSArray()
+    
+    var reportCompHybridArray = NSArray()
+    var reportDidYouLikeArray: NSArray = [
+        ["id": "1", "name": "Yes"],
+        ["id": "2", "name": "No"]
+    ]
+    var reportReasonArray = NSArray()
     
     var arrTopFabList:NSArray = []
     var getServerId = 0
@@ -512,13 +734,13 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     var maximumDate : NSDate?
     
     var ImageNameSending = ""
+    var DamageImageNameSending = ""
     var originalSelectedDate = ""
     
     var selectLocation: CLLocationCoordinate2D?
     var currentLocation : CLLocationCoordinate2D?
     
     var arrayAreaCoordinates = NSMutableArray()
-    
     
     
     func getAreaCoordinates(_ cordinates: NSMutableArray) {
@@ -591,6 +813,10 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         bigFarmerEditView.isHidden = true
         
         editButton.isHidden = true
+        
+//        harvestReportTopFabView.isHidden = true
+        harvestReportReasonView.isHidden = true
+        
 
         print("selected list data",self.dataObj!)
         print("selected list data count",self.dataObj!.count)
@@ -614,12 +840,23 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         self.harvestReportWillGrowYesBtn?.setImage(UIImage(named: "Radio"), for: .normal)
         self.harvestReportWillRecommendNoBtn?.setImage(UIImage(named: "Radio"), for: .normal)
         self.harvestReportWillRecommendYesBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+        
+        self.harvestReportRatingPoorBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+        self.harvestReportRatingAverageBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+        self.harvestReportRatingGoodBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+        self.harvestReportRatingExcellentBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+        
+        self.harvestReportSampleDanagedNoBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+        self.harvestReportSampleDanagedYesBtn?.setImage(UIImage(named: "Radio"), for: .normal)
+        
                 
         self.geoTagImageView.setImage(UIImage(named: "PlaceHolderImage")!)
         
-        ratingView?.delegate = self
-        ratingView?.type = .wholeRatings
-        ratingView?.minRating = 0
+        self.harvestReportImageView.setImage(UIImage(named: "PlaceHolderImage")!)
+        
+//        ratingView?.delegate = self
+//        ratingView?.type = .wholeRatings
+//        ratingView?.minRating = 0
         
         //updateStarColors(for: ratingView, rating: Float(ratingView.rating))
         
@@ -628,7 +865,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         self.reportCropArray = getCropListArray!
         self.reportHybridArray = getHybridListArray!
         self.originalReportHybridArray = getHybridListArray!
-  
+
         
         print("crop list data222",self.cropArray)
         print("hybrid list data333",self.hybridArray)
@@ -654,10 +891,23 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         reportHybridNameTblView.dataSource = self
         reportHybridNameTblView.delegate = self
         
+        self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: reportCompHybridTblView, textField: harvestReportCompHybridNameTxt)
+        reportCompHybridTblView.dataSource = self
+        reportCompHybridTblView.delegate = self
+        
+        self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: reportDidYouLikeTblView, textField: harvestReportDidYouLikeTxt)
+        reportDidYouLikeTblView.dataSource = self
+        reportDidYouLikeTblView.delegate = self
+        
+        self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: reportHybridReasonTblView, textField: harvestReportCompHybridName)
+        reportHybridReasonTblView.dataSource = self
+        reportHybridReasonTblView.delegate = self
+        
+        
         //top fab dropdown tableView
-        self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: topFabTblView, textField: harvestReportTopFabTxt)
-        topFabTblView.dataSource = self
-        topFabTblView.delegate = self
+//        self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: topFabTblView, textField: harvestReportTopFabTxt)
+//        topFabTblView.dataSource = self
+//        topFabTblView.delegate = self
         
     }
     func appendEditDataHere(){
@@ -668,7 +918,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                     print("123***456***789",self.dataStatus )
                     dataSection1Pravakta = ""
                     dataSection2Pravakta = ""
-                    dataSection4HybridRating = 0.0
+//                    dataSection4HybridRating = 0.0
                     dataSection4WillGrow = ""
                     dataSection4WillRecommend = ""
         
@@ -719,7 +969,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         
         self.dataSection1Pravakta = ""
         self.dataSection2Pravakta = ""
-        self.dataSection4HybridRating = 0.0
+//        self.dataSection4HybridRating = 0.0
         self.dataSection4WillGrow = ""
         self.dataSection4WillRecommend = ""
         
@@ -742,9 +992,24 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         getServerId = self.dataObj?.value(forKey: "serverId") as! Int
         print("123***456***999",self.getServerId)
         
-        self.getTopFabListArray = dataObj!["top3Fablists"] as? NSArray
-        print("topfab list data",self.getTopFabListArray!)
-        self.topFabArray = getTopFabListArray!
+//        self.getTopFabListArray = dataObj!["top3Fablists"] as? NSArray
+//        print("topfab list data",self.getTopFabListArray!)
+//        self.topFabArray = getTopFabListArray!
+        
+        self.getCompHyrbidArray = dataObj!["competitorHybridsList"] as? NSArray
+        self.reportCompHybridArray = getCompHyrbidArray!
+        print("get comp2",self.reportCompHybridArray)
+        
+        self.getReasonArray = dataObj!["damageReasonsList"] as? NSArray
+        self.reportReasonArray = getReasonArray!
+        print("get reason2",self.reportReasonArray)
+        print("get do you like",self.reportDidYouLikeArray)
+    
+        self.reportCompHybridTblView.reloadData()
+        self.reportDidYouLikeTblView.reloadData()
+        self.reportHybridReasonTblView.reloadData()
+        
+    
 
         if(NSLocalizedString("sampleRequest", comment: "") == self.statusIS){
             RetailerTopView.isHidden = false
@@ -845,7 +1110,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
             PravtktaHeightConstraint.constant =  260
             PravtktaTopImageView.image = UIImage(named: "downroundIcon")
             
-            bigfarmerEditHeightConstraint.constant = 500
+            bigfarmerEditHeightConstraint.constant = 1300
             BigfarmerTopImageView.image = UIImage(named: "downroundIcon")
             
             
@@ -909,6 +1174,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
             farmerView.isHidden = false
             PravtktaView.isHidden = false
             BigfarmerView.isHidden = false
+        
     
     RetailerHeightConstraint.constant = 130
     RetailerTopImageView.image = UIImage(named: "downroundIcon")
@@ -919,7 +1185,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
     PravtktaHeightConstraint.constant =  260
     PravtktaTopImageView.image = UIImage(named: "downroundIcon")
     
-    BigfarmerHeightConstraint.constant = 250
+    BigfarmerHeightConstraint.constant = 720
     BigfarmerTopImageView.image = UIImage(named: "downroundIcon")
             
             self.dataStatus = "Finish"
@@ -938,18 +1204,12 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
             self.sampleReportLbl5.text = self.dataObj?.value(forKey: "productConfirmationKey") as? String
             self.geoTagLbl1.text = self.dataObj?.value(forKey: "dateOfShowing") as? String
             self.geoTagLbl2.text = self.dataObj?.value(forKey: "geoTAg") as? String
-            print("what image is coming",self.dataObj?.value(forKey: "cropUploadImage")! ?? "")
+            
+            
+            print("what image is comingkkkk",self.dataObj?.value(forKey: "cropUploadImage")! ?? "")
             let productImgURL = self.dataObj?.value(forKey: "cropUploadImage") as? String
             self.ImageNameSending = self.dataObj?.value(forKey: "cropUploadImage") as! String
 
-            self.harvestReportLbl1.text = self.dataObj?.value(forKey: "dateOfHarvesting") as? String
-            self.harvestReportLbl2.text = self.dataObj?.value(forKey: "yieldPerAcre") as? String
-            self.harvestReportLbl3.text = self.dataObj?.value(forKey: "pricePerQt") as? String
-            self.harvestReportLbl4.text = self.dataObj?.value(forKey: "rating") as? String
-            self.harvestReportLbl5.text = self.dataObj?.value(forKey: "top3FabSelection") as? String
-            self.harvestReportLbl6.text = self.dataObj?.value(forKey: "growNextYear") as? String
-            self.harvestReportLbl7.text = self.dataObj?.value(forKey: "recommendedToOthers") as? String
-            
             if productImgURL != "" {
                 DispatchQueue.main.async {
                     if productImgURL!.hasPrefix("http") || productImgURL!.hasPrefix("https") {
@@ -958,6 +1218,55 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                     }
                     else{
                         self.geoTagImg.image = UIImage(named: "image_placeholder")
+                    }
+                }
+            }
+
+            self.harvestReportLbl1.text = self.dataObj?.value(forKey: "dateOfHarvesting") as? String
+            self.harvestReportLbl2.text = self.dataObj?.value(forKey: "yieldPerAcre") as? String
+            self.harvestReportLbl3.text = self.dataObj?.value(forKey: "pricePerQt") as? String
+            self.harvestReportLbl4.text = self.dataObj?.value(forKey: "rating") as? String
+//            self.harvestReportLbl5.text = self.dataObj?.value(forKey: "top3FabSelection") as? String
+            self.harvestReportLbl6.text = self.dataObj?.value(forKey: "growNextYear") as? String
+            self.harvestReportLbl7.text = self.dataObj?.value(forKey: "recommendedToOthers") as? String
+            
+            
+            self.harvestReportLblCompHybName.text = self.dataObj?.value(forKey: "competitorHybridName") as? String
+            self.harvestReportLbYieldComp.text = self.dataObj?.value(forKey: "competitorHybridYield") as? String
+            self.harvestReportLblDidYouLike.text = self.dataObj?.value(forKey: "performanceOpinion") as? String
+            
+            if(self.harvestReportLblDidYouLike.text == "Yes"){
+                self.harvestReportTopFabView.isHidden = false
+                self.harvestReportReasonView.isHidden = true
+                self.harvestReportLblTopOrReason1.text = self.dataObj?.value(forKey: "hybridPerformanceTop1Fab") as? String
+                self.harvestReportLblTopOrReason2.text = self.dataObj?.value(forKey: "hybridPerformanceTop2Fab") as? String
+                self.harvestReportLblTop3.text = self.dataObj?.value(forKey: "hybridPerformanceTop3Fab") as? String
+            }
+            else{
+                self.harvestReportTopFabView.isHidden = true
+                self.harvestReportReasonView.isHidden = false
+                self.harvestReportLblTopOrReason1.text = self.dataObj?.value(forKey: "hybridPerformanceReasonOne") as? String
+                self.harvestReportLblTopOrReason2.text = self.dataObj?.value(forKey: "hybridPerformanceReasonTwo") as? String
+            }
+            
+            self.harvestReportLblDHowManyAcres.text = self.dataObj?.value(forKey: "noOfAcres") as? String
+
+            self.harvestReportLblSampleDamaged.text = self.dataObj?.value(forKey: "sampleDamaged") as? String
+            
+            
+            print("what image is cominguuuu",self.dataObj?.value(forKey: "cropDamageImage")! ?? "")
+            let productDamageImgURL = self.dataObj?.value(forKey: "cropDamageImage") as? String
+            self.DamageImageNameSending = self.dataObj?.value(forKey: "cropDamageImage") as! String
+            
+
+            if productDamageImgURL != "" {
+                DispatchQueue.main.async {
+                    if productDamageImgURL!.hasPrefix("http") || productDamageImgURL!.hasPrefix("https") {
+                        let imageDamageUrl = URL(string: productDamageImgURL!)
+                        self.harvestReportImg?.kf.setImage(with: imageDamageUrl! as Resource, placeholder: UIImage(named: "image_placeholder.png"), options: nil, progressBlock: nil)
+                    }
+                    else{
+                        self.harvestReportImg.image = UIImage(named: "image_placeholder")
                     }
                 }
             }
@@ -995,6 +1304,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         self.backButton?.setImage(UIImage(named: "Back"), for: .normal)
         
         self.geoTagUploadCropImgBtn.setTitle("", for: .normal)
+        self.harvestReportUploadCropImgBtn.setTitle("", for: .normal)
         self.editButton.setTitle("", for: .normal)
         
         
@@ -1278,23 +1588,23 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                 }
     }
     
-    func floatRatingView(_ ratingView: FloatRatingView, isUpdating rating: Double) {
-        //liveLabel.text = String(format: "%.2f", self.floatRatingView.rating)
-    }
+//    func floatRatingView(_ ratingView: FloatRatingView, isUpdating rating: Double) {
+//        //liveLabel.text = String(format: "%.2f", self.floatRatingView.rating)
+//    }
     
-    func floatRatingView(_ ratingView: FloatRatingView, didUpdate rating: Double) {
-        
-        if self.ratingView!.rating >= Double(1.0) && self.ratingView!.rating <= Double(3.9) {
-            self.ratingView?.fullImage = UIImage(named: "StarRed")
-            dataSection4HybridRating = self.ratingView!.rating
-        }else if self.ratingView!.rating >= Double(4.0) && self.ratingView!.rating <= Double(7.9) {
-            self.ratingView?.fullImage = UIImage(named: "StarOrange")
-            dataSection4HybridRating = self.ratingView!.rating
-        }else if self.ratingView!.rating >= Double(8.0) {
-            self.ratingView?.fullImage = UIImage(named: "StarGreen")
-            dataSection4HybridRating = self.ratingView!.rating
-        }
-    }
+//    func floatRatingView(_ ratingView: FloatRatingView, didUpdate rating: Double) {
+//        
+//        if self.ratingView!.rating >= Double(1.0) && self.ratingView!.rating <= Double(3.9) {
+//            self.ratingView?.fullImage = UIImage(named: "StarRed")
+//            dataSection4HybridRating = self.ratingView!.rating
+//        }else if self.ratingView!.rating >= Double(4.0) && self.ratingView!.rating <= Double(7.9) {
+//            self.ratingView?.fullImage = UIImage(named: "StarOrange")
+//            dataSection4HybridRating = self.ratingView!.rating
+//        }else if self.ratingView!.rating >= Double(8.0) {
+//            self.ratingView?.fullImage = UIImage(named: "StarGreen")
+//            dataSection4HybridRating = self.ratingView!.rating
+//        }
+//    }
     
     //MARK: camera
     func camera()
@@ -1328,11 +1638,19 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
             if let image_data = info[UIImagePickerControllerEditedImage] as? UIImage {
                 selectedCropImage = image_data
 
-                self.geoTagImageView.setImage(self.selectedCropImage)
-                let currentTime = Constatnts.getCurrentMillis()
-                let imgFileName = String(currentTime).replacingOccurrences(of: "-", with: "")
-                self.ImageNameSending = String(format:"%@.jpg",imgFileName)
-                
+                if(self.dataStatus == NSLocalizedString("performanceReport", comment: "")){
+                    self.harvestReportImageView.setImage(self.selectedCropImage)
+                    let currentTime = Constatnts.getCurrentMillis()
+                    let imgFileName = String(currentTime).replacingOccurrences(of: "-", with: "")
+                    self.DamageImageNameSending = String(format:"%@.jpg",imgFileName)
+                }
+                else{
+                    self.geoTagImageView.setImage(self.selectedCropImage)
+                    let currentTime = Constatnts.getCurrentMillis()
+                    let imgFileName = String(currentTime).replacingOccurrences(of: "-", with: "")
+                    self.ImageNameSending = String(format:"%@.jpg",imgFileName)
+                }
+              
                 if let data = UIImagePNGRepresentation(image_data) as Data? {
                     let bcf = ByteCountFormatter()
                     bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
@@ -1609,14 +1927,20 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         else if textField == sampleReportHybridTxt {
             reportHybridNameTblView.isHidden = true
         }
+        else if textField == harvestReportCompHybridNameTxt {
+            reportCompHybridTblView.isHidden = true
+        }
+        else if textField == harvestReportDidYouLikeTxt {
+            reportDidYouLikeTblView.isHidden = true
+        }
+        else if textField == harvestReportCompHybridName {
+            reportHybridReasonTblView.isHidden = true
+        }
         else if textField == sampleReceivingData {
 
         }
         else if textField == sampleReportProductConfirmationTxt {
 
-        }
-        else if textField == harvestReportTopFabTxt {
-            topFabTblView.isHidden = true
         }
         return true
     }
@@ -1646,6 +1970,24 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
            reportHybridNameTblView.isHidden = false
            reportCropDropDownTblView.isHidden = true
        }
+        else if textField == harvestReportCompHybridNameTxt {
+            harvestReportCompHybridNameTxt.resignFirstResponder()
+            reportCompHybridTblView.isHidden = false
+            reportDidYouLikeTblView.isHidden = true
+            reportHybridReasonTblView.isHidden = true
+        }
+        else if textField == harvestReportDidYouLikeTxt {
+            harvestReportDidYouLikeTxt.resignFirstResponder()
+            reportDidYouLikeTblView.isHidden = false
+            reportCompHybridTblView.isHidden = true
+            reportHybridReasonTblView.isHidden = true
+        }
+        else if textField == harvestReportCompHybridName {
+            harvestReportCompHybridName.resignFirstResponder()
+            reportHybridReasonTblView.isHidden = false
+            reportDidYouLikeTblView.isHidden = true
+            reportCompHybridTblView.isHidden = true
+        }
         else if textField == sampleReceivingData {
             sampleReceivingData.resignFirstResponder()
             self.openCalender(fromSection: NSLocalizedString("sampleReport", comment: ""))
@@ -1665,9 +2007,9 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
             harvestReportDateOfHarvestingTxt.resignFirstResponder()
             self.openCalender(fromSection: NSLocalizedString("performanceReport", comment: ""))
         }
-        else if textField == harvestReportTopFabTxt {
-            harvestReportTopFabTxt.resignFirstResponder()
-            topFabTblView.isHidden = false
+        else if textField == harvestReportDateofHarvestingTxt {
+            harvestReportDateofHarvestingTxt.resignFirstResponder()
+            self.openCalender(fromSection: NSLocalizedString("performanceReport", comment: ""))
         }
     }
 
@@ -1700,16 +2042,33 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
             print("its 4")
 
         }
-        else if textField == sampleReceivingData{
+        else if textField == harvestReportCompHybridNameTxt{
             print("its 5")
+            view.endEditing(true)
+//            self.RetailerView.endEditing(true)
+//            self.retailerEditView.endEditing(true)
+
+        }
+        else if textField == harvestReportDidYouLikeTxt{
+            print("its 6")
+            view.endEditing(true)
+//            self.RetailerView.endEditing(true)
+//            self.retailerEditView.endEditing(true)
+
+        }
+        else if textField == harvestReportCompHybridName{
+            print("its 7")
+            view.endEditing(true)
+//            self.RetailerView.endEditing(true)
+//            self.retailerEditView.endEditing(true)
+
+        }
+        else if textField == sampleReceivingData{
+            print("its 8")
 
         }
         else if textField == sampleReportProductConfirmationTxt{
-            print("its 6")
-
-        }
-        else if textField == harvestReportTopFabTxt{
-            print("its 7")
+            print("its 9")
 
         }
     }
@@ -1731,6 +2090,56 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         }
         else if textField == self.harvestReportMandiTxt{
         let maxLength = 10
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+
+        return newString.length <= maxLength
+        }
+        else if textField == self.harvestReportYieldCompHybridTxt{
+        let maxLength = 5
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+
+        return newString.length <= maxLength
+        }
+        else if textField == self.harvestReporthowManyAcresTxt{
+        let maxLength = 5
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+
+        return newString.length <= maxLength
+        }
+        
+        else if textField == self.harvestReportTopFab1Txt{
+        let maxLength = 25
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+
+        return newString.length <= maxLength
+        }
+        else if textField == self.harvestReportTopFab2Txt{
+        let maxLength = 25
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+
+        return newString.length <= maxLength
+        }
+        else if textField == self.harvestReportTopFab3Txt{
+        let maxLength = 25
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+
+        return newString.length <= maxLength
+        }
+        else if textField == self.harvestReportReason1Txt{
+        let maxLength = 25
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+
+        return newString.length <= maxLength
+        }
+        else if textField == self.harvestReportReason2Txt{
+        let maxLength = 25
         let currentString: NSString = (textField.text ?? "") as NSString
         let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
 
@@ -1824,7 +2233,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                     BigfarmerHeightConstraint.constant = 0
                 }
                 else{
-                    BigfarmerHeightConstraint.constant = 250
+                    BigfarmerHeightConstraint.constant = 720
                     BigfarmerTopImageView.image = UIImage(named: "downroundIcon")
                 }
             }
@@ -1836,7 +2245,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                     bigfarmerEditHeightConstraint.constant = 0
                 }
                 else{
-                    bigfarmerEditHeightConstraint.constant = 500
+                    bigfarmerEditHeightConstraint.constant = 1300
                     BigfarmerTopImageView.image = UIImage(named: "downroundIcon")
                 }
             }
@@ -1885,6 +2294,7 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                 "hybridId": self.hybridID,
                 "recommendedToOthers": self.dataSection4WillRecommend,
                 "cropUploadImage": ImageNameSending,
+                "cropDamageImage": DamageImageNameSending,
                 "yieldPerAcre": self.harvestReportYieldTxt.text!,
                 "rating": self.dataSection4HybridRating,
                 "reportCropId": self.reportCropID,
@@ -1895,10 +2305,23 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
                 "reportHybridName":self.sampleReportHybridTxt.text!,
                 "isPravaktha":self.dataSection1Pravakta,
                 "sampleReceived":self.dataSection2Pravakta,
-                "top3FabId":self.topFabID,
-                "top3FabName":self.harvestReportTopFabTxt.text!,
+//                "top3FabId":self.topFabID,
+//                "top3FabName":self.harvestReportTopFabTxt.text!,
                 "customerTypeName":userObj.customerTypeName!,
                 "mdoMdrActualUserId":self.iagUserIDTxt.text!,
+                
+                "competitorHybridName":self.harvestReportCompHybridNameTxt.text!,
+                "competitorHybridYield":self.harvestReportYieldCompHybridTxt.text!,
+                "hybridPerformanceReasonOne":self.harvestReportReason1Txt.text!,
+                "hybridPerformanceReasonTwo":self.harvestReportReason2Txt.text ?? "",
+                "hybridPerformanceTop1Fab":self.harvestReportTopFab1Txt.text!,
+                "hybridPerformanceTop2Fab":self.harvestReportTopFab2Txt.text!,
+                "hybridPerformanceTop3Fab":self.harvestReportTopFab3Txt.text!,
+                "mdoMdrUserIdType":"IAG",
+                "performanceOpinion":self.harvestReportDidYouLikeTxt.text!,
+                "performanceSelection":self.harvestReportDidYouLikeTxt.text!,
+                "sampleDamaged":self.dataSection4SampleDamaged,
+                "top3FabId":0,
             ]
         ]
         print("the main finial",originalData)
@@ -1927,9 +2350,17 @@ class SampleTrackingDetailsViewController: BaseViewController,FloatRatingViewDel
         Alamofire.upload(multipartFormData: {(multipartFormData) in
             multipartFormData.append(stringAPI.data(using: String.Encoding.utf8)!, withName: "encodedData")
             
-            if let imageData = UIImageJPEGRepresentation(self.geoTagImageView.image ?? UIImage(), 1) {
-                multipartFormData.append(imageData, withName: "multipartFile", fileName: self.ImageNameSending, mimeType: "image/png")
+            if(self.dataStatus == NSLocalizedString("performanceReport", comment: "")){
+                if let imageData = UIImageJPEGRepresentation(self.harvestReportImageView.image ?? UIImage(), 1) {
+                    multipartFormData.append(imageData, withName: "multipartFile", fileName: self.DamageImageNameSending, mimeType: "image/png")
+                }
             }
+            else{
+                if let imageData = UIImageJPEGRepresentation(self.geoTagImageView.image ?? UIImage(), 1) {
+                    multipartFormData.append(imageData, withName: "multipartFile", fileName: self.ImageNameSending, mimeType: "image/png")
+                }
+            }
+           
         }, usingThreshold: UInt64.init(), to: String(format :"%@%@",BASE_URL,POST_SAMPLE_TRACKING_SAVE_REQUEST), method: .post, headers: headers, encodingCompletion: {(encodeResult) in
             
             print("url:%@%@",BASE_URL,POST_SAMPLE_TRACKING_SAVE_REQUEST)
@@ -1999,9 +2430,18 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
         else if tableView == reportHybridNameTblView {
             return reportHybridArray.count
         }
-        else if tableView == topFabTblView {
-            return topFabArray.count
+        else if tableView == reportCompHybridTblView {
+            return reportCompHybridArray.count
         }
+        else if tableView == reportDidYouLikeTblView {
+            return reportDidYouLikeArray.count
+        }
+        else if tableView == reportHybridReasonTblView {
+            return reportReasonArray.count
+        }
+//        else if tableView == topFabTblView {
+//            return topFabArray.count
+//        }
         return 0
     }
     
@@ -2027,10 +2467,22 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
             let hybridDic = reportHybridArray.object(at: indexPath.row) as? NSDictionary
             cell.textLabel?.text = hybridDic?.value(forKey: "hybridName") as? String
         }
-        else if tableView == topFabTblView {
-            let hybridDic = topFabArray.object(at: indexPath.row) as? NSDictionary
-            cell.textLabel?.text = hybridDic?.value(forKey: "name") as? String
+        else if tableView == reportCompHybridTblView {
+            let comphybridDic = reportCompHybridArray.object(at: indexPath.row) as? NSDictionary
+            cell.textLabel?.text = comphybridDic?.value(forKey: "name") as? String
         }
+        else if tableView == reportDidYouLikeTblView {
+            let didyouLikeDic = reportDidYouLikeArray.object(at: indexPath.row) as? NSDictionary
+            cell.textLabel?.text = didyouLikeDic?.value(forKey: "name") as? String
+        }
+        else if tableView == reportHybridReasonTblView {
+            let reasonDic = reportReasonArray.object(at: indexPath.row) as? NSDictionary
+            cell.textLabel?.text = reasonDic?.value(forKey: "name") as? String
+        }
+//        else if tableView == topFabTblView {
+//            let hybridDic = topFabArray.object(at: indexPath.row) as? NSDictionary
+//            cell.textLabel?.text = hybridDic?.value(forKey: "name") as? String
+//        }
         return cell
     }
     
@@ -2071,13 +2523,34 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
            reportHybridNameTblView.isHidden = true
            sampleReportHybridTxt.resignFirstResponder()
        }
-        else if tableView == topFabTblView {
-            let topFabDic = self.topFabArray.object(at: indexPath.row) as? NSDictionary
-            topFabID =  String(describing: topFabDic!.value(forKey: "id"))
-            harvestReportTopFabTxt.text = topFabDic?.value(forKey: "name") as? String
-            topFabTblView.isHidden = true
-            harvestReportTopFabTxt.resignFirstResponder()
+        else if tableView == reportCompHybridTblView {
+            let hybridDic = self.reportCompHybridArray.object(at: indexPath.row) as? NSDictionary
+           // reportHybridID =  String(describing: hybridDic!.value(forKey: "id")!)
+            harvestReportCompHybridNameTxt.text = hybridDic?.value(forKey: "name") as? String
+            reportCompHybridTblView.isHidden = true
+            harvestReportCompHybridNameTxt.resignFirstResponder()
         }
+        else if tableView == reportDidYouLikeTblView {
+            let hybridDic = self.reportDidYouLikeArray.object(at: indexPath.row) as? NSDictionary
+           // reportHybridID =  String(describing: hybridDic!.value(forKey: "id")!)
+            harvestReportDidYouLikeTxt.text = hybridDic?.value(forKey: "name") as? String
+            reportDidYouLikeTblView.isHidden = true
+            harvestReportDidYouLikeTxt.resignFirstResponder()
+        }
+        else if tableView == reportHybridReasonTblView {
+            let hybridDic = self.reportReasonArray.object(at: indexPath.row) as? NSDictionary
+           // reportHybridID =  String(describing: hybridDic!.value(forKey: "id")!)
+            harvestReportCompHybridName.text = hybridDic?.value(forKey: "name") as? String
+            reportHybridReasonTblView.isHidden = true
+            harvestReportCompHybridName.resignFirstResponder()
+        }
+//        else if tableView == topFabTblView {
+//            let topFabDic = self.topFabArray.object(at: indexPath.row) as? NSDictionary
+//            topFabID =  String(describing: topFabDic!.value(forKey: "id"))
+//            harvestReportTopFabTxt.text = topFabDic?.value(forKey: "name") as? String
+//            topFabTblView.isHidden = true
+//            harvestReportTopFabTxt.resignFirstResponder()
+//        }
 
         self.view.endEditing(true)
     }

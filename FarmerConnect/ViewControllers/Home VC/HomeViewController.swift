@@ -3200,6 +3200,10 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         var getProjectName = ""
         var getLanguage = ""
         
+//        let displayName = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+//        ?? Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+//        ?? "FarmerConnect"
+//        let bundleId = Bundle.main.bundleIdentifier ?? "com.phi.farmerconnect"
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
         if BASE_URL == "https://pioneeractivity.com/rest/" {
