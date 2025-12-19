@@ -4170,8 +4170,7 @@
             "moduleName": "EmpoverCameraScannerSDK",
             "static": true,
             "declAttributes": [
-              "Final",
-              "RawDocComment"
+              "Final"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -4994,462 +4993,462 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4146,
+      "offset": 3896,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4175,
+      "offset": 3925,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4234,
+      "offset": 3984,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4434,
+      "offset": 4184,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4570,
+      "offset": 4320,
       "length": 2,
       "value": "17"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4689,
+      "offset": 4439,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4745,
+      "offset": 4495,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4882,
+      "offset": 4632,
       "length": 2,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4982,
+      "offset": 4732,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5038,
+      "offset": 4788,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "StringLiteral",
-      "offset": 5168,
+      "offset": 4918,
       "length": 4,
       "value": "\"OK\""
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5237,
+      "offset": 4987,
       "length": 2,
       "value": "17"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5314,
+      "offset": 5064,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11245,
+      "offset": 10995,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11353,
+      "offset": 11103,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 11422,
+      "offset": 11172,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 11526,
+      "offset": 11276,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 11574,
+      "offset": 11324,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 11655,
+      "offset": 11405,
       "length": 4,
       "value": "0.25"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 11739,
+      "offset": 11489,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 11791,
+      "offset": 11541,
       "length": 3,
       "value": "2.0"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11905,
+      "offset": 11655,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 12794,
+      "offset": 12544,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 12839,
+      "offset": 12589,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21279,
+      "offset": 21126,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21307,
+      "offset": 21154,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21318,
+      "offset": 21165,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21330,
+      "offset": 21177,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21417,
+      "offset": 21264,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21472,
+      "offset": 21319,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21511,
+      "offset": 21358,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 21619,
+      "offset": 21466,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21691,
+      "offset": 21538,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21725,
+      "offset": 21572,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21871,
+      "offset": 21718,
       "length": 2,
       "value": "28"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "FloatLiteral",
-      "offset": 21887,
+      "offset": 21734,
       "length": 4,
       "value": "0.12"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21928,
+      "offset": 21775,
       "length": 3,
       "value": "130"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 21999,
+      "offset": 21846,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22020,
+      "offset": 21867,
       "length": 2,
       "value": "40"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22050,
+      "offset": 21897,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22105,
+      "offset": 21952,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22110,
+      "offset": 21957,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22131,
+      "offset": 21978,
       "length": 2,
       "value": "65"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 21989,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22002,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 22108,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
       "offset": 22142,
-      "length": 3,
-      "value": "200"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 22155,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22261,
-      "length": 2,
-      "value": "40"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 22295,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 22336,
+      "offset": 22183,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22417,
+      "offset": 22264,
       "length": 3,
       "value": "200"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22465,
+      "offset": 22312,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22751,
+      "offset": 22598,
       "length": 2,
       "value": "40"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22755,
+      "offset": 22602,
       "length": 3,
       "value": "420"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22794,
+      "offset": 22641,
       "length": 2,
       "value": "44"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22867,
+      "offset": 22714,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22894,
+      "offset": 22741,
       "length": 2,
       "value": "70"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 22967,
+      "offset": 22814,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 23002,
+      "offset": 22849,
       "length": 2,
       "value": "24"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 23142,
+      "offset": 22989,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 23231,
+      "offset": 23078,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/CameraScannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 23281,
+      "offset": 23128,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/empover\/Documents\/EmpoverCameraScannerSDK\/EmpoverCameraScannerSDK\/ScannerViewController.swift",
+      "filePath": "\/Users\/empover\/Documents\/EMP-SCANNER-IOS-SDK\/EmpoverCameraScannerSDK\/ScannerViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 2766,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-giquhysglnyeykbiktbwtgwypttd\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 735,
       "length": 13,
       "value": "\"cortevaLogo\""
     },
     {
-      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-giquhysglnyeykbiktbwtgwypttd\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 874,
       "length": 10,
       "value": "\"flashoff\""
     },
     {
-      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-giquhysglnyeykbiktbwtgwypttd\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1008,
       "length": 9,
       "value": "\"flashon\""
     },
     {
-      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-giquhysglnyeykbiktbwtgwypttd\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1147,
       "length": 12,
       "value": "\"speakeroff\""
     },
     {
-      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-cvhmekzkekmrmhbwzsxoleyqcpph\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/empover\/Library\/Developer\/Xcode\/DerivedData\/EmpoverCameraScannerSDK-giquhysglnyeykbiktbwtgwypttd\/Build\/Intermediates.noindex\/EmpoverCameraScannerSDK.build\/Debug-iphoneos\/EmpoverCameraScannerSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1287,
       "length": 11,

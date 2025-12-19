@@ -40,10 +40,10 @@ pod 'FBSDKCoreKit'
 #pod 'AcvissCore', :git =>   'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'react-xc162'
 #pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'react-xc162-new'
 
-pod 'AcvissCore', :git => 'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'react-xc162'
-pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'react-xc162-error'
-
-pod 'ZXingObjC'
+#pod 'AcvissCore', :git => 'https://gitlab.com/acviss-ios/private-pods/acviss-core.git', :branch => 'react-xc162'
+#pod 'Acvission', :git => 'https://gitlab.com/acviss-ios/private-pods/acvission.git', :branch => 'react-xc162-error'
+#
+#pod 'ZXingObjC'
 
 
   # Comment the next line if you don't want to use dynamic frameworks

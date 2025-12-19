@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		t9QDn/rVs1gz/aXeOKwB4x76tws=
+		88EIcx8sOufTd20DtKdwLdOLOkY=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		czNSNUMonYyRmxQVqLB1x7J2X9Q=
+		H7zIkIXWK6hQnfWDk2qE1i6tJmw=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		97bgnY2YalMSOZfRxymCq6tlR1E=
+		4uyxX1/J5J6QsTqG8P8LVogeUPU=
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		B++xCg//wzYAu9cs087FyzZhafg=
+		e9X6F20cFwriH0U7fjnufPjWlfM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,14 +69,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jjlcHN/LdZnLNKS29oCg1/V4rxumUJWVR7W567mR6pU=
+			gMxEQjsr//Kj9MEg18ctZnro859/uy+6Jp97tSoMvXo=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rN4aHEkg3piR1CLfP0LWehlWO3PpHwIornChqd/l0vA=
+			ELr+W4YzfhVtL2JOf5XA9XCzN/iU0863JbrZC9nyt9g=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -90,7 +90,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vMuMDnLWWxdyL21W8he+RVLDau/4eCzPq9g68NPspMg=
+			sB8k/VqeSwebxQczO0UMAsreP5rDJsi7BmqnJT1fchY=
 			</data>
 		</dict>
 		<key>Modules/EmpoverCameraScannerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
@@ -104,7 +104,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NwsRU6p1ZZJ/KpViCNuOdyIGIj07ve78uzgvlOiQTJs=
+			i7hEyKJgCrQtTp1laONMNizZkL/+wWHL5tLCS+u7lxo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
