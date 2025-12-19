@@ -87,6 +87,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     @IBOutlet weak var harvestReportLbl7: UILabel!
     
    
+    @IBOutlet weak var harvestReportLblCompanyName: UILabel!
     @IBOutlet weak var harvestReportLblCompHybName: UILabel!
     
     @IBOutlet weak var harvestReportLbYieldComp: UILabel!
@@ -249,6 +250,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     
     @IBOutlet weak var harvestReportMandiTxt: UITextField!
     
+    @IBOutlet weak var harvestReportCompanyNameTxt: UITextField!
     @IBOutlet weak var harvestReportCompHybridNameTxt: UITextField!
     @IBOutlet weak var harvestReportYieldCompHybridTxt: UITextField!
     @IBOutlet weak var harvestReportDidYouLikeTxt: UITextField!
@@ -492,6 +494,8 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     var getHybridListArray: NSArray?
     var getTopFabListArray: NSArray?
     
+    var getCompNameArray: NSArray?
+    var getCompHyrbidArrayOriginal: NSArray?
     var getCompHyrbidArray: NSArray?
     var getReasonArray: NSArray?
 
@@ -549,6 +553,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     var reportCropDropDownTblView = UITableView()
     var reportHybridNameTblView = UITableView()
 //    var topFabTblView = UITableView()
+    var reportCompCompanyTblView = UITableView()
     var reportCompHybridTblView = UITableView()
     var reportDidYouLikeTblView = UITableView()
     var reportHybridReasonTblView = UITableView()
@@ -567,6 +572,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     var originalReportHybridArray = NSArray()
     var topFabArray = NSArray()
     
+    var reportCompCompanyArray = NSArray()
     var reportCompHybridArray = NSArray()
     var reportDidYouLikeArray: NSArray = [
         ["id": "1", "name": "Yes"],
@@ -597,6 +603,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     
     var arrayAreaCoordinates = NSMutableArray()
     var harvestReportCompHybridNameTxtID = ""
+    var harvestReportCompanyNameTxtID = ""
     
     //////
     @IBOutlet weak var submitBtn: UIButton!
@@ -709,7 +716,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                 self.view.makeToast("Please Enter Mandi price")
                 return
             }
-
+            
+            if harvestReportCompanyNameTxt.text == "" {
+                self.view.makeToast("Please Select Competition Company Name")
+                return
+            }
+            
             if harvestReportCompHybridNameTxt.text == "" {
                 self.view.makeToast("Please Select Competition Hybrid Name")
                 return
@@ -962,6 +974,10 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         reportHybridNameTblView.dataSource = self
         reportHybridNameTblView.delegate = self
         
+        self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: reportCompCompanyTblView, textField: harvestReportCompanyNameTxt)
+        reportCompCompanyTblView.dataSource = self
+        reportCompCompanyTblView.delegate = self
+        
         self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: reportCompHybridTblView, textField: harvestReportCompHybridNameTxt)
         reportCompHybridTblView.dataSource = self
         reportCompHybridTblView.delegate = self
@@ -1067,13 +1083,15 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
 //        print("topfab list data",self.getTopFabListArray!)
 //        self.topFabArray = getTopFabListArray!
         
-        self.getCompHyrbidArray = dataObj!["competitorHybridsList"] as? NSArray
-        self.reportCompHybridArray = getCompHyrbidArray!
+        self.getCompNameArray = dataObj!["competitorCompanyList"] as? NSArray
+        self.reportCompCompanyArray = getCompNameArray!
+        
+        self.getCompHyrbidArrayOriginal = dataObj!["competitorHybridsList"] as? NSArray
         
         self.getReasonArray = dataObj!["damageReasonsList"] as? NSArray
         self.reportReasonArray = getReasonArray!
     
-        self.reportCompHybridTblView.reloadData()
+        self.reportCompCompanyTblView.reloadData()
         self.reportDidYouLikeTblView.reloadData()
         self.reportHybridReasonTblView.reloadData()
         
@@ -1295,7 +1313,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             self.harvestReportLbl6.text = self.dataObj?.value(forKey: "growNextYear") as? String
             self.harvestReportLbl7.text = self.dataObj?.value(forKey: "recommendedToOthers") as? String
             
-            
+            self.harvestReportLblCompanyName.text = self.dataObj?.value(forKey: "competitorCompanyName") as? String
             self.harvestReportLblCompHybName.text = self.dataObj?.value(forKey: "competitorHybridName") as? String
             self.harvestReportLbYieldComp.text = self.dataObj?.value(forKey: "competitorHybridYield") as? String
             self.harvestReportLblDidYouLike.text = self.dataObj?.value(forKey: "performanceOpinion") as? String
@@ -1862,6 +1880,16 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                 dobPicker.minimumDate = dateFormatter1.date(from: str)//NSDate() as Date
             }
         }
+        else if(self.originalSelectedDate == "GerminationDate"){
+            if(harvestReportDateOfHarvestingTxt.text != ""){
+                let dateFormatter1: DateFormatter = DateFormatter()
+                dateFormatter1.dateFormat = "dd-MMM-yyyy"
+                let minDate = dateFormatter1.date(from: harvestReportDateOfHarvestingTxt.text!)
+                dateFormatter1.dateFormat = "yyyy-MM-dd"
+                let str = dateFormatter1.string(from: minDate!)
+                dobPicker.minimumDate = dateFormatter1.date(from: str)//NSDate() as Date
+            }
+        }
         else{
                     let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
                     calendar.timeZone = NSTimeZone(name: "UTC")! as TimeZone
@@ -2049,6 +2077,9 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         else if textField == sampleReportHybridTxt {
             reportHybridNameTblView.isHidden = true
         }
+        else if textField == harvestReportCompanyNameTxt {
+            reportCompCompanyTblView.isHidden = true
+        }
         else if textField == harvestReportCompHybridNameTxt {
             reportCompHybridTblView.isHidden = true
         }
@@ -2092,21 +2123,36 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
            reportHybridNameTblView.isHidden = false
            reportCropDropDownTblView.isHidden = true
        }
-        else if textField == harvestReportCompHybridNameTxt {
-            harvestReportCompHybridNameTxt.resignFirstResponder()
-            reportCompHybridTblView.isHidden = false
+        else if textField == harvestReportCompanyNameTxt {
+            harvestReportCompanyNameTxt.resignFirstResponder()
+            reportCompCompanyTblView.isHidden = false
+            reportCompHybridTblView.isHidden = true
             reportDidYouLikeTblView.isHidden = true
             reportHybridReasonTblView.isHidden = true
+        }
+        else if textField == harvestReportCompHybridNameTxt {
+            harvestReportCompHybridNameTxt.resignFirstResponder()
+           if(self.reportCompHybridArray.count > 0){
+               reportCompHybridTblView.isHidden = false
+               reportCompCompanyTblView.isHidden = true
+               reportDidYouLikeTblView.isHidden = true
+               reportHybridReasonTblView.isHidden = true
+           }
+            else{
+                self.view.makeToast("Please Select Competition Company Name")
+            }
         }
         else if textField == harvestReportDidYouLikeTxt {
             harvestReportDidYouLikeTxt.resignFirstResponder()
             reportDidYouLikeTblView.isHidden = false
+            reportCompCompanyTblView.isHidden = true
             reportCompHybridTblView.isHidden = true
             reportHybridReasonTblView.isHidden = true
         }
         else if textField == harvestReportCompHybridName {
             harvestReportCompHybridName.resignFirstResponder()
             reportHybridReasonTblView.isHidden = false
+            reportCompCompanyTblView.isHidden = true
             reportDidYouLikeTblView.isHidden = true
             reportCompHybridTblView.isHidden = true
         }
@@ -2161,6 +2207,10 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             print("its 4")
 
         }
+        
+        else if textField == harvestReportCompanyNameTxt{
+            view.endEditing(true)
+        }
         else if textField == harvestReportCompHybridNameTxt{
             view.endEditing(true)
 //            self.RetailerView.endEditing(true)
@@ -2211,7 +2261,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             } else {
                 updated = digitsOnly
             }
-            if let value = Double(updated), value > 99.99 {
+            if let value = Double(updated), value > 60 {
                 return false
             }
             textField.text = updated
@@ -2260,7 +2310,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                     let updatedText = currentText.replacingCharacters(in: textRange, with: string)
                     if updatedText.isEmpty { return true }
                     if updatedText.count > 5 { return false }
-                    if let number = Int(updatedText), number <= 10000 {
+                    if let number = Int(updatedText), number <= 100 {
                         return true
                     } else {
                         return false
@@ -2477,7 +2527,8 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                 "sampleReceived":self.dataSection2Pravakta,
                 "customerTypeName":userObj.customerTypeName!,
                 "mdoMdrActualUserId":self.iagUserIDTxt.text!,
-                
+                "competitorCompanyId":self.harvestReportCompanyNameTxtID,
+                "competitorCompanyName":self.harvestReportCompanyNameTxt.text!,
                 "competitorHybridName":self.harvestReportCompHybridNameTxt.text!,
                 "competitorHybridYield":self.harvestReportYieldCompHybridTxt.text!,
                 "hybridPerformanceReasonOne":self.harvestReportReason1Txt.text!,
@@ -2601,6 +2652,9 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
         else if tableView == reportHybridNameTblView {
             return reportHybridArray.count
         }
+        else if tableView == reportCompCompanyTblView {
+            return reportCompCompanyArray.count
+        }
         else if tableView == reportCompHybridTblView {
             return reportCompHybridArray.count
         }
@@ -2637,6 +2691,10 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
         else if tableView == reportHybridNameTblView {
             let hybridDic = reportHybridArray.object(at: indexPath.row) as? NSDictionary
             cell.textLabel?.text = hybridDic?.value(forKey: "hybridName") as? String
+        }
+        else if tableView == reportCompCompanyTblView {
+            let compNameDic = reportCompCompanyArray.object(at: indexPath.row) as? NSDictionary
+            cell.textLabel?.text = compNameDic?.value(forKey: "name") as? String
         }
         else if tableView == reportCompHybridTblView {
             let comphybridDic = reportCompHybridArray.object(at: indexPath.row) as? NSDictionary
@@ -2694,9 +2752,19 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
            reportHybridNameTblView.isHidden = true
            sampleReportHybridTxt.resignFirstResponder()
        }
+        else if tableView == reportCompCompanyTblView {
+            let companyDic = self.reportCompCompanyArray.object(at: indexPath.row) as? NSDictionary
+            harvestReportCompanyNameTxtID =  String(describing: companyDic!.value(forKey: "id")!)
+            harvestReportCompanyNameTxt.text = companyDic?.value(forKey: "name") as? String
+            reportCompCompanyTblView.isHidden = true
+            harvestReportCompanyNameTxt.resignFirstResponder()
+            
+            self.reportfilterCompanyWithName(cropDic: companyDic)
+            harvestReportCompHybridNameTxt.text = ""
+        }
         else if tableView == reportCompHybridTblView {
             let hybridDic = self.reportCompHybridArray.object(at: indexPath.row) as? NSDictionary
-           // reportHybridID =  String(describing: hybridDic!.value(forKey: "id")!)
+            // reportHybridID =  String(describing: hybridDic!.value(forKey: "id")!)
             harvestReportCompHybridNameTxt.text = hybridDic?.value(forKey: "name") as? String
             reportCompHybridTblView.isHidden = true
             harvestReportCompHybridNameTxt.resignFirstResponder()
@@ -2797,6 +2865,21 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
             print("reportHybridArray",reportHybridArray)
             self.reportHybridNameTblView.reloadData()
             
+         }
+     }
+    
+    func reportfilterCompanyWithName(cropDic: NSDictionary?){
+        if cropDic != nil{
+            reportCropID = (cropDic!.value(forKey: "id") as! String as NSString) as String
+            let filterCropId:Int = Int(reportCropID)!
+            reportCompHybridArray = (getCompHyrbidArrayOriginal as! [[String: Any]]).filter { hybrid in
+                if let cropId = hybrid["compId"] as? Int {
+                    return cropId == filterCropId
+                }
+                return false
+            } as NSArray
+            print("reportCompHybridArray is:",reportCompHybridArray)
+            self.reportCompHybridTblView.reloadData()
          }
      }
 }

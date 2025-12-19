@@ -3165,17 +3165,6 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     //MARK: - Empover Scanner
     func openEmpoverScanner(){
         let regexPatterns = [
-//            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}.[iI]{1}[nN]{1}\\/)",
-//            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
-//            "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}.[iI]{1}[nN]{1}\\/)",
-//            "https:\\/\\/roots-cpm.ecubix.com\\/?.*",
-//            "http:\\/\\/6\\.ivcs\\.ai\\/?.*",
-//            "^[A-Z0-9]{8}$",
-//            "^www\\.checko\\.ai\\/\\?i=[A-Z0-9]{8}$",
-//            "^([0-9A-Z]*)([A-Zs]*)[0-9A-Z]*[0-9A-Z]*[0-9]*[0-9A-Za-z]*",
-//            "^https?://.*",  // any http/https URL
-//            "^[A-Za-z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=%\\s]+$",  // any printable token/text
-//            "^([a-zA-Z0-9]*)_[0-9]{10}_[a-z0-9A-Z]*_[0-9]*"
             "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[cC]{1}[oO]{1}[iI]{1}[dD]{1}\\.[iI]{1}[nN]{1}\\/)",
             "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[uU]{1}[aA]{1}[tT]{1}\\.[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}\\.[iI]{1}[nN]{1}\\/)",
             "^([hH]{1}[tT]{2}[pP]{1}[sS]{1}:\\/\\/[fF]{1}[aA]{1}[rR]{1}[mM]{1}[eE]{1}[rR]{1}[cC]{1}[oO]{1}[nN]{2}[eE]{1}[cC]{1}[tT]{1}\\.[iI]{1}[nN]{1}\\/)",
