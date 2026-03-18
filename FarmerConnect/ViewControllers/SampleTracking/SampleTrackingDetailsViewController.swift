@@ -605,6 +605,9 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     var harvestReportCompHybridNameTxtID = ""
     var harvestReportCompanyNameTxtID = ""
     
+    var mandiMinValue = 0
+    var mandiMaxValue = 0
+    
     //////
     @IBOutlet weak var submitBtn: UIButton!
     @IBAction func submitBtnAction(_ sender: Any) {
@@ -1247,6 +1250,9 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             geoTagReportDateTxt.text = self.dataObj?.value(forKey: "dateOfShowing") as? String
             geoTagReportGeoTagTxt.text = self.dataObj?.value(forKey: "geoTAg") as? String
             
+            self.mandiMinValue = self.dataObj?.value(forKey: "pricePerQtMin") as! Int
+            self.mandiMaxValue = self.dataObj?.value(forKey: "pricePerQtMax") as! Int
+            
         }
         else if(NSLocalizedString("performanceReport", comment: "") == self.statusIS){
             RetailerTopView.isHidden = false
@@ -1321,6 +1327,8 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             self.harvestReportLblCompHybridName.text = self.dataObj?.value(forKey: "damageReason") as? String
            // self.harvestReport.text = self.dataObj?.value(forKey: "damageReason") as? String
             
+            self.mandiMinValue = self.dataObj?.value(forKey: "pricePerQtMin") as! Int
+            self.mandiMaxValue = self.dataObj?.value(forKey: "pricePerQtMax") as! Int
             
             if(self.harvestReportLblDidYouLike.text == "Yes"){
                 self.harvestReportDisplyTopOrReason1.text = "Top 1 Fab"
@@ -2237,6 +2245,16 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             print("its 9")
 
         }
+        else if textField == self.harvestReportMandiTxt{
+            view.endEditing(true)
+        if let value = Int(textField.text ?? "") {
+            if value < mandiMinValue || value > mandiMaxValue {
+        self.view.makeToast("Value must be between \(mandiMinValue) and \(mandiMaxValue)")
+            print("Value must be between \(mandiMinValue) and \(mandiMaxValue)")
+            textField.text = ""
+            }
+          }
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -2276,7 +2294,8 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             let updatedText = currentText.replacingCharacters(in: textRange, with: string)
             if updatedText.isEmpty { return true }
             if updatedText.count > 4 { return false }
-            if let number = Int(updatedText), number <= 3000 {
+//            if let number = Int(updatedText), number <= 3000 {
+            if let number = Int(updatedText), number <= mandiMaxValue {
                 return true
             } else {
                 return false
