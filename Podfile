@@ -5,8 +5,8 @@
 target 'FarmerConnect' do
 
 pod 'Alamofire','~> 4.9.1'
-pod 'GoogleMaps',  '~> 4.0.0'
-pod 'GooglePlaces' , '~> 4.0.0'
+pod 'GoogleMaps',  '4.0.0'
+pod 'GooglePlaces' , '4.0.0'
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
 pod 'SDWebImage', '~> 4.0'
