@@ -900,13 +900,13 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
             diction1.setValue(Dashboard.FEATURES_AND_BENFITS.rawValue, forKey: "image")
             productsArray.add(diction1)
         }
-        
-        if userObj.cropProtection == "true"{
-            let diction = NSMutableDictionary()
-            diction.setValue(NSLocalizedString("Crop_Protection", comment: ""), forKey: "name") // NSLocalizedString("features", comment: "")
-            diction.setValue(Dashboard.CROP_PROTECTION.rawValue, forKey: "image")
-            productsArray.add(diction)
-        }
+        //Hidden this module for Seed branch
+//        if userObj.cropProtection == "true"{
+//            let diction = NSMutableDictionary()
+//            diction.setValue(NSLocalizedString("Crop_Protection", comment: ""), forKey: "name") // NSLocalizedString("features", comment: "")
+//            diction.setValue(Dashboard.CROP_PROTECTION.rawValue, forKey: "image")
+//            productsArray.add(diction)
+//        }
         if userObj.nearBy == "true"{
             let dictionOthers = NSMutableDictionary()
             dictionOthers.setValue(NSLocalizedString("nearby", comment: ""), forKey: "name")
@@ -1691,11 +1691,12 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
 //                toFABVC?.isFromHome = true
 //                self.navigationController?.pushViewController(toFABVC!, animated: true)
             }
-            else if dictionary.value(forKey: "image") as? String == "Crop Protection"{
-                let toFABVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectCropAndProductViewController") as? SelectCropAndProductViewController
-                toFABVC?.isFromHome = true
-                self.navigationController?.pushViewController(toFABVC!, animated: true)
-            }
+            //Hidden this module for Seed branch
+//            else if dictionary.value(forKey: "image") as? String == "Crop Protection"{
+//                let toFABVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectCropAndProductViewController") as? SelectCropAndProductViewController
+//                toFABVC?.isFromHome = true
+//                self.navigationController?.pushViewController(toFABVC!, animated: true)
+//            }
             else if dictionary.value(forKey: "image") as? String == "Calculators"{
                 if net?.isReachable == true{
                     let toCalculationsVC = self.storyboard?.instantiateViewController(withIdentifier: "CalculatorHomeViewController") as? CalculatorHomeViewController

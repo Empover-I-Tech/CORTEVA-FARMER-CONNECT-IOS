@@ -179,9 +179,10 @@ class SideMenuViewController: UIViewController, CollapsibleTableViewHeaderDelega
         if userObj.hybridSeeds == "true"{
         arrDashBoardItems.add(NSLocalizedString("hybrid_Seeds", comment: ""))
         }
-        if userObj.cropProtection == "true"{
-        arrDashBoardItems.add(NSLocalizedString("Crop_Protection", comment: ""))
-        }
+        //Hidden this module for Seed branch
+//        if userObj.cropProtection == "true"{
+//        arrDashBoardItems.add(NSLocalizedString("Crop_Protection", comment: ""))
+//        }
         // arrDashBoardItems.add(NSLocalizedString("features", comment: ""))
         if userObj.genuinityCheck == "true"{
         arrDashBoardItems.add(NSLocalizedString("genuinity_check", comment: ""))
@@ -504,15 +505,16 @@ extension SideMenuViewController : UITableViewDataSource,UITableViewDelegate{
                     destViewController = mainStoryboard.instantiateViewController(withIdentifier: "FABViewController") as? FABViewController
                 }
                 break
-            case "Crop Protection" :    // NSLocalizedString("features", comment: "")?
-                if currentViewController is SelectCropAndProductViewController
-                {
-                    destViewController = currentViewController
-                }
-                else{
-                    destViewController = mainStoryboard.instantiateViewController(withIdentifier: "SelectCropAndProductViewController") as? SelectCropAndProductViewController
-                }
-                break
+                //Hidden this module for Seed branch
+//            case "Crop Protection" :    // NSLocalizedString("features", comment: "")?
+//                if currentViewController is SelectCropAndProductViewController
+//                {
+//                    destViewController = currentViewController
+//                }
+//                else{
+//                    destViewController = mainStoryboard.instantiateViewController(withIdentifier: "SelectCropAndProductViewController") as? SelectCropAndProductViewController
+//                }
+//                break
                 
             case NSLocalizedString("crop_diagnostic", comment: "")?:
                 if currentViewController is CropDiagnosis_ViewController
