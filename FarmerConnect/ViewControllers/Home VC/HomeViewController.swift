@@ -880,13 +880,6 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     
     func setUserMenuForDashboard(){
         
-        guard let items = tabBar.items else { return }
-       // items[0].title = NSLocalizedString("Grower_Engagement", comment: "")
-        items[0].title = NSLocalizedString("home", comment: "")
-//        items[1].title = NSLocalizedString("Grower_Engagement", comment: "")
-        items[1].title = NSLocalizedString("Services", comment: "")
-        items[2].title = NSLocalizedString("rewards", comment: "")
-        
         //var GrowerEngagementArray = NSMutableArray()
         var productsArray = NSMutableArray()
         var servicesArray = NSMutableArray()
@@ -1114,10 +1107,36 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         }
         
         dashboardItemsArray.removeAllObjects()
-        dashboardItemsArray.add(dicProducts)
+        
+        guard let items = tabBar.items else { return }
+        
+//        dashboardItemsArray.add(dicProducts)
+//       // dashboardItemsArray.add(dicgrowerEngagement)
+//        dashboardItemsArray.add(dicServices)
+//        dashboardItemsArray.add(dictRewards)
+        if(productsArray.count != 0){
+            items[0].title = NSLocalizedString("home", comment: "")
+            dashboardItemsArray.add(dicProducts)
+        }
        // dashboardItemsArray.add(dicgrowerEngagement)
-        dashboardItemsArray.add(dicServices)
-        dashboardItemsArray.add(dictRewards)
+        if(servicesArray.count != 0){
+            if(productsArray.count == 0){
+                items[0].title = NSLocalizedString("Services", comment: "")
+
+            }else{
+                items[1].title = NSLocalizedString("Services", comment: "")
+            }
+            dashboardItemsArray.add(dicServices)
+        }
+        if(rewardsArray.count != 0){
+            if(servicesArray.count == 0){
+                items[1].title = NSLocalizedString("rewards", comment: "")
+            }
+            else{
+                items[2].title = NSLocalizedString("rewards", comment: "")
+            }
+            dashboardItemsArray.add(dictRewards)
+        }
         dashBoardCollectionView.reloadData()
     }
     @objc func gotoAboutScreen (_ sender: UIButton) {

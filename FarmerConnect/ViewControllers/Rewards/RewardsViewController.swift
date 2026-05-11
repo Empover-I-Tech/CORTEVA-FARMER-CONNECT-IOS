@@ -423,9 +423,10 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 self.rewardTitle.text = title.uppercased()
                             }
                             if arrayStatus.contains("claimList"){
-                                let claimTrans = cashFree["claimList"] as! NSArray
+                                let claimTrans = cashFree["claimList"] as? NSArray
                                 self.claimTransactions.removeAll()
-                                if claimTrans.count > 0 {
+                                if let claimTrans = claimTrans, claimTrans.count > 0 {
+//                                if claimTrans.count > 0 {
                                     for i in claimTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -464,9 +465,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                           
                          
                             if arrayStatus.contains("successList"){
-                                let successTrans = cashFree["successList"] as! NSArray
+                                let successTrans = cashFree["successList"] as? NSArray
                                 self.successTransactions.removeAll()
-                                if successTrans.count > 0 {
+                                if let successTrans = successTrans, successTrans.count > 0 {
                                     for i in successTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -500,9 +501,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("reClaimList"){
-                                let reclaimTrans = cashFree["reClaimList"] as! NSArray
+                                let reclaimTrans = cashFree["reClaimList"] as? NSArray
                                 self.reclaimTransactions.removeAll()
-                                if reclaimTrans.count > 0 {
+                                if let reclaimTrans = reclaimTrans, reclaimTrans.count > 0 {
                                     for i in reclaimTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -569,9 +570,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 self.ecouponTitle.text = title.uppercased()
                             }
                             if arrayStatus.contains("ecouponClaimList"){
-                                let claimTrans = cashFree["ecouponClaimList"] as! NSArray
+                                let claimTrans = cashFree["ecouponClaimList"] as? NSArray
                                 self.claimTransactionsEcoupon.removeAll()
-                                if claimTrans.count > 0 {
+                                if let claimTrans = claimTrans, claimTrans.count > 0 {
                                     for i in claimTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -606,9 +607,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                             }
                          
                             if arrayStatus.contains("ecouponSuccessList"){
-                                let successTrans = cashFree["ecouponSuccessList"] as! NSArray
+                                let successTrans = cashFree["ecouponSuccessList"] as? NSArray
                                 self.successTransactionsEcoupon.removeAll()
-                                if successTrans.count > 0 {
+                                if let successTrans = successTrans, successTrans.count > 0 {
                                     for i in successTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -642,9 +643,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("ecouponReClaimList"){
-                                let reclaimTrans = cashFree["ecouponReClaimList"] as! NSArray
+                                let reclaimTrans = cashFree["ecouponReClaimList"] as? NSArray
                                 self.reclaimTransactionsEcoupon.removeAll()
-                                if reclaimTrans.count > 0 {
+                                if let reclaimTrans = reclaimTrans, reclaimTrans.count > 0 {
                                     for i in reclaimTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -679,12 +680,12 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                             }
                             print("djgkl")
                             print(arrayStatus.contains("ecouponCodeList"))
-                            print(cashFree["ecouponCodeList"] as! NSArray)
+                            print(cashFree["ecouponCodeList"] as? NSArray)
                             print("wert")
                             if arrayStatus.contains("ecouponCodeList"){
-                                let reclaimTrans = cashFree["ecouponCodeList"] as! NSArray
+                                let reclaimTrans = cashFree["ecouponCodeList"] as? NSArray
                                 self.couponCodesList.removeAll()
-                                if reclaimTrans.count > 0 {
+                                if let reclaimTrans = reclaimTrans, reclaimTrans.count > 0 {
                                     for i in reclaimTrans {
                                         var arrTrans = ecouponCodeList()
                                         arrTrans.ecouponCode = (i as AnyObject).value(forKey:"ecouponCode") as? String ?? ""
@@ -731,9 +732,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 self.giftCouponCountLbl.text = String(count)
                             }
                             if arrayStatus.contains("couponsToClaimList"){
-                                let claimTrans = cashFree["couponsToClaimList"] as! NSArray
+                                let claimTrans = cashFree["couponsToClaimList"] as? NSArray
                                 self.giftCouponTransactions.removeAll()
-                                if claimTrans.count > 0 {
+                                if let claimTrans = claimTrans, claimTrans.count > 0 {
                                     for i in claimTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.sampleQRCodeImgUrl = (i as AnyObject).value(forKey: "sampleQRCodeImgUrl") as? String ?? ""
@@ -772,11 +773,10 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 self.seedTitle.text = title.uppercased()
                             }
                             if arrayStatus.contains("seedClaimList"){
-                                let claimSeedTrans = seedTrans["seedClaimList"] as! NSArray
+                                let claimSeedTrans = seedTrans["seedClaimList"] as? NSArray
                                 self.claimSeedTransactions.removeAll()
                                
-
-                                if claimSeedTrans.count > 0 {
+                                if let claimSeedTrans = claimSeedTrans, claimSeedTrans.count > 0 {
                                     for i in claimSeedTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -810,9 +810,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("seedSuccessList"){
-                                let successSeedTrans = seedTrans["seedSuccessList"] as! NSArray
+                                let successSeedTrans = seedTrans["seedSuccessList"] as? NSArray
                                 self.successSeedTransactions.removeAll()
-                                if successSeedTrans.count > 0 {
+                                if let successSeedTrans = successSeedTrans, successSeedTrans.count > 0 {
                                     for i in successSeedTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.buttonText =  (i as AnyObject).value(forKey: "buttonText") as? String ?? ""
@@ -847,9 +847,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("seedReClaimList"){
-                                let reclaimSeedTrans = seedTrans["seedReClaimList"] as! NSArray
+                                let reclaimSeedTrans = seedTrans["seedReClaimList"] as? NSArray
                                 self.reclaimSeedTransactions.removeAll()
-                                if reclaimSeedTrans.count > 0 {
+                                if let reclaimSeedTrans = reclaimSeedTrans, reclaimSeedTrans.count > 0 {
                                     for i in reclaimSeedTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -918,9 +918,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 self.seedTitle.text = title.uppercased()
                             }
                             if arrayStatus.contains("seedClaimList"){
-                                let claimSeedTrans = seedTrans["seedClaimList"] as! NSArray
+                                let claimSeedTrans = seedTrans["seedClaimList"] as? NSArray
                                 self.claimSeed2Transactions.removeAll()
-                                if claimSeedTrans.count > 0 {
+                                if let claimSeedTrans = claimSeedTrans, claimSeedTrans.count > 0 {
                                     for i in claimSeedTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -954,9 +954,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("seedSuccessList"){
-                                let successSeedTrans = seedTrans["seedSuccessList"] as! NSArray
+                                let successSeedTrans = seedTrans["seedSuccessList"] as? NSArray
                                 self.successSeed2Transactions.removeAll()
-                                if successSeedTrans.count > 0 {
+                                if let successSeedTrans = successSeedTrans, successSeedTrans.count > 0 {
                                     for i in successSeedTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.buttonText =  (i as AnyObject).value(forKey: "buttonText") as? String ?? ""
@@ -991,9 +991,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("seedReClaimList"){
-                                let reclaimSeedTrans = seedTrans["seedReClaimList"] as! NSArray
+                                let reclaimSeedTrans = seedTrans["seedReClaimList"] as? NSArray
                                 self.reclaimSeed2Transactions.removeAll()
-                                if reclaimSeedTrans.count > 0 {
+                                if let reclaimSeedTrans = reclaimSeedTrans, reclaimSeedTrans.count > 0 {
                                     for i in reclaimSeedTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -1065,9 +1065,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 self.dsrTitle.text = title.uppercased()
                             }
                             if arrayStatus.contains("dsrClaimList"){
-                                let claimDSRTrans = seedTrans["dsrClaimList"] as! NSArray
+                                let claimDSRTrans = seedTrans["dsrClaimList"] as? NSArray
                                 self.claimDSRTransactions.removeAll()
-                                if claimDSRTrans.count > 0 {
+                                if let claimDSRTrans = claimDSRTrans, claimDSRTrans.count > 0 {
                                     for i in claimDSRTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -1101,9 +1101,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("dsrSuccessList"){
-                                let successDSRTrans = seedTrans["dsrSuccessList"] as! NSArray
+                                let successDSRTrans = seedTrans["dsrSuccessList"] as? NSArray
                                 self.successDSRTransactions.removeAll()
-                                if successDSRTrans.count > 0 {
+                                if let successDSRTrans = successDSRTrans, successDSRTrans.count > 0 {
                                     for i in successDSRTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.buttonText =  (i as AnyObject).value(forKey: "buttonText") as? String ?? ""
@@ -1138,9 +1138,9 @@ class RewardsViewController: BaseViewController,UIScrollViewDelegate {
                                 }
                             }
                             if arrayStatus.contains("dsrReClaimList"){
-                                let reclaimDSRTrans = seedTrans["dsrReClaimList"] as! NSArray
+                                let reclaimDSRTrans = seedTrans["dsrReClaimList"] as? NSArray
                                 self.reclaimDSRTransactions.removeAll()
-                                if reclaimDSRTrans.count > 0 {
+                                if let reclaimDSRTrans = reclaimDSRTrans, reclaimDSRTrans.count > 0 {
                                     for i in reclaimDSRTrans {
                                         let arrTrans = TransactionModel()
                                         arrTrans.amount = (i as AnyObject).value(forKey: "amount") as? String ?? ""
@@ -4168,3 +4168,4 @@ extension UIButton {
         task.resume()
     }
 }
+
