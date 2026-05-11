@@ -879,14 +879,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     }
     
     func setUserMenuForDashboard(){
-        
-        guard let items = tabBar.items else { return }
-       // items[0].title = NSLocalizedString("Grower_Engagement", comment: "")
-        items[0].title = NSLocalizedString("home", comment: "")
-//        items[1].title = NSLocalizedString("Grower_Engagement", comment: "")
-        items[1].title = NSLocalizedString("Services", comment: "")
-        items[2].title = NSLocalizedString("rewards", comment: "")
-        
+    
         //var GrowerEngagementArray = NSMutableArray()
         var productsArray = NSMutableArray()
         var servicesArray = NSMutableArray()
@@ -894,12 +887,13 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         let userObj = Constatnts.getUserObject()
         
         //Products Array Data
-        if userObj.hybridSeeds == "true"{
-            let diction1 = NSMutableDictionary()
-            diction1.setValue(NSLocalizedString("hybrid_Seeds", comment: ""), forKey: "name")
-            diction1.setValue(Dashboard.FEATURES_AND_BENFITS.rawValue, forKey: "image")
-            productsArray.add(diction1)
-        }
+        //Hidden this module for CP branch
+//        if userObj.hybridSeeds == "true"{
+//            let diction1 = NSMutableDictionary()
+//            diction1.setValue(NSLocalizedString("hybrid_Seeds", comment: ""), forKey: "name")
+//            diction1.setValue(Dashboard.FEATURES_AND_BENFITS.rawValue, forKey: "image")
+//            productsArray.add(diction1)
+//        }
         
         if userObj.cropProtection == "true"{
             let diction = NSMutableDictionary()
@@ -945,12 +939,13 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
 //        }
         
         //ServicesArray
-         if userObj.cropAdvisory == "true"{
-             let diction3 = NSMutableDictionary()
-             diction3.setValue(NSLocalizedString("crop_advisory", comment: ""), forKey: "name")
-             diction3.setValue(Dashboard.CROP_ADVISORY.rawValue, forKey: "image")
-             servicesArray.add(diction3)
-         }
+        //Hidden this module for CP branch
+//         if userObj.cropAdvisory == "true"{
+//             let diction3 = NSMutableDictionary()
+//             diction3.setValue(NSLocalizedString("crop_advisory", comment: ""), forKey: "name")
+//             diction3.setValue(Dashboard.CROP_ADVISORY.rawValue, forKey: "image")
+//             servicesArray.add(diction3)
+//         }
          
 //        if userObj.farmServices == "true"{
 //            let diction4 = NSMutableDictionary()
@@ -964,13 +959,13 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
             diction5.setValue(Dashboard.MANDI_PRICES.rawValue, forKey: "image")
             servicesArray.add(diction5)
         }
-         
-        if userObj.cropCalculator == "true"{
-            let diction6 = NSMutableDictionary()
-            diction6.setValue(NSLocalizedString("crop_calculator", comment: ""), forKey: "name")
-            diction6.setValue(Dashboard.CROP_CALCULATOR.rawValue, forKey: "image")
-            servicesArray.add(diction6)
-        }
+        //Hidden this module for CP branch
+//        if userObj.cropCalculator == "true"{
+//            let diction6 = NSMutableDictionary()
+//            diction6.setValue(NSLocalizedString("crop_calculator", comment: ""), forKey: "name")
+//            diction6.setValue(Dashboard.CROP_CALCULATOR.rawValue, forKey: "image")
+//            servicesArray.add(diction6)
+//        }
         if userObj.farmerDashboard == "true"{
             let diction7 = NSMutableDictionary()
             diction7.setValue(NSLocalizedString("farmer_Dashboard", comment: ""), forKey: "name")
@@ -1079,6 +1074,7 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
             
         }
         
+        
         let dicProducts = NSMutableDictionary()
         dicProducts.setValue(NSLocalizedString("products", comment: ""), forKey: "Title")
         dicProducts.setValue(productsArray, forKey: "Items")
@@ -1114,10 +1110,38 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
         }
         
         dashboardItemsArray.removeAllObjects()
-        dashboardItemsArray.add(dicProducts)
+        
+        guard let items = tabBar.items else { return }
+       // items[0].title = NSLocalizedString("Grower_Engagement", comment: "")
+//        items[0].title = NSLocalizedString("home", comment: "")
+////        items[1].title = NSLocalizedString("Grower_Engagement", comment: "")
+//        items[1].title = NSLocalizedString("Services", comment: "")
+//        items[2].title = NSLocalizedString("rewards", comment: "")
+        
+        if(productsArray.count != 0){
+            items[0].title = NSLocalizedString("home", comment: "")
+            dashboardItemsArray.add(dicProducts)
+        }
        // dashboardItemsArray.add(dicgrowerEngagement)
-        dashboardItemsArray.add(dicServices)
-        dashboardItemsArray.add(dictRewards)
+        if(servicesArray.count != 0){
+            if(productsArray.count == 0){
+                items[0].title = NSLocalizedString("Services", comment: "")
+
+            }else{
+                items[1].title = NSLocalizedString("Services", comment: "")
+            }
+            dashboardItemsArray.add(dicServices)
+        }
+        if(rewardsArray.count != 0){
+            if(servicesArray.count == 0){
+                items[1].title = NSLocalizedString("rewards", comment: "")
+//                items[2].title = NSLocalizedString("", comment: "")
+            }
+            else{
+                items[2].title = NSLocalizedString("rewards", comment: "")
+            }
+            dashboardItemsArray.add(dictRewards)
+        }
         dashBoardCollectionView.reloadData()
     }
     @objc func gotoAboutScreen (_ sender: UIButton) {
@@ -1599,9 +1623,10 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
                     self.view.makeToast(CHECK_NETWORK_CONNECTION_MESSAGE)
                 }
             }
-            else if dictionary.value(forKey: "image") as? String == "Crop Advisory" {
-                self.cropAdvisoryOptionSelectionActionSheetControl()
-            }
+            //Hidden this module for CP branch
+//            else if dictionary.value(forKey: "image") as? String == "Crop Advisory" {
+//                self.cropAdvisoryOptionSelectionActionSheetControl()
+//            }
             else if dictionary.value(forKey: "image") as? String == "Mandi Prices"{
                 if net?.isReachable == true{
                     let toFABVC = self.storyboard?.instantiateViewController(withIdentifier: "MandisAndCropsDashboard") as? MandisAndCropsDashboard
@@ -1685,27 +1710,29 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
                 //self.openAcvission()
                 self.openEmpoverScanner()
             }
-            else if dictionary.value(forKey: "image") as? String == "Hybrid Seeds"{
-                self.hybridOptionSelectionActionSheetControl()
-//                let toFABVC = self.storyboard?.instantiateViewController(withIdentifier: "FABViewController") as? FABViewController
-//                toFABVC?.isFromHome = true
-//                self.navigationController?.pushViewController(toFABVC!, animated: true)
-            }
+            //Hidden this module for CP branch
+//            else if dictionary.value(forKey: "image") as? String == "Hybrid Seeds"{
+//                self.hybridOptionSelectionActionSheetControl()
+////                let toFABVC = self.storyboard?.instantiateViewController(withIdentifier: "FABViewController") as? FABViewController
+////                toFABVC?.isFromHome = true
+////                self.navigationController?.pushViewController(toFABVC!, animated: true)
+//            }
             else if dictionary.value(forKey: "image") as? String == "Crop Protection"{
                 let toFABVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectCropAndProductViewController") as? SelectCropAndProductViewController
                 toFABVC?.isFromHome = true
                 self.navigationController?.pushViewController(toFABVC!, animated: true)
             }
-            else if dictionary.value(forKey: "image") as? String == "Calculators"{
-                if net?.isReachable == true{
-                    let toCalculationsVC = self.storyboard?.instantiateViewController(withIdentifier: "CalculatorHomeViewController") as? CalculatorHomeViewController
-                    toCalculationsVC!.isFromHome = true
-                    self.navigationController?.pushViewController(toCalculationsVC!, animated: true)
-                }
-                else{
-                    self.view.makeToast(CHECK_NETWORK_CONNECTION_MESSAGE)
-                }
-            }
+            //Hidden this module for CP branch
+//            else if dictionary.value(forKey: "image") as? String == "Calculators"{
+//                if net?.isReachable == true{
+//                    let toCalculationsVC = self.storyboard?.instantiateViewController(withIdentifier: "CalculatorHomeViewController") as? CalculatorHomeViewController
+//                    toCalculationsVC!.isFromHome = true
+//                    self.navigationController?.pushViewController(toCalculationsVC!, animated: true)
+//                }
+//                else{
+//                    self.view.makeToast(CHECK_NETWORK_CONNECTION_MESSAGE)
+//                }
+//            }
             
             else if dictionary.value(forKey: "image") as? String == "Crop Diagnostic"{
                 let diagnosisVC = self.storyboard?.instantiateViewController(withIdentifier: "CropDiagnosis_ViewController") as? CropDiagnosis_ViewController
@@ -2675,6 +2702,9 @@ class HomeViewController: BaseViewController, UICollectionViewDataSource, UIColl
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         isTabItemClickeed = true
         
+        if(item.title == "Other Services"){
+            return
+        }
         if item.tag == 101 {
             dashBoardCollectionView.scrollToItem(at: NSIndexPath.init(item: 0, section: 0) as IndexPath, at: .centeredVertically, animated: true)
         }

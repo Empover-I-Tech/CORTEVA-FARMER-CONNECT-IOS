@@ -176,9 +176,10 @@ class SideMenuViewController: UIViewController, CollapsibleTableViewHeaderDelega
         if userObj.weatherReport == "true"{
         arrDashBoardItems.add(NSLocalizedString("weather_report", comment: ""))
         }
-        if userObj.hybridSeeds == "true"{
-        arrDashBoardItems.add(NSLocalizedString("hybrid_Seeds", comment: ""))
-        }
+        //Hidden this module for CP branch
+//        if userObj.hybridSeeds == "true"{
+//        arrDashBoardItems.add(NSLocalizedString("hybrid_Seeds", comment: ""))
+//        }
         if userObj.cropProtection == "true"{
         arrDashBoardItems.add(NSLocalizedString("Crop_Protection", comment: ""))
         }
@@ -189,12 +190,12 @@ class SideMenuViewController: UIViewController, CollapsibleTableViewHeaderDelega
         if userObj.nearBy == "true"{
         arrDashBoardItems.add(NSLocalizedString("nearby", comment: ""))
         }
-        //
-        if userObj.cropAdvisory == "true"{
-        var cropAdvisorySection = Section(name: NSLocalizedString("crop_advisory", comment: ""), items: [NSLocalizedString("crop_advisory", comment: ""),NSLocalizedString("crop_advisory_notifications", comment: "")])
-        cropAdvisorySection.collapsed = false
-        arrDashBoardItems.add(cropAdvisorySection)
-        }
+        //Hidden this module for CP branch
+//        if userObj.cropAdvisory == "true"{
+//        var cropAdvisorySection = Section(name: NSLocalizedString("crop_advisory", comment: ""), items: [NSLocalizedString("crop_advisory", comment: ""),NSLocalizedString("crop_advisory_notifications", comment: "")])
+//        cropAdvisorySection.collapsed = false
+//        arrDashBoardItems.add(cropAdvisorySection)
+//        }
        
         if  userObj.cepJourney == "true" ||  userObj.cepJourney == ""{
             arrDashBoardItems.add(NSLocalizedString("cep_Udayan", comment: ""))
@@ -213,9 +214,10 @@ class SideMenuViewController: UIViewController, CollapsibleTableViewHeaderDelega
         if userObj.mandiPrices == "true"{
         arrDashBoardItems.add(NSLocalizedString("mandi_prices", comment: ""))
         }
-        if userObj.cropCalculator == "true"{
-        arrDashBoardItems.add(NSLocalizedString("crop_calculator", comment: ""))
-        }
+        //Hidden this module for CP branch
+//        if userObj.cropCalculator == "true"{
+//        arrDashBoardItems.add(NSLocalizedString("crop_calculator", comment: ""))
+//        }
         if userObj.farmerDashboard == "true"{
         arrDashBoardItems.add(NSLocalizedString("farmer_Dashboard", comment: ""))
         }
@@ -404,52 +406,53 @@ extension SideMenuViewController : UITableViewDataSource,UITableViewDelegate{
         if let sectionData = menuItemsArr.object(at: indexPath.section) as? Section{
             let menuTitle = sectionData.name
             switch (menuTitle){
-            case NSLocalizedString("crop_advisory", comment: ""):
-                switch (indexPath.row){
-                case 0:
-                    let net = NetworkReachabilityManager(host: "www.google.com")
-                    if net?.isReachable == true{
-                        
-                        appDelegate.isOpennedCropAdvisoryFromSidemMenu = true
-                        
-                        if currentViewController is HomeViewController
-                        {
-                            destViewController = currentViewController
-                            
-                            break
-                        }
-                        else{
-                            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
-                        }
-                        
-                        break
-                    }
-                    else{
-                        if self.navController.topViewController != nil{
-                            destViewController = self.navController.topViewController
-                        }
-                        if let hamburguerViewController = self.findHamburguerViewController() {
-                            hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
-                            })
-                        }
-                        self.destViewController.view.makeToast(CHECK_NETWORK_CONNECTION_MESSAGE)
-                    }
-                    break
-                case 1:
-                    if currentViewController is CropNotificationViewController
-                    {
-                        destViewController = currentViewController
-                        break
-                    }
-                    else{
-                        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "CropNotificationViewController") as? CropNotificationViewController
-                    }
-                    break
-                    
-                default:
-                    break
-                }
-                break
+                //Hidden this module for CP branch
+//            case NSLocalizedString("crop_advisory", comment: ""):
+//                switch (indexPath.row){
+//                case 0:
+//                    let net = NetworkReachabilityManager(host: "www.google.com")
+//                    if net?.isReachable == true{
+//                        
+//                        appDelegate.isOpennedCropAdvisoryFromSidemMenu = true
+//                        
+//                        if currentViewController is HomeViewController
+//                        {
+//                            destViewController = currentViewController
+//                            
+//                            break
+//                        }
+//                        else{
+//                            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+//                        }
+//                        
+//                        break
+//                    }
+//                    else{
+//                        if self.navController.topViewController != nil{
+//                            destViewController = self.navController.topViewController
+//                        }
+//                        if let hamburguerViewController = self.findHamburguerViewController() {
+//                            hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
+//                            })
+//                        }
+//                        self.destViewController.view.makeToast(CHECK_NETWORK_CONNECTION_MESSAGE)
+//                    }
+//                    break
+//                case 1:
+//                    if currentViewController is CropNotificationViewController
+//                    {
+//                        destViewController = currentViewController
+//                        break
+//                    }
+//                    else{
+//                        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "CropNotificationViewController") as? CropNotificationViewController
+//                    }
+//                    break
+//                    
+//                default:
+//                    break
+//                }
+//                break
             case NSLocalizedString("farm_services", comment: ""):
                 switch (indexPath.row){
                 case 0:
@@ -494,16 +497,17 @@ extension SideMenuViewController : UITableViewDataSource,UITableViewDelegate{
                     destViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
                 }
                 break
+                //Hidden this module for CP branch
+//            case "Hybrid Seeds" :    // NSLocalizedString("features", comment: "")?
+//                if currentViewController is FABViewController
+//                {
+//                    destViewController = currentViewController
+//                }
+//                else{
+//                    destViewController = mainStoryboard.instantiateViewController(withIdentifier: "FABViewController") as? FABViewController
+//                }
+//                break
                 
-            case "Hybrid Seeds" :    // NSLocalizedString("features", comment: "")?
-                if currentViewController is FABViewController
-                {
-                    destViewController = currentViewController
-                }
-                else{
-                    destViewController = mainStoryboard.instantiateViewController(withIdentifier: "FABViewController") as? FABViewController
-                }
-                break
             case "Crop Protection" :    // NSLocalizedString("features", comment: "")?
                 if currentViewController is SelectCropAndProductViewController
                 {
@@ -557,19 +561,19 @@ extension SideMenuViewController : UITableViewDataSource,UITableViewDelegate{
                     
                 }
                 break
-                
-            case NSLocalizedString("crop_calculator", comment: "")?:
-                let net = NetworkReachabilityManager(host: "www.google.com")
-                if net?.isReachable == true{
-                    if currentViewController is CalculatorHomeViewController
-                    {
-                        destViewController = currentViewController
-                    }
-                    else{
-                        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "CalculatorHomeViewController") as? CalculatorHomeViewController
-                    }
-                }
-                break
+                //Hidden this module for CP branch
+//            case NSLocalizedString("crop_calculator", comment: "")?:
+//                let net = NetworkReachabilityManager(host: "www.google.com")
+//                if net?.isReachable == true{
+//                    if currentViewController is CalculatorHomeViewController
+//                    {
+//                        destViewController = currentViewController
+//                    }
+//                    else{
+//                        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "CalculatorHomeViewController") as? CalculatorHomeViewController
+//                    }
+//                }
+//                break
             case NSLocalizedString("weather_report", comment: "")?:
                 let net = NetworkReachabilityManager(host: "www.google.com")
                 if net?.isReachable == true{
