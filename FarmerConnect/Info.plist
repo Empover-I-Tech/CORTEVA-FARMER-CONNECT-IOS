@@ -113,5 +113,10 @@
 	<string>Light</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>HelveticaNowText.ttf</string>
+		<string>Gilroy-Bold.otf</string>
+	</array>
 </dict>
 </plist>

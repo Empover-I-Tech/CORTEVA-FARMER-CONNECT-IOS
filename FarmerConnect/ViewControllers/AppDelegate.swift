@@ -120,6 +120,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
                    application,
                    didFinishLaunchingWithOptions: launchOptions
                )
+        
+        for family in UIFont.familyNames {
+            print("Font Family Names: \(family)")
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print("  \(name)")
+            }
+        }
+        
+        UILabel.swizzleFontImplementation
      
         GMSServices.provideAPIKey(Google_API_Key)
             GMSPlacesClient.provideAPIKey(Google_API_Key)
@@ -271,6 +280,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 //        return myOrientation
 //
 //    }
+    
     
     func getCPFABPdfFolderPath() -> String{
              let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
