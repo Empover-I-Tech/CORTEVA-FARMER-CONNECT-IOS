@@ -591,8 +591,8 @@ Copyright © 2019 ABC. All rights reserved.
 "click_for_WhatsApp_optIn" = "We are on WhatsApp! Please Click for WhatsApp to receive your Farmer Connect related services on WhatsApp.";
 "Might_be_later" = "Might be later";
 "Opt_In" = "Opt-In";
-//"successMessage" = "Thank you for subscribing to Corteva WhatsApp. We will send important and useful information through your WhatsApp number."
-//"Successfull_whatsapp_optIn" = "Thank you for subscribing to Corteva WhatsApp. We will send important and useful information through your WhatsApp number.";
+//"successMessage" = "Thank you for subscribing to Pioneer WhatsApp. We will send important and useful information through your WhatsApp number."
+//"Successfull_whatsapp_optIn" = "Thank you for subscribing to Pioneer WhatsApp. We will send important and useful information through your WhatsApp number.";
 "remove_the_notification_message" = "Note : Please Swipe Right to Left to remove the notification.";
 "Spray_Service"  =  "Spray Service";
 //"No_Crops_Available_Message" =  "No Crops Available. Please Check internet connection and comae back to this screen again";
@@ -719,7 +719,7 @@ Copyright © 2019 ABC. All rights reserved.
 "cep_Rank _in S_tate_dashboard" = "Rank in State";
 "cep_Share_statement_one" = "Waqt se aage Jamane se badhkar";
 "cep_Share_statement_two" = "Ab Pure Honge Sapne Hazzar";
-"cep_Share_statement_three" = "Corteva Udayan - Tarraki ka Naya Savera";
+"cep_Share_statement_three" = "Pioneer Udayan - Tarraki ka Naya Savera";
 "rhrd_Enroll_and_get_luckydraw" = "Enroll & Get a Lucky Draw Coupon";
 "rhrd_scan_and_get_luckydraw" = "Scan & Get a Lucky Draw Coupon (Delegate & Galileo Sensa)";
 "rhrd_Refer_and_get_luckydraw" = "Refer & Get a Lucky Draw Coupon";
@@ -754,7 +754,7 @@ Copyright © 2019 ABC. All rights reserved.
 "RHRD_farmer_mobile_name" = "Please Enter Farmer Name and Mobile number";
 "RHRD_capture_or_selectImage" = "Please capture or select an Image";
 "RHRD_SuccessStory_Validationfor_text" = "Please enter details of your success story";
-"RHRD_AllowCoretve_msg" = "I allow Corteva to use the photo/ videos / other content shared here in photo and video sharing screen.";
+"RHRD_AllowCoretve_msg" = "I allow Pioneer to use the photo/ videos / other content shared here in photo and video sharing screen.";
 "bycrops" = "By Crops";
 "bymandis" = "By Mandis";
 "buyFromRetailer" = "Buy From Retailer";
@@ -767,7 +767,7 @@ Copyright © 2019 ABC. All rights reserved.
 "whatsapp_st" = "WhatsApp";
 "missed_call" = "Missed Call";
 "continu" = "Continue";
-"whatsapp_otp_msg" = " \U2022 Please make sure that your Whatsapp number : $1 \n\n \U2022 You agree to receive messages from Corteva through Whatsapp.";
+"whatsapp_otp_msg" = " \U2022 Please make sure that your Whatsapp number : $1 \n\n \U2022 You agree to receive messages from Pioneer through Whatsapp.";
 "choose_verification_message" = "Choose any one option for mobile number verification";
 "permissions_required_app" = "Permissions required for this APP :";
 "phone_call" = "Phone Call";

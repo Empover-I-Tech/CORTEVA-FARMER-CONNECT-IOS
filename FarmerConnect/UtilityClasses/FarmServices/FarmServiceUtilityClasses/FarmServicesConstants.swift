@@ -43,7 +43,7 @@ var Accept_Counter_Proposal = "equipmentRequester/acceptCounterProposal"
 
 var App_Theme_Green_Color = UIColor(red: 34.0/255, green: 119.0/255, blue: 45.0/255, alpha: 1.0)
 var App_Theme_Orange_Color = UIColor(red: 255.0/255, green: 147.0/255, blue: 0.0/255, alpha: 1.0)
-var App_Theme_Blue_Color = UIColor(red: 0.0/255, green: 95.0/255, blue: 239.0/255, alpha: 1.0)
+var App_Theme_Blue_Color = UIColor(red: 74.0/255, green: 119.0/255, blue: 41.0/255, alpha: 1.0)
 var App_Theme_Orange_Light_Color = UIColor(red: 255.0/255, green: 126.0/255, blue: 31.0/255, alpha: 1.0)
 var App_Theme_Green_Light_Color = UIColor(red: 136.0/255, green: 180.0/255, blue: 16.0/255, alpha: 1.0)
 var App_Theme_Orange_new_Color = UIColor(red: 255.0/255, green: 130.0/255, blue: 82.0/255, alpha: 1.0)

@@ -508,7 +508,7 @@
 "click_for_WhatsApp_optIn" = "We are on WhatsApp! Please Click for WhatsApp to receive your Farmer Connect related services on WhatsApp.";
 "Might_be_later" = "Might be later";
 "Opt_In" = "Opt-In";
-//"Successfull_whatsapp_optIn" = "Thank you for subscribing to Corteva WhatsApp. We will send important and useful information through your WhatsApp number.";
+//"Successfull_whatsapp_optIn" = "Thank you for subscribing to Pioneer WhatsApp. We will send important and useful information through your WhatsApp number.";
 "remove_the_notification_message" = "Note : Please Swipe Right to Left to remove the notification.";
 "Spray_Service"  =  "தெளிப்பு சேவை";
 //"No_Crops_Available_Message" =  "No Crops Available. Please Check internet connection and comae back to this screen again";
@@ -635,7 +635,7 @@
 "cep_Rank _in S_tate_dashboard" = "மாநிலத்தில் ரேங்க்";
 "cep_Share_statement_one" = "Waqt se aage Jamane se badhkar";
 "cep_Share_statement_two" = "Ab Pure Honge Sapne Hazzar";
-"cep_Share_statement_three" = "Corteva Udayan - Tarraki ka Naya Savera";
+"cep_Share_statement_three" = "Pioneer Udayan - Tarraki ka Naya Savera";
 "rhrd_Enroll_and_get_luckydraw" = "Enroll & Get a Lucky Draw Coupon";
 "rhrd_scan_and_get_luckydraw" = "Scan & Get a Lucky Draw Coupon (Delegate & Galileo Sensa)";
 "rhrd_Refer_and_get_luckydraw" = "Refer & Get a Lucky Draw Coupon";
@@ -669,7 +669,7 @@
 "RHRD_capture_or_selectImage" = "Please capture or select an Image";
 "RHRD_SuccessStory_Validationfor_text" = "Please enter details of your success story";
 "cep_used_kharif" = "Have you used Pexalon in Kharif Season ?";
-"RHRD_AllowCoretve_msg" = "I allow Corteva to use the photo/ videos / other content shared here in photo and video sharing screen.";
+"RHRD_AllowCoretve_msg" = "I allow Pioneer to use the photo/ videos / other content shared here in photo and video sharing screen.";
 "bycrops" = "பயிர்கள் வாரியாக";
 "bymandis" = "மண்டிகள் வாரியாக";
 "buyFromRetailer" = "Buy From Retailer";
@@ -682,7 +682,7 @@
 "whatsapp_st" = "WhatsApp";
 "missed_call" = "Missed Call";
 "continu" = "தொடரவும்";
-"whatsapp_otp_msg" = " \U2022 Please make sure that your Whatsapp number : $1 \n\n \U2022 You agree to receive messages from Corteva through Whatsapp.";
+"whatsapp_otp_msg" = " \U2022 Please make sure that your Whatsapp number : $1 \n\n \U2022 You agree to receive messages from Pioneer through Whatsapp.";
 "choose_verification_message" = "Choose any one option for mobile number verification";
 "permissions_required_app" = "Permissions required for this APP :";
 "phone_call" = "Phone Call";
