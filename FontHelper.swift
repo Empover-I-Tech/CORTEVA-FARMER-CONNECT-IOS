@@ -24,54 +24,54 @@ struct AppFont {
 }
 
 // MARK: - UILabel
-//extension UILabel {
-//
-//    open override func awakeFromNib() {
-//        super.awakeFromNib()
-//        applyFont()
-//    }
-//
-//    open override func didMoveToSuperview() {
-//        super.didMoveToSuperview()
-//        applyFont()
-//    }
-//
-//    private func applyFont() {
-//        let size = self.font.pointSize
-//        let name = self.font.fontName
-//        
-//        print("Font applied to UILabel",self.font.fontName)
-//
-//        if name.contains("Bold") || name.contains("Semibold") || name.contains("SFUI") {
-//            self.font = AppFont.boldFont(size: size)
-//        } else {
-//            self.font = AppFont.regularFont(size: size)
-//        }
-//    }
-//}
 extension UILabel {
 
-    static let swizzleFontImplementation: Void = {
-       
-        let originalMethod = class_getInstanceMethod(UILabel.self, #selector(setter: UILabel.font))
-        let swizzledMethod = class_getInstanceMethod(UILabel.self, #selector(UILabel.customSetFont(_:)))
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        applyFont()
+    }
 
-        if let original = originalMethod, let swizzled = swizzledMethod {
-            method_exchangeImplementations(original, swizzled)
-        }
-    }()
+    open override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        applyFont()
+    }
 
-    @objc func customSetFont(_ font: UIFont) {
-        let size = font.pointSize
-        let name = font.fontName
+    private func applyFont() {
+        let size = self.font.pointSize
+        let name = self.font.fontName
+        
         print("Font applied to UILabel",self.font.fontName)
+
         if name.contains("Bold") || name.contains("Semibold") || name.contains("SFUI") {
-            self.customSetFont(AppFont.boldFont(size: size))
+            self.font = AppFont.boldFont(size: size)
         } else {
-            self.customSetFont(AppFont.regularFont(size: size))
+            self.font = AppFont.regularFont(size: size)
         }
     }
 }
+//extension UILabel {
+//
+//    static let swizzleFontImplementation: Void = {
+//       
+//        let originalMethod = class_getInstanceMethod(UILabel.self, #selector(setter: UILabel.font))
+//        let swizzledMethod = class_getInstanceMethod(UILabel.self, #selector(UILabel.customSetFont(_:)))
+//
+//        if let original = originalMethod, let swizzled = swizzledMethod {
+//            method_exchangeImplementations(original, swizzled)
+//        }
+//    }()
+//
+//    @objc func customSetFont(_ font: UIFont) {
+//        let size = font.pointSize
+//        let name = font.fontName
+//        print("Font applied to UILabel",self.font.fontName)
+//        if name.contains("Bold") || name.contains("Semibold") || name.contains("SFUI") {
+//            self.customSetFont(AppFont.boldFont(size: size))
+//        } else {
+//            self.customSetFont(AppFont.regularFont(size: size))
+//        }
+//    }
+//}
 
 // MARK: - UIButton
 extension UIButton {

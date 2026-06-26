@@ -128,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
             }
         }
         
-        UILabel.swizzleFontImplementation
+        //UILabel.swizzleFontImplementation
      
         GMSServices.provideAPIKey(Google_API_Key)
             GMSPlacesClient.provideAPIKey(Google_API_Key)

@@ -371,7 +371,7 @@ extension ProductDetailsViewController : UITableViewDataSource, UITableViewDeleg
         header.bgView.layer.cornerRadius = 5.0
         header.bgView.layer.borderWidth = 0.5
         header.bgView.layer.borderColor = UIColor.clear.cgColor
-        //header.titleLabel.font = UIFont (name: "Lato-Bold", size:15)
+        //header.titleLabel.font = UIFont (name: "Gilroy-Bold", size:15)
         header.setCollapsedCrop((sectionData?.collapsed)!)
         
         header.section = section

@@ -312,6 +312,7 @@
 		A3A98E672769D17C007475FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D282B1FEA2688003E6582 /* Constants.swift */; };
 		A3C3B9D32EEAD1CA00EAE1AE /* EmpoverCameraScannerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C3B9D22EEAD1CA00EAE1AE /* EmpoverCameraScannerSDK.framework */; };
 		A3C3B9D42EEAD1E700EAE1AE /* EmpoverCameraScannerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3C3B9D22EEAD1CA00EAE1AE /* EmpoverCameraScannerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A3D5CFD22FEE54A80010C808 /* Genuinity Check.gif in Resources */ = {isa = PBXBuildFile; fileRef = A3D5CFD12FEE54A70010C808 /* Genuinity Check.gif */; };
 		A3E2C0B22CA2B2AB0023F0DC /* SampleTrackingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2C0B12CA2B2AB0023F0DC /* SampleTrackingListViewController.swift */; };
 		A3E2C0B42CA2B5520023F0DC /* SampleTrackingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2C0B32CA2B5520023F0DC /* SampleTrackingDetailsViewController.swift */; };
 		A3E2C0B62CA3EB130023F0DC /* SampleTrackingListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2C0B52CA3EB130023F0DC /* SampleTrackingListCollectionViewCell.swift */; };
@@ -977,6 +978,7 @@
 		A3963A381FF273DE00E8713D /* Classifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifications.swift; sourceTree = "<group>"; };
 		A3A4678F26D8AFD500B2383C /* FiledSharingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiledSharingViewController.swift; sourceTree = "<group>"; };
 		A3C3B9D22EEAD1CA00EAE1AE /* EmpoverCameraScannerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EmpoverCameraScannerSDK.framework; sourceTree = "<group>"; };
+		A3D5CFD12FEE54A70010C808 /* Genuinity Check.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Genuinity Check.gif"; sourceTree = "<group>"; };
 		A3E2C0B12CA2B2AB0023F0DC /* SampleTrackingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTrackingListViewController.swift; sourceTree = "<group>"; };
 		A3E2C0B32CA2B5520023F0DC /* SampleTrackingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTrackingDetailsViewController.swift; sourceTree = "<group>"; };
 		A3E2C0B52CA3EB130023F0DC /* SampleTrackingListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTrackingListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1605,6 +1607,7 @@
 		8447F2851FE7EBB000C5E00C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A3D5CFD12FEE54A70010C808 /* Genuinity Check.gif */,
 				A33A0A991FF216F300956DD5 /* drop_down_img.png */,
 				8447F2861FE7EBB000C5E00C /* downArrow.png */,
 				8447F2871FE7EBB000C5E00C /* icon_cross.png */,
@@ -2896,6 +2899,7 @@
 				D07CC76124ADEF7D00D43FC0 /* CropSubscriptionDetailView.xib in Resources */,
 				A3726C4F2768BB6200227A7F /* Acviss-Credentials.plist in Resources */,
 				A31FBBC92CD8FAE5003C483C /* RGLRewardsViewCell.xib in Resources */,
+				A3D5CFD22FEE54A80010C808 /* Genuinity Check.gif in Resources */,
 				180C4C8223A1168000EF7C14 /* CropDiagnosisCollectionViewCell.xib in Resources */,
 				A37713E52FE3D3EE00DFE2A7 /* HelveticaNowText.ttf in Resources */,
 				844CF21621D4F8B000C6AFE1 /* GoogleService-Info.plist in Resources */,

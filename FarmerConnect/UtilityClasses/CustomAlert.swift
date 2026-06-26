@@ -513,7 +513,7 @@ class CustomAlert: NSObject
         alertTitleLbl.text = title as String
         alertTitleLbl.textColor = App_Theme_Blue_Color//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 149.0/255, blue: 159.0/255, alpha: 1)
-        alertTitleLbl.font = UIFont (name: "Lato-Bold", size:15)
+        alertTitleLbl.font = UIFont (name: "Gilroy-Bold", size:15)
         alertTitleLbl.textAlignment = NSTextAlignment.center
         alertView.addSubview(alertTitleLbl)
         
@@ -522,7 +522,7 @@ class CustomAlert: NSObject
         alertMessageLbl.text = message as String
         alertMessageLbl.textColor = UIColor.black//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.8)
-        alertMessageLbl.font = UIFont (name: "Lato-Bold", size:11)
+        alertMessageLbl.font = UIFont (name: "Gilroy-Bold", size:11)
         alertMessageLbl.numberOfLines = 0
         alertMessageLbl.sizeToFit()
         
@@ -610,7 +610,7 @@ class CustomAlert: NSObject
         alertTitleLbl.text = title as String
         alertTitleLbl.textColor = App_Theme_Blue_Color//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 149.0/255, blue: 159.0/255, alpha: 1)
-        alertTitleLbl.font = UIFont (name: "Lato-Bold", size:15)
+        alertTitleLbl.font = UIFont (name: "Gilroy-Bold", size:15)
         alertTitleLbl.textAlignment = NSTextAlignment.center
         alertView.addSubview(alertTitleLbl)
         
@@ -619,7 +619,7 @@ class CustomAlert: NSObject
         alertMessageLbl.text = message as String
         alertMessageLbl.textColor = UIColor.black//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.8)
-        alertMessageLbl.font = UIFont (name: "Lato-Bold", size:11)
+        alertMessageLbl.font = UIFont (name: "Gilroy-Bold", size:11)
         alertMessageLbl.numberOfLines = 0
         alertMessageLbl.sizeToFit()
         
@@ -705,7 +705,7 @@ class CustomAlert: NSObject
         alertTitleLbl.text = title as String
         alertTitleLbl.textColor = App_Theme_Blue_Color//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 149.0/255, blue: 159.0/255, alpha: 1)
-        alertTitleLbl.font = UIFont (name: "Lato-Bold", size:15)
+        alertTitleLbl.font = UIFont (name: "Gilroy-Bold", size:15)
         alertTitleLbl.textAlignment = NSTextAlignment.center
         alertView.addSubview(alertTitleLbl)
         
@@ -714,7 +714,7 @@ class CustomAlert: NSObject
         alertMessageLbl.text = message as String
         alertMessageLbl.textColor = UIColor.black//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.8)
-        alertMessageLbl.font = UIFont (name: "Lato-Bold", size:11)
+        alertMessageLbl.font = UIFont (name: "Gilroy-Bold", size:11)
         alertMessageLbl.numberOfLines = 0
         alertMessageLbl.sizeToFit()
         
@@ -805,7 +805,7 @@ class CustomAlert: NSObject
         alertMessageLbl.text = message as String
         alertMessageLbl.textColor = UIColor.black//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.8)
-        alertMessageLbl.font = UIFont (name: "Lato-Bold", size:11)
+        alertMessageLbl.font = UIFont (name: "Gilroy-Bold", size:11)
         alertMessageLbl.numberOfLines = 0
         alertMessageLbl.sizeToFit()
         
@@ -861,7 +861,7 @@ class CustomAlert: NSObject
         alertTitleLbl.text = title as String
         alertTitleLbl.textColor = App_Theme_Blue_Color//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 149.0/255, blue: 159.0/255, alpha: 1)
-        alertTitleLbl.font = UIFont (name: "Lato-Bold", size:15)
+        alertTitleLbl.font = UIFont (name: "Gilroy-Bold", size:15)
         alertTitleLbl.textAlignment = NSTextAlignment.center
         alertView.addSubview(alertTitleLbl)
         
@@ -870,7 +870,7 @@ class CustomAlert: NSObject
         alertMessageLbl.text = message as String
         alertMessageLbl.textColor = UIColor.black//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.8)
-        alertMessageLbl.font = UIFont (name: "Lato-Bold", size:11)
+        alertMessageLbl.font = UIFont (name: "Gilroy-Bold", size:11)
         alertMessageLbl.numberOfLines = 0
         alertMessageLbl.sizeToFit()
         
@@ -955,7 +955,7 @@ class CustomAlert: NSObject
         alertMessageLbl.text = message as String
         alertMessageLbl.textColor = UIColor.black//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.8)
-        alertMessageLbl.font = UIFont (name: "Lato-Bold", size:11)
+        alertMessageLbl.font = UIFont (name: "Gilroy-Bold", size:11)
         alertMessageLbl.numberOfLines = 0
         alertMessageLbl.sizeToFit()
         
@@ -999,7 +999,7 @@ class CustomAlert: NSObject
         alertTitleLbl.text = title as String
         alertTitleLbl.textColor = App_Theme_Blue_Color//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 149.0/255, blue: 159.0/255, alpha: 1)
-        alertTitleLbl.font = UIFont (name: "Lato-Bold", size:20)
+        alertTitleLbl.font = UIFont (name: "Gilroy-Bold", size:20)
         alertTitleLbl.textAlignment = NSTextAlignment.center
         alertView.addSubview(alertTitleLbl)
         
@@ -1014,7 +1014,7 @@ class CustomAlert: NSObject
         let farmerMobileNoLbl : UILabel = UILabel (frame: CGRect(x: farmerMobileNoTitleLbl.frame.width+20,y: alertTitleLbl.frame.maxY + 10
             ,width: alertView.frame.width/2,height: 30))
         farmerMobileNoLbl.text = farmerMobileNumber as String
-        farmerMobileNoLbl.font = UIFont (name: "Lato-Bold", size:12)
+        farmerMobileNoLbl.font = UIFont (name: "Gilroy-Bold", size:12)
         farmerMobileNoLbl.textAlignment = NSTextAlignment.left
         alertView.addSubview(farmerMobileNoLbl)
         
@@ -1029,7 +1029,7 @@ class CustomAlert: NSObject
         let sharedDateLbl : UILabel = UILabel (frame: CGRect(x: sharedDateTitleLbl.frame.width+20,y: farmerMobileNoTitleLbl.frame.maxY + 15
             ,width: alertView.frame.width/2,height: 30))
         sharedDateLbl.text = sharedDate as String
-        sharedDateLbl.font = UIFont (name: "Lato-Bold", size:12)
+        sharedDateLbl.font = UIFont (name: "Gilroy-Bold", size:12)
         sharedDateLbl.textAlignment = NSTextAlignment.left
         alertView.addSubview(sharedDateLbl)
         
@@ -1080,7 +1080,7 @@ class CustomAlert: NSObject
         alertTitleLbl.text = title as String
         alertTitleLbl.textColor = App_Theme_Blue_Color//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 149.0/255, blue: 159.0/255, alpha: 1)
-        alertTitleLbl.font = UIFont (name: "Lato-Bold", size:20)
+        alertTitleLbl.font = UIFont (name: "Gilroy-Bold", size:20)
         alertTitleLbl.textAlignment = NSTextAlignment.center
         alertView.addSubview(alertTitleLbl)
         
@@ -2400,7 +2400,7 @@ class CustomAlert: NSObject
         alertMessageLbl.text = message as String
         alertMessageLbl.textColor = UIColor.black//UIColor(red: 0.0/255, green: 128.0/255, blue: 43.0/255, alpha: 1)
         //UIColor(red: 0.0/255, green: 0.0/255, blue: 0.0/255, alpha: 0.8)
-        alertMessageLbl.font = UIFont (name: "Lato-Bold", size:11)
+        alertMessageLbl.font = UIFont (name: "Gilroy-Bold", size:11)
         alertMessageLbl.numberOfLines = 0
         alertMessageLbl.sizeToFit()
         

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,14 +54,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-7g-Qpe">
-                    <rect key="frame" x="9" y="75" width="412" height="40"/>
+                    <rect key="frame" x="9" y="134" width="375" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Previous Years" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vO-Yl-71v">
-                            <rect key="frame" x="5" y="9.6666666666666714" width="140" height="21"/>
+                            <rect key="frame" x="5" y="9.6666666666666572" width="140" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="140" id="Ofk-t4-Jer"/>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="nVX-Qy-oa0"/>
@@ -74,7 +74,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Puh-7i-g7l">
-                            <rect key="frame" x="153" y="2" width="255" height="35"/>
+                            <rect key="frame" x="153" y="2" width="218" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -94,7 +94,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-ox-wLr">
-                    <rect key="frame" x="0.0" y="121" width="430" height="120"/>
+                    <rect key="frame" x="0.0" y="180" width="393" height="120"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planning Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-oA-nSM">
                             <rect key="frame" x="9" y="6" width="120" height="21"/>
@@ -110,7 +110,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TAW-iW-vmM">
-                            <rect key="frame" x="136" y="2" width="285" height="34"/>
+                            <rect key="frame" x="136" y="2" width="248" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -131,7 +131,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KyL-pz-2RO">
-                            <rect key="frame" x="137" y="44" width="284" height="34"/>
+                            <rect key="frame" x="137" y="44" width="247" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <connections>
@@ -139,7 +139,7 @@
                             </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-0N-r2n">
-                            <rect key="frame" x="143" y="88" width="144" height="30"/>
+                            <rect key="frame" x="124.66666666666669" y="88" width="144" height="30"/>
                             <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="144" id="NtU-5b-oGV"/>
@@ -176,13 +176,13 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTV-MD-mYH">
-                    <rect key="frame" x="0.0" y="249" width="430" height="649"/>
+                    <rect key="frame" x="0.0" y="308" width="393" height="476"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ske-sA-kGY">
-                            <rect key="frame" x="0.0" y="0.0" width="430" height="947"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="947"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Land Preparation/ Nursery Raising" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sa-0u-fgq">
-                                    <rect key="frame" x="9" y="10" width="274" height="41"/>
+                                    <rect key="frame" x="9" y="10" width="237" height="41"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="41" id="pvc-Jb-3Ae"/>
                                     </constraints>
@@ -194,7 +194,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-8a-A68">
-                                    <rect key="frame" x="290" y="13.666666666666686" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="13.666666666666686" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="1F3-1V-JUP"/>
                                     </constraints>
@@ -205,7 +205,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed Cost (Rs./ Kg)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f7-db-6zL">
-                                    <rect key="frame" x="9" y="53" width="275" height="30"/>
+                                    <rect key="frame" x="9" y="53" width="238" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="k88-iu-tYb"/>
                                     </constraints>
@@ -217,7 +217,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0tv-dJ-Uhx">
-                                    <rect key="frame" x="290" y="51" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="51" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="Ptu-S4-dY0"/>
                                     </constraints>
@@ -228,7 +228,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed Rate (Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iet-c7-Zc1">
-                                    <rect key="frame" x="9" y="91" width="275" height="30"/>
+                                    <rect key="frame" x="9" y="91" width="238" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="5Ni-KK-W0F"/>
                                     </constraints>
@@ -240,7 +240,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Si3-RC-187">
-                                    <rect key="frame" x="290" y="89" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="89" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="rLK-aY-9LS"/>
                                     </constraints>
@@ -251,7 +251,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Seed Cost Rs./ 5 Acres)         " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOd-qf-ERR">
-                                    <rect key="frame" x="9" y="126" width="275" height="36"/>
+                                    <rect key="frame" x="9" y="126" width="238" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="iqv-gc-Slk"/>
                                     </constraints>
@@ -263,7 +263,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4j-NR-483">
-                                    <rect key="frame" x="290" y="127" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="127" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="Elh-0O-Aiu"/>
                                     </constraints>
@@ -274,7 +274,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labour Cost (Rs./Labour)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2R-gi-ikb">
-                                    <rect key="frame" x="9" y="172" width="275" height="36"/>
+                                    <rect key="frame" x="9" y="172" width="238" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="cq5-aS-Ld3"/>
                                     </constraints>
@@ -286,7 +286,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7t0-PY-Uvt">
-                                    <rect key="frame" x="290" y="173" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="173" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="Hoh-a1-blz"/>
                                     </constraints>
@@ -297,7 +297,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total no. of labourers requd. in entire crop duration" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbN-rk-OvE">
-                                    <rect key="frame" x="9" y="213" width="275" height="36"/>
+                                    <rect key="frame" x="9" y="213" width="238" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="zfI-ul-1cg"/>
                                     </constraints>
@@ -309,7 +309,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9BM-CD-E5L">
-                                    <rect key="frame" x="290" y="214" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="214" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="PE9-vW-7fs"/>
                                     </constraints>
@@ -320,7 +320,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mechanical harvesting cost Rs./acre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-uO-5eL">
-                                    <rect key="frame" x="9" y="254" width="274" height="36"/>
+                                    <rect key="frame" x="9" y="254" width="237" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="noZ-5Z-WmO"/>
                                     </constraints>
@@ -332,7 +332,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VI-ug-mlr">
-                                    <rect key="frame" x="290" y="255" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="255" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="er4-kW-xNs"/>
                                     </constraints>
@@ -343,7 +343,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Labour Cost (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1e-Wx-DVc">
-                                    <rect key="frame" x="8" y="298" width="276" height="36"/>
+                                    <rect key="frame" x="8" y="298" width="239" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="fnj-dx-0ly"/>
                                     </constraints>
@@ -355,7 +355,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-IL-Pe4">
-                                    <rect key="frame" x="290" y="299" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="299" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="mHY-dQ-YmN"/>
                                     </constraints>
@@ -366,7 +366,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost per irrigation (Rs./Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIb-eJ-ks9">
-                                    <rect key="frame" x="9" y="342" width="274" height="36"/>
+                                    <rect key="frame" x="9" y="342" width="237" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="4Nu-AT-Pj2"/>
                                     </constraints>
@@ -378,7 +378,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aa3-zG-nfj">
-                                    <rect key="frame" x="290" y="343" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="343" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="h79-eG-WJp"/>
                                     </constraints>
@@ -389,7 +389,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Irrigations" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryi-7r-qvg">
-                                    <rect key="frame" x="9" y="386" width="275" height="36"/>
+                                    <rect key="frame" x="9" y="386" width="238" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="z4q-x5-Rql"/>
                                     </constraints>
@@ -401,7 +401,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-Fv-UYY">
-                                    <rect key="frame" x="290" y="387" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="387" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="7M7-96-2iK"/>
                                     </constraints>
@@ -412,7 +412,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Irrigation Cost (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsl-Wm-ZRu">
-                                    <rect key="frame" x="9" y="430" width="274" height="36"/>
+                                    <rect key="frame" x="9" y="430" width="237" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="uuu-UZ-PKL"/>
                                     </constraints>
@@ -424,7 +424,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFI-Az-rF8">
-                                    <rect key="frame" x="290" y="431" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="431" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="BOx-tk-qgF"/>
                                     </constraints>
@@ -435,7 +435,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fertiliser Cost (Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqk-yY-Brz">
-                                    <rect key="frame" x="9" y="474" width="275" height="36"/>
+                                    <rect key="frame" x="9" y="474" width="238" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="L5g-vi-fT1"/>
                                     </constraints>
@@ -447,7 +447,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jtS-Yk-BpA">
-                                    <rect key="frame" x="290" y="475" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="475" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="YRq-E5-h01"/>
                                     </constraints>
@@ -458,7 +458,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesticide Cost (Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-EB-GgF">
-                                    <rect key="frame" x="9" y="518" width="275" height="36"/>
+                                    <rect key="frame" x="9" y="518" width="238" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="CZa-rV-ocq"/>
                                     </constraints>
@@ -470,7 +470,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXx-8n-QO1">
-                                    <rect key="frame" x="290" y="519" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="519" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="OJs-nZ-rDq"/>
                                     </constraints>
@@ -481,7 +481,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Miscellaneous Cost(Rs./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIr-sO-3bb">
-                                    <rect key="frame" x="9" y="562" width="275" height="36"/>
+                                    <rect key="frame" x="9" y="562" width="238" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="PGf-6X-cAZ"/>
                                     </constraints>
@@ -493,7 +493,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-PU-Sgg">
-                                    <rect key="frame" x="290" y="563" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="563" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="cIn-6j-w2X"/>
                                     </constraints>
@@ -504,7 +504,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Input Cost (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52L-z1-70N">
-                                    <rect key="frame" x="8" y="606" width="276" height="36"/>
+                                    <rect key="frame" x="8" y="606" width="239" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="9jJ-kv-cyc"/>
                                     </constraints>
@@ -516,7 +516,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAG-cH-pLC">
-                                    <rect key="frame" x="290" y="607" width="130" height="34"/>
+                                    <rect key="frame" x="253" y="607" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="mPz-Gl-TuH"/>
                                     </constraints>
@@ -527,7 +527,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grain/Cotton Yield (Qntl./ Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4y-Vp-q9d">
-                                    <rect key="frame" x="9" y="650" width="276" height="36"/>
+                                    <rect key="frame" x="9" y="650" width="239" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="bHu-wz-nIJ"/>
                                     </constraints>
@@ -539,7 +539,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQ4-JB-ztp">
-                                    <rect key="frame" x="291" y="651" width="130" height="34"/>
+                                    <rect key="frame" x="254" y="651" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="yGM-KK-VWs"/>
                                     </constraints>
@@ -550,7 +550,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial Grain Price (Rs./Qntl)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF6-LS-1oO">
-                                    <rect key="frame" x="9" y="694" width="276" height="36"/>
+                                    <rect key="frame" x="9" y="694" width="239" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="Y06-7j-nOq"/>
                                     </constraints>
@@ -562,7 +562,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jpt-4U-aRb">
-                                    <rect key="frame" x="291" y="695" width="130" height="34"/>
+                                    <rect key="frame" x="254" y="695" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="I27-Uz-dUF"/>
                                     </constraints>
@@ -573,10 +573,10 @@
                                     </connections>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cc3-6H-cYv">
-                                    <rect key="frame" x="0.0" y="738" width="430" height="75"/>
+                                    <rect key="frame" x="0.0" y="738" width="393" height="75"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straw Yield (Qntl./Acre)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj3-A2-deq">
-                                            <rect key="frame" x="9" y="0.0" width="276" height="36"/>
+                                            <rect key="frame" x="9" y="0.0" width="239" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="FO1-vN-a7A"/>
                                             </constraints>
@@ -588,7 +588,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1e-tg-14x">
-                                            <rect key="frame" x="291" y="1" width="130" height="34"/>
+                                            <rect key="frame" x="254" y="1" width="130" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="130" id="fWT-N1-wWC"/>
                                             </constraints>
@@ -599,7 +599,7 @@
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commercial Fodder Price (Rs./Qntl.)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dE-U9-kQl">
-                                            <rect key="frame" x="9" y="41" width="276" height="36"/>
+                                            <rect key="frame" x="9" y="41" width="239" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="uPW-C3-ifb"/>
                                             </constraints>
@@ -611,7 +611,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ik6-gE-bYa">
-                                            <rect key="frame" x="291" y="42" width="130" height="34"/>
+                                            <rect key="frame" x="254" y="42" width="130" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="130" id="7y8-Ys-lJG"/>
                                             </constraints>
@@ -638,7 +638,7 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Income (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae3-jY-AmA">
-                                    <rect key="frame" x="9" y="821" width="276" height="36"/>
+                                    <rect key="frame" x="9" y="821" width="239" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="VEO-iu-erm"/>
                                     </constraints>
@@ -650,7 +650,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpR-MU-oLp">
-                                    <rect key="frame" x="291" y="822" width="130" height="34"/>
+                                    <rect key="frame" x="254" y="822" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="FfH-Sw-Kr2"/>
                                     </constraints>
@@ -661,7 +661,7 @@
                                     </connections>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net Profit (Rs./5 Acres)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-dX-MRT">
-                                    <rect key="frame" x="9" y="865" width="276" height="36"/>
+                                    <rect key="frame" x="9" y="865" width="239" height="36"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="36" id="9OB-ns-tAh"/>
                                     </constraints>
@@ -673,7 +673,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-yn-2fM">
-                                    <rect key="frame" x="291" y="866" width="130" height="34"/>
+                                    <rect key="frame" x="254" y="866" width="130" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="130" id="RhE-P1-G7j"/>
                                     </constraints>
@@ -684,8 +684,8 @@
                                     </connections>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-JH-XGE">
-                                    <rect key="frame" x="155" y="897" width="120" height="30"/>
-                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="136.66666666666666" y="897" width="119.99999999999997" height="30"/>
+                                    <color key="backgroundColor" red="0.2901960784" green="0.46666666670000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="120" id="yfh-xk-60v"/>
                                     </constraints>

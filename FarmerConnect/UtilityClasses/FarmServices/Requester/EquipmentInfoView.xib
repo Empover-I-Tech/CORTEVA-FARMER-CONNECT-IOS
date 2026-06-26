@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -185,9 +183,9 @@
                 <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yX4-fw-pFP">
                     <rect key="frame" x="0.0" y="112" width="375" height="42"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hb-ve-BhU">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hb-ve-BhU">
                             <rect key="frame" x="38" y="4" width="300" height="35"/>
-                            <color key="backgroundColor" red="0.13244354720000001" green="0.46817851069999999" blue="0.1768759191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.2901960784" green="0.46666666670000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="jZQ-pW-S9p"/>
                             </constraints>
@@ -218,13 +216,14 @@
                     <state key="normal" image="DeleteRed"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InfoArrow" translatesAutoresizingMaskIntoConstraints="NO" id="OFX-UC-rcp">
-                    <rect key="frame" x="177" y="151" width="20" height="20"/>
+                    <rect key="frame" x="177.5" y="151" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="kmp-3i-xlP"/>
                         <constraint firstAttribute="width" constant="20" id="mbt-JC-zAk"/>
                     </constraints>
                 </imageView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="N8p-Hq-2La" secondAttribute="trailing" constant="3" id="8wd-BB-nzx"/>
@@ -240,7 +239,6 @@
                 <constraint firstItem="yX4-fw-pFP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="o9Z-nb-kxr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="btnClose" destination="N8p-Hq-2La" id="J7S-Va-15o"/>
                 <outlet property="btnViewDetails" destination="0hb-ve-BhU" id="VaW-yX-vue"/>
@@ -250,7 +248,7 @@
                 <outlet property="lblModel" destination="XOc-3w-Sbl" id="wvG-yf-Jg8"/>
                 <outlet property="lblServiceHours" destination="zvD-C5-p3a" id="Tyf-3m-EOr"/>
             </connections>
-            <point key="canvasLocation" x="-7.5" y="-387.5"/>
+            <point key="canvasLocation" x="-12" y="-348.57571214392806"/>
         </view>
     </objects>
     <resources>
