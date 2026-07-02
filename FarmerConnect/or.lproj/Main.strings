@@ -332,8 +332,8 @@
 /* Class = "UILabel"; text = "0"; ObjectID = "5h5-ji-ojV"; */
 "5h5-ji-ojV.text" = "0";
 
-/* Class = "UILabel"; text = "Corteva Udayan - Tarraki ka Naya Savera   Corteva Udayan - Tarraki ka Naya Savera     "; ObjectID = "5hG-fH-Gk5"; */
-"5hG-fH-Gk5.text" = "Corteva Udayan - Tarraki ka Naya Savera   Corteva Udayan - Tarraki ka Naya Savera     ";
+/* Class = "UILabel"; text = "Pioneer Udayan - Tarraki ka Naya Savera   Pioneer Udayan - Tarraki ka Naya Savera     "; ObjectID = "5hG-fH-Gk5"; */
+"5hG-fH-Gk5.text" = "Pioneer Udayan - Tarraki ka Naya Savera   Pioneer Udayan - Tarraki ka Naya Savera     ";
 
 /* Class = "UILabel"; text = "584128"; ObjectID = "5k6-Bz-6Ui"; */
 "5k6-Bz-6Ui.text" = "584128";
@@ -788,8 +788,8 @@
 /* Class = "UILabel"; text = "N/A"; ObjectID = "D65-di-PY7"; */
 "D65-di-PY7.text" = "N/A";
 
-/* Class = "UILabel"; text = "I allow Corteva to use the Photo / Video / other content shared here in photo and video sharing screen."; ObjectID = "DAb-FW-eEA"; */
-"DAb-FW-eEA.text" = "I allow Corteva to use the Photo / Video / other content shared here in photo and video sharing screen.";
+/* Class = "UILabel"; text = "I allow Pioneer to use the Photo / Video / other content shared here in photo and video sharing screen."; ObjectID = "DAb-FW-eEA"; */
+"DAb-FW-eEA.text" = "I allow Pioneer to use the Photo / Video / other content shared here in photo and video sharing screen.";
 
 /* Class = "UILabel"; text = "Contact No"; ObjectID = "DD3-OW-EXk"; */
 "DD3-OW-EXk.text" = "Contact No";
@@ -2069,8 +2069,8 @@
 /* Class = "UILabel"; text = "Version"; ObjectID = "XlQ-dx-Sej"; */
 "XlQ-dx-Sej.text" = "Version";
 
-/* Class = "UILabel"; text = "Corteva Udayan - Tarraki ka Naya Savera   Corteva Udayan - Tarraki ka Naya Savera     "; ObjectID = "Xma-pD-9FA"; */
-"Xma-pD-9FA.text" = "Corteva Udayan - Tarraki ka Naya Savera   Corteva Udayan - Tarraki ka Naya Savera     ";
+/* Class = "UILabel"; text = "Pioneer Udayan - Tarraki ka Naya Savera   Pioneer Udayan - Tarraki ka Naya Savera     "; ObjectID = "Xma-pD-9FA"; */
+"Xma-pD-9FA.text" = "Pioneer Udayan - Tarraki ka Naya Savera   Pioneer Udayan - Tarraki ka Naya Savera     ";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "Xnt-49-1oH"; */
 "Xnt-49-1oH.text" = "0";

@@ -104,7 +104,7 @@ class PageContentViewController: UIViewController,UICollectionViewDelegate,UICol
 //        
 //        let dict3 : NSMutableDictionary = NSMutableDictionary()
 //        dict3.setValue("Crop Diagnosis", forKey: "title")
-//        dict3.setValue("Are your plants healthy? Take a picture of your crop with smart phone. Corteva will analyze it and provide insights with in seconds.", forKey: "description")
+//        dict3.setValue("Are your plants healthy? Take a picture of your crop with smart phone. Pioneer will analyze it and provide insights with in seconds.", forKey: "description")
 //        dict3.setValue("walk_thru3", forKey: "Image")
         
         let dict6 : NSMutableDictionary = NSMutableDictionary()

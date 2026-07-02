@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Farmer Connect</string>
+	<string>Pioneer FarmFirst</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -83,6 +83,11 @@
 	<string>This app will used to save this app images in your image gallery</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app will use your image gallery for Farm Services, Crop Diagnosis</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>HelveticaNowText.ttf</string>
+		<string>Gilroy-Bold.otf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -113,10 +118,5 @@
 	<string>Light</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>HelveticaNowText.ttf</string>
-		<string>Gilroy-Bold.otf</string>
-	</array>
 </dict>
 </plist>

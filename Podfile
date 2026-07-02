@@ -2,7 +2,7 @@
 ## platform :ios, '14.2'
 # use_frameworks!
 #
-#target 'FarmerConnect' do
+#target 'Pioneer FarmFirst' do
 #
 #pod 'Alamofire','~> 4.9.1'
 #pod 'GoogleMaps',  '4.0.0'
@@ -49,14 +49,14 @@
 #  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 #
-#  # Pods for FarmerConnect
+#  # Pods for Pioneer FarmFirst
 #
-#  target 'FarmerConnectTests' do
+#  target 'Pioneer FarmFirstTests' do
 #    inherit! :search_paths
 #    # Pods for testing
 #  end
 #
-#  target 'FarmerConnectUITests' do
+#  target 'Pioneer FarmFirstUITests' do
 #    # Pods for testing
 #  end
 #
@@ -99,7 +99,7 @@
 
 platform :ios, '13.0'
 
-target 'FarmerConnect' do
+target 'Pioneer FarmFirst' do
 
   pod 'Alamofire','~> 4.9.1'
   pod 'GoogleMaps',  '4.0.0'
@@ -117,7 +117,7 @@ target 'FarmerConnect' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKCoreKit'
 
-  target 'FarmerConnectTests' do
+  target 'Pioneer FarmFirstTests' do
     inherit! :search_paths
   end
 

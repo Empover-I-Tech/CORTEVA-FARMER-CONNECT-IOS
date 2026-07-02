@@ -2173,7 +2173,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     /**
      It redirects to the folder **CropDiagnosis** in **Documents Directory** else new folder is created
-     - Remark: used to store all downloaded assets of **Corteva News** data when there is a active internet connection
+     - Remark: used to store all downloaded assets of **Pioneer News** data when there is a active internet connection
      - Returns: String
      */
     @objc func getNewsFolderPath() -> String{

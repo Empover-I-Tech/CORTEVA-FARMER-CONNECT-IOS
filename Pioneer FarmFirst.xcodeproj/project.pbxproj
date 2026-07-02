@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17D5FB1CADED6ABC250E2CC7 /* Pods_RichNotificationContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50E7CD2EC8DBEF18DCDEDD /* Pods_RichNotificationContent.framework */; };
+		14C5A0775E3C54111D193445 /* Pods_Pioneer_FarmFirstTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F584358884C330A5980D113F /* Pods_Pioneer_FarmFirstTests.framework */; };
 		180C4C6E23A1165D00EF7C14 /* PeetUploadedRecordsBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4C6C23A1165B00EF7C14 /* PeetUploadedRecordsBO.swift */; };
 		180C4C6F23A1165D00EF7C14 /* CDIDiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4C6D23A1165D00EF7C14 /* CDIDiseaseCell.swift */; };
 		180C4C7123A1166200EF7C14 /* CropDiagnosisPeetViwControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4C7023A1166200EF7C14 /* CropDiagnosisPeetViwControllerOne.swift */; };
@@ -44,8 +44,7 @@
 		18DC851B23A216F500E89C4C /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DC851A23A216F500E89C4C /* upArrow.png */; };
 		18DC851F23A24EA800E89C4C /* ca_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DC851E23A24EA600E89C4C /* ca_camera.png */; };
 		18DC852123A2509100E89C4C /* ca_camera1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DC852023A2508F00E89C4C /* ca_camera1.png */; };
-		500D8529FFE8F9F1A340531D /* Pods_FarmerConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6114919E401D4ABCD997A4E3 /* Pods_FarmerConnectTests.framework */; };
-		68FAD3A4926CE3FEB9878FA6 /* Pods_NotificationMediaExtention.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE33E75637086931E99AECCD /* Pods_NotificationMediaExtention.framework */; };
+		26300088F1BF0F28791B0DE3 /* Pods_RichNotificationContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6597FBD5691A3C673AE3FE /* Pods_RichNotificationContent.framework */; };
 		840B5FAC1FEA5FCC004F4492 /* ISRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5FAB1FEA5FCC004F4492 /* ISRadioButton.swift */; };
 		840B5FAE1FEA6724004F4492 /* FarmServicesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5FAD1FEA6724004F4492 /* FarmServicesConstants.swift */; };
 		840B5FB01FEA9F1B004F4492 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5FAF1FEA9F1B004F4492 /* Equipment.swift */; };
@@ -195,7 +194,6 @@
 		84C5F7371FFBBB0D00B78745 /* SingleDaySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5F7361FFBBB0D00B78745 /* SingleDaySelectionView.swift */; };
 		84C5F7391FFBBB8500B78745 /* SingleDaySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C5F7381FFBBB8500B78745 /* SingleDaySelectionView.xib */; };
 		84C5F7451FFBD1CC00B78745 /* BookNowTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C5F7441FFBD1CC00B78745 /* BookNowTimeCell.xib */; };
-		8E6738AB4A125ABE713FC789 /* Pods_FarmerConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B302B3BC9E18E9CFD960D9D2 /* Pods_FarmerConnect.framework */; };
 		A306D21926DCBD860032ABDF /* HeighestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306D21826DCBD860032ABDF /* HeighestViewController.swift */; };
 		A30767171FFDFBF300B23F0C /* DiseasePrescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30767141FFDFBF300B23F0C /* DiseasePrescriptions.swift */; };
 		A30767181FFDFBF300B23F0C /* AgroProductMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30767151FFDFBF300B23F0C /* AgroProductMaster.swift */; };
@@ -493,6 +491,7 @@
 		D0F6F5A4245B509A00D1178B /* BookletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6F5A3245B509A00D1178B /* BookletInfo.swift */; };
 		D0F90D9423B7753300AAD1DA /* CropCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F90D9323B7753300AAD1DA /* CropCell.swift */; };
 		D0F90D9623B77E8A00AAD1DA /* CropCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F90D9523B77E8A00AAD1DA /* CropCell.xib */; };
+		EA9DCDD40C306E3530811E99 /* Pods_Pioneer_FarmFirst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDA637ABA85FDAC0CEAC483 /* Pods_Pioneer_FarmFirst.framework */; };
 		FF67E4F229D43B3C000FDED4 /* PlanterOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E4F129D43B3C000FDED4 /* PlanterOrdersViewController.swift */; };
 		FF67E4F429D43FF1000FDED4 /* PlanterOrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E4F329D43FF1000FDED4 /* PlanterOrdersTableViewCell.swift */; };
 		FF7CAC1C29B9C0020078E8C2 /* UserLogEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CAC1B29B9C0020078E8C2 /* UserLogEvents.swift */; };
@@ -500,6 +499,7 @@
 		FF9A7D4A29D2FB3600E8DDEE /* PlanterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A7D4929D2FB3600E8DDEE /* PlanterViewController.swift */; };
 		FF9A7D4E29D2FC6C00E8DDEE /* PlanterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A7D4D29D2FC6B00E8DDEE /* PlanterModel.swift */; };
 		FFD529DF29D5A48D00DE6FAC /* PlanterApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD529DE29D5A48D00DE6FAC /* PlanterApprovalViewController.swift */; };
+		FFE1A9A43492294D5BC5B9B1 /* Pods_NotificationMediaExtention.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A4393D790035B20E2FC79F /* Pods_NotificationMediaExtention.framework */; };
 		FFF2942E29B0A61500DA1592 /* UserLogEventsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF2942D29B0A61500DA1592 /* UserLogEventsDetails.swift */; };
 /* End PBXBuildFile section */
 
@@ -570,7 +570,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		09602C6DFB30FFF55FBF1EA4 /* Pods-FarmerConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnectTests.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnectTests/Pods-FarmerConnectTests.release.xcconfig"; sourceTree = "<group>"; };
 		180C4C6C23A1165B00EF7C14 /* PeetUploadedRecordsBO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeetUploadedRecordsBO.swift; sourceTree = "<group>"; };
 		180C4C6D23A1165D00EF7C14 /* CDIDiseaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDIDiseaseCell.swift; sourceTree = "<group>"; };
 		180C4C7023A1166200EF7C14 /* CropDiagnosisPeetViwControllerOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropDiagnosisPeetViwControllerOne.swift; sourceTree = "<group>"; };
@@ -607,12 +606,11 @@
 		18DC851A23A216F500E89C4C /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
 		18DC851E23A24EA600E89C4C /* ca_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ca_camera.png; sourceTree = "<group>"; };
 		18DC852023A2508F00E89C4C /* ca_camera1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ca_camera1.png; sourceTree = "<group>"; };
-		3C50E7CD2EC8DBEF18DCDEDD /* Pods_RichNotificationContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichNotificationContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		463467F74CB8FE333FCED61B /* Pods-FarmerConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnectTests/Pods-FarmerConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		516E1C4CE5FEBE7799E155E8 /* Pods-NotificationMediaExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.debug.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.debug.xcconfig"; sourceTree = "<group>"; };
-		6114919E401D4ABCD997A4E3 /* Pods_FarmerConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		62105BD93A71E94D4A9B0E18 /* Pods-RichNotificationContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.debug.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.debug.xcconfig"; sourceTree = "<group>"; };
-		6DB0BCB7C4D6700C23DA9017 /* Pods-NotificationMediaExtention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.release.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.release.xcconfig"; sourceTree = "<group>"; };
+		3A6597FBD5691A3C673AE3FE /* Pods_RichNotificationContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichNotificationContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4389BD847B09CCB9EE2DE07F /* Pods-Pioneer FarmFirst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pioneer FarmFirst.release.xcconfig"; path = "Target Support Files/Pods-Pioneer FarmFirst/Pods-Pioneer FarmFirst.release.xcconfig"; sourceTree = "<group>"; };
+		4A6082E79D0CC3FFD78446D0 /* Pods-Pioneer FarmFirstTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pioneer FarmFirstTests.debug.xcconfig"; path = "Target Support Files/Pods-Pioneer FarmFirstTests/Pods-Pioneer FarmFirstTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57660AAAB85F945B4A6AE26C /* Pods-NotificationMediaExtention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.release.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.release.xcconfig"; sourceTree = "<group>"; };
+		7FDA637ABA85FDAC0CEAC483 /* Pods_Pioneer_FarmFirst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pioneer_FarmFirst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840B5FAB1FEA5FCC004F4492 /* ISRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRadioButton.swift; sourceTree = "<group>"; };
 		840B5FAD1FEA6724004F4492 /* FarmServicesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmServicesConstants.swift; sourceTree = "<group>"; };
 		840B5FAF1FEA9F1B004F4492 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
@@ -631,13 +629,13 @@
 		8447906B1FFCD3DF00B4473D /* NextGrowingTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextGrowingTextView.swift; sourceTree = "<group>"; };
 		8447906F1FFCF7CE00B4473D /* MultipuleDaySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipuleDaySelection.swift; sourceTree = "<group>"; };
 		844790711FFD03A700B4473D /* MultipuleDaySelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipuleDaySelection.xib; sourceTree = "<group>"; };
-		8447F1261FE7D3FB00C5E00C /* FarmerConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmerConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8447F1261FE7D3FB00C5E00C /* Pioneer FarmFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pioneer FarmFirst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447F1301FE7D3FB00C5E00C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8447F1351FE7D3FB00C5E00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8447F13A1FE7D3FB00C5E00C /* FarmerConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmerConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8447F13A1FE7D3FB00C5E00C /* Pioneer FarmFirstTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pioneer FarmFirstTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447F13E1FE7D3FB00C5E00C /* FarmerConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerConnectTests.swift; sourceTree = "<group>"; };
 		8447F1401FE7D3FB00C5E00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8447F1451FE7D3FB00C5E00C /* FarmerConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmerConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8447F1451FE7D3FB00C5E00C /* Pioneer FarmFirstUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pioneer FarmFirstUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447F1491FE7D3FB00C5E00C /* FarmerConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerConnectUITests.swift; sourceTree = "<group>"; };
 		8447F14B1FE7D3FB00C5E00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8447F1F21FE7EAA700C5E00C /* ActiveBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveBuilder.swift; sourceTree = "<group>"; };
@@ -801,7 +799,7 @@
 		84C5F7361FFBBB0D00B78745 /* SingleDaySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDaySelectionView.swift; sourceTree = "<group>"; };
 		84C5F7381FFBBB8500B78745 /* SingleDaySelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleDaySelectionView.xib; sourceTree = "<group>"; };
 		84C5F7441FFBD1CC00B78745 /* BookNowTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookNowTimeCell.xib; sourceTree = "<group>"; };
-		A2559DC696C6AC372819C94C /* Pods-RichNotificationContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.release.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.release.xcconfig"; sourceTree = "<group>"; };
+		99A4393D790035B20E2FC79F /* Pods_NotificationMediaExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationMediaExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A306D21826DCBD860032ABDF /* HeighestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeighestViewController.swift; sourceTree = "<group>"; };
 		A30767141FFDFBF300B23F0C /* DiseasePrescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiseasePrescriptions.swift; sourceTree = "<group>"; };
 		A30767151FFDFBF300B23F0C /* AgroProductMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgroProductMaster.swift; sourceTree = "<group>"; };
@@ -995,7 +993,6 @@
 		A3F439B129DBE8BD005F3598 /* PSSingleDaySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSSingleDaySelectionView.swift; sourceTree = "<group>"; };
 		A3F439B229DBE8BD005F3598 /* PSSingleDaySelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSSingleDaySelectionView.xib; sourceTree = "<group>"; };
 		A3F4C14E2FE90FFD00F6E89D /* swizzleFontImplementation.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = swizzleFontImplementation.txt; sourceTree = "<group>"; };
-		B302B3BC9E18E9CFD960D9D2 /* Pods_FarmerConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B411D2372271774400107DBA /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		B41E7DAF2269A2DB004CDC22 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		B42D9F4022705BE2004CE1FD /* SVPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVPinView.swift; sourceTree = "<group>"; };
@@ -1003,6 +1000,8 @@
 		B42D9F442270609C004CE1FD /* SVPinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVPinCell.xib; sourceTree = "<group>"; };
 		B42D9F452270609C004CE1FD /* SVPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVPinView.xib; sourceTree = "<group>"; };
 		B4A563342277025B00BB78EB /* PageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		B50CEC5AC01FD86BAD52B5B4 /* Pods-NotificationMediaExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.debug.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.debug.xcconfig"; sourceTree = "<group>"; };
+		B8EB0EA6E104C06CBF047FC2 /* Pods-Pioneer FarmFirst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pioneer FarmFirst.debug.xcconfig"; path = "Target Support Files/Pods-Pioneer FarmFirst/Pods-Pioneer FarmFirst.debug.xcconfig"; sourceTree = "<group>"; };
 		D005E50823DF22B30075DF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D005E50923DF22D50075DF75 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D005E50A23DF22E80075DF75 /* pa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pa; path = pa.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1184,9 +1183,10 @@
 		D0F6F5A3245B509A00D1178B /* BookletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookletInfo.swift; sourceTree = "<group>"; };
 		D0F90D9323B7753300AAD1DA /* CropCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropCell.swift; sourceTree = "<group>"; };
 		D0F90D9523B77E8A00AAD1DA /* CropCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CropCell.xib; sourceTree = "<group>"; };
-		E75DDFF5E1EE160F3971ACE2 /* Pods-FarmerConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect.release.xcconfig"; sourceTree = "<group>"; };
-		FD2E7DBFBA6C59BADBAD8A37 /* Pods-FarmerConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect.debug.xcconfig"; sourceTree = "<group>"; };
-		FE33E75637086931E99AECCD /* Pods_NotificationMediaExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationMediaExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0C0EBC8BAC8DF328B6449B2 /* Pods-Pioneer FarmFirstTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pioneer FarmFirstTests.release.xcconfig"; path = "Target Support Files/Pods-Pioneer FarmFirstTests/Pods-Pioneer FarmFirstTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF5DF84BEE763B3CDCA89047 /* Pods-RichNotificationContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.debug.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.debug.xcconfig"; sourceTree = "<group>"; };
+		F248D2A5A6EC3EAFB40692B9 /* Pods-RichNotificationContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.release.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.release.xcconfig"; sourceTree = "<group>"; };
+		F584358884C330A5980D113F /* Pods_Pioneer_FarmFirstTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pioneer_FarmFirstTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF573E5929B8DC6700936096 /* FarmerConnectV7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FarmerConnectV7.xcdatamodel; sourceTree = "<group>"; };
 		FF67E4F129D43B3C000FDED4 /* PlanterOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanterOrdersViewController.swift; sourceTree = "<group>"; };
 		FF67E4F329D43FF1000FDED4 /* PlanterOrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanterOrdersTableViewCell.swift; sourceTree = "<group>"; };
@@ -1204,7 +1204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C3B9D32EEAD1CA00EAE1AE /* EmpoverCameraScannerSDK.framework in Frameworks */,
-				8E6738AB4A125ABE713FC789 /* Pods_FarmerConnect.framework in Frameworks */,
+				EA9DCDD40C306E3530811E99 /* Pods_Pioneer_FarmFirst.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,7 +1212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500D8529FFE8F9F1A340531D /* Pods_FarmerConnectTests.framework in Frameworks */,
+				14C5A0775E3C54111D193445 /* Pods_Pioneer_FarmFirstTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1227,7 +1227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68FAD3A4926CE3FEB9878FA6 /* Pods_NotificationMediaExtention.framework in Frameworks */,
+				FFE1A9A43492294D5BC5B9B1 /* Pods_NotificationMediaExtention.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,7 +1237,7 @@
 			files = (
 				D0A12AE224606B7900B36FE7 /* UserNotificationsUI.framework in Frameworks */,
 				D0A12AE024606B7900B36FE7 /* UserNotifications.framework in Frameworks */,
-				17D5FB1CADED6ABC250E2CC7 /* Pods_RichNotificationContent.framework in Frameworks */,
+				26300088F1BF0F28791B0DE3 /* Pods_RichNotificationContent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1391,9 +1391,9 @@
 		8447F1271FE7D3FB00C5E00C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8447F1261FE7D3FB00C5E00C /* FarmerConnect.app */,
-				8447F13A1FE7D3FB00C5E00C /* FarmerConnectTests.xctest */,
-				8447F1451FE7D3FB00C5E00C /* FarmerConnectUITests.xctest */,
+				8447F1261FE7D3FB00C5E00C /* Pioneer FarmFirst.app */,
+				8447F13A1FE7D3FB00C5E00C /* Pioneer FarmFirstTests.xctest */,
+				8447F1451FE7D3FB00C5E00C /* Pioneer FarmFirstUITests.xctest */,
 				84930CD82004FBEB00C9F9BC /* NotificationMediaExtention.appex */,
 				D0A12ADE24606B7900B36FE7 /* RichNotificationContent.appex */,
 			);
@@ -2314,14 +2314,14 @@
 		B94EEAA99F559A3F07A84165 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FD2E7DBFBA6C59BADBAD8A37 /* Pods-FarmerConnect.debug.xcconfig */,
-				E75DDFF5E1EE160F3971ACE2 /* Pods-FarmerConnect.release.xcconfig */,
-				463467F74CB8FE333FCED61B /* Pods-FarmerConnectTests.debug.xcconfig */,
-				09602C6DFB30FFF55FBF1EA4 /* Pods-FarmerConnectTests.release.xcconfig */,
-				516E1C4CE5FEBE7799E155E8 /* Pods-NotificationMediaExtention.debug.xcconfig */,
-				6DB0BCB7C4D6700C23DA9017 /* Pods-NotificationMediaExtention.release.xcconfig */,
-				62105BD93A71E94D4A9B0E18 /* Pods-RichNotificationContent.debug.xcconfig */,
-				A2559DC696C6AC372819C94C /* Pods-RichNotificationContent.release.xcconfig */,
+				B50CEC5AC01FD86BAD52B5B4 /* Pods-NotificationMediaExtention.debug.xcconfig */,
+				57660AAAB85F945B4A6AE26C /* Pods-NotificationMediaExtention.release.xcconfig */,
+				B8EB0EA6E104C06CBF047FC2 /* Pods-Pioneer FarmFirst.debug.xcconfig */,
+				4389BD847B09CCB9EE2DE07F /* Pods-Pioneer FarmFirst.release.xcconfig */,
+				4A6082E79D0CC3FFD78446D0 /* Pods-Pioneer FarmFirstTests.debug.xcconfig */,
+				E0C0EBC8BAC8DF328B6449B2 /* Pods-Pioneer FarmFirstTests.release.xcconfig */,
+				EF5DF84BEE763B3CDCA89047 /* Pods-RichNotificationContent.debug.xcconfig */,
+				F248D2A5A6EC3EAFB40692B9 /* Pods-RichNotificationContent.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -2589,10 +2589,10 @@
 				D0273F71245C56DE0071346A /* QuickLook.framework */,
 				D0A12ADF24606B7900B36FE7 /* UserNotifications.framework */,
 				D0A12AE124606B7900B36FE7 /* UserNotificationsUI.framework */,
-				B302B3BC9E18E9CFD960D9D2 /* Pods_FarmerConnect.framework */,
-				6114919E401D4ABCD997A4E3 /* Pods_FarmerConnectTests.framework */,
-				FE33E75637086931E99AECCD /* Pods_NotificationMediaExtention.framework */,
-				3C50E7CD2EC8DBEF18DCDEDD /* Pods_RichNotificationContent.framework */,
+				99A4393D790035B20E2FC79F /* Pods_NotificationMediaExtention.framework */,
+				7FDA637ABA85FDAC0CEAC483 /* Pods_Pioneer_FarmFirst.framework */,
+				F584358884C330A5980D113F /* Pods_Pioneer_FarmFirstTests.framework */,
+				3A6597FBD5691A3C673AE3FE /* Pods_RichNotificationContent.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2613,19 +2613,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8447F1251FE7D3FB00C5E00C /* FarmerConnect */ = {
+		8447F1251FE7D3FB00C5E00C /* Pioneer FarmFirst */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8447F14E1FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnect" */;
+			buildConfigurationList = 8447F14E1FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "Pioneer FarmFirst" */;
 			buildPhases = (
-				59D7680803CD35E492027AE1 /* [CP] Check Pods Manifest.lock */,
+				210A72C50ECD99D53855989C /* [CP] Check Pods Manifest.lock */,
 				8447F1221FE7D3FB00C5E00C /* Sources */,
 				8447F1231FE7D3FB00C5E00C /* Frameworks */,
 				8447F1241FE7D3FB00C5E00C /* Resources */,
 				84930CE32004FBEB00C9F9BC /* Embed App Extensions */,
 				D04B453A24AC7A6D000D8AA2 /* Embed Frameworks */,
 				D04B454D24ACA1E1000D8AA2 /* CopyFiles */,
-				AE8B2DA77BDA1408B05BE8A5 /* [CP] Embed Pods Frameworks */,
-				66641E1FDE7A3D83397D4B61 /* [CP] Copy Pods Resources */,
+				9201A1FCB9D96C297437198C /* [CP] Embed Pods Frameworks */,
+				F427938BEA1E20581630F930 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2633,16 +2633,16 @@
 				84930CDE2004FBEB00C9F9BC /* PBXTargetDependency */,
 				D0A12AEB24606B7900B36FE7 /* PBXTargetDependency */,
 			);
-			name = FarmerConnect;
+			name = "Pioneer FarmFirst";
 			productName = FarmerConnect;
-			productReference = 8447F1261FE7D3FB00C5E00C /* FarmerConnect.app */;
+			productReference = 8447F1261FE7D3FB00C5E00C /* Pioneer FarmFirst.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8447F1391FE7D3FB00C5E00C /* FarmerConnectTests */ = {
+		8447F1391FE7D3FB00C5E00C /* Pioneer FarmFirstTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8447F1511FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnectTests" */;
+			buildConfigurationList = 8447F1511FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "Pioneer FarmFirstTests" */;
 			buildPhases = (
-				E114900F3CB3FC07A78BC364 /* [CP] Check Pods Manifest.lock */,
+				4655F5C1748662562B03AAB4 /* [CP] Check Pods Manifest.lock */,
 				8447F1361FE7D3FB00C5E00C /* Sources */,
 				8447F1371FE7D3FB00C5E00C /* Frameworks */,
 				8447F1381FE7D3FB00C5E00C /* Resources */,
@@ -2652,14 +2652,14 @@
 			dependencies = (
 				8447F13C1FE7D3FB00C5E00C /* PBXTargetDependency */,
 			);
-			name = FarmerConnectTests;
+			name = "Pioneer FarmFirstTests";
 			productName = FarmerConnectTests;
-			productReference = 8447F13A1FE7D3FB00C5E00C /* FarmerConnectTests.xctest */;
+			productReference = 8447F13A1FE7D3FB00C5E00C /* Pioneer FarmFirstTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8447F1441FE7D3FB00C5E00C /* FarmerConnectUITests */ = {
+		8447F1441FE7D3FB00C5E00C /* Pioneer FarmFirstUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8447F1541FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnectUITests" */;
+			buildConfigurationList = 8447F1541FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "Pioneer FarmFirstUITests" */;
 			buildPhases = (
 				8447F1411FE7D3FB00C5E00C /* Sources */,
 				8447F1421FE7D3FB00C5E00C /* Frameworks */,
@@ -2670,16 +2670,16 @@
 			dependencies = (
 				8447F1471FE7D3FB00C5E00C /* PBXTargetDependency */,
 			);
-			name = FarmerConnectUITests;
+			name = "Pioneer FarmFirstUITests";
 			productName = FarmerConnectUITests;
-			productReference = 8447F1451FE7D3FB00C5E00C /* FarmerConnectUITests.xctest */;
+			productReference = 8447F1451FE7D3FB00C5E00C /* Pioneer FarmFirstUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		84930CD72004FBEB00C9F9BC /* NotificationMediaExtention */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84930CE02004FBEB00C9F9BC /* Build configuration list for PBXNativeTarget "NotificationMediaExtention" */;
 			buildPhases = (
-				BAA68D384EC98DC3EC3A16DA /* [CP] Check Pods Manifest.lock */,
+				B6AB3CA542A2B8260D205D87 /* [CP] Check Pods Manifest.lock */,
 				84930CD42004FBEB00C9F9BC /* Sources */,
 				84930CD52004FBEB00C9F9BC /* Frameworks */,
 				84930CD62004FBEB00C9F9BC /* Resources */,
@@ -2698,7 +2698,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A12AEF24606B7900B36FE7 /* Build configuration list for PBXNativeTarget "RichNotificationContent" */;
 			buildPhases = (
-				B41DD85641A9535B0FFDDBCA /* [CP] Check Pods Manifest.lock */,
+				4D2A495EAADD4DA29038739A /* [CP] Check Pods Manifest.lock */,
 				D0A12ADA24606B7900B36FE7 /* Sources */,
 				D0A12ADB24606B7900B36FE7 /* Frameworks */,
 				D0A12ADC24606B7900B36FE7 /* Resources */,
@@ -2755,7 +2755,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8447F1211FE7D3FB00C5E00C /* Build configuration list for PBXProject "FarmerConnect" */;
+			buildConfigurationList = 8447F1211FE7D3FB00C5E00C /* Build configuration list for PBXProject "Pioneer FarmFirst" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2826,9 +2826,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8447F1251FE7D3FB00C5E00C /* FarmerConnect */,
-				8447F1391FE7D3FB00C5E00C /* FarmerConnectTests */,
-				8447F1441FE7D3FB00C5E00C /* FarmerConnectUITests */,
+				8447F1251FE7D3FB00C5E00C /* Pioneer FarmFirst */,
+				8447F1391FE7D3FB00C5E00C /* Pioneer FarmFirstTests */,
+				8447F1441FE7D3FB00C5E00C /* Pioneer FarmFirstUITests */,
 				84930CD72004FBEB00C9F9BC /* NotificationMediaExtention */,
 				D0A12ADD24606B7900B36FE7 /* RichNotificationContent */,
 			);
@@ -2956,7 +2956,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		59D7680803CD35E492027AE1 /* [CP] Check Pods Manifest.lock */ = {
+		210A72C50ECD99D53855989C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2971,40 +2971,64 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FarmerConnect-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Pioneer FarmFirst-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66641E1FDE7A3D83397D4B61 /* [CP] Copy Pods Resources */ = {
+		4655F5C1748662562B03AAB4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"$(DERIVED_FILE_DIR)/Pods-Pioneer FarmFirstTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE8B2DA77BDA1408B05BE8A5 /* [CP] Embed Pods Frameworks */ = {
+		4D2A495EAADD4DA29038739A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RichNotificationContent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9201A1FCB9D96C297437198C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Pioneer FarmFirst/Pods-Pioneer FarmFirst-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -3057,32 +3081,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pioneer FarmFirst/Pods-Pioneer FarmFirst-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B41DD85641A9535B0FFDDBCA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RichNotificationContent-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BAA68D384EC98DC3EC3A16DA /* [CP] Check Pods Manifest.lock */ = {
+		B6AB3CA542A2B8260D205D87 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3138,26 +3140,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
 		};
-		E114900F3CB3FC07A78BC364 /* [CP] Check Pods Manifest.lock */ = {
+		F427938BEA1E20581630F930 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-Pioneer FarmFirst/Pods-Pioneer FarmFirst-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FarmerConnectTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pioneer FarmFirst/Pods-Pioneer FarmFirst-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3605,12 +3605,12 @@
 /* Begin PBXTargetDependency section */
 		8447F13C1FE7D3FB00C5E00C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8447F1251FE7D3FB00C5E00C /* FarmerConnect */;
+			target = 8447F1251FE7D3FB00C5E00C /* Pioneer FarmFirst */;
 			targetProxy = 8447F13B1FE7D3FB00C5E00C /* PBXContainerItemProxy */;
 		};
 		8447F1471FE7D3FB00C5E00C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8447F1251FE7D3FB00C5E00C /* FarmerConnect */;
+			target = 8447F1251FE7D3FB00C5E00C /* Pioneer FarmFirst */;
 			targetProxy = 8447F1461FE7D3FB00C5E00C /* PBXContainerItemProxy */;
 		};
 		84930CDE2004FBEB00C9F9BC /* PBXTargetDependency */ = {
@@ -3856,7 +3856,7 @@
 		};
 		8447F14F1FE7D3FB00C5E00C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD2E7DBFBA6C59BADBAD8A37 /* Pods-FarmerConnect.debug.xcconfig */;
+			baseConfigurationReference = B8EB0EA6E104C06CBF047FC2 /* Pods-Pioneer FarmFirst.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -3902,7 +3902,7 @@
 		};
 		8447F1501FE7D3FB00C5E00C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E75DDFF5E1EE160F3971ACE2 /* Pods-FarmerConnect.release.xcconfig */;
+			baseConfigurationReference = 4389BD847B09CCB9EE2DE07F /* Pods-Pioneer FarmFirst.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -3948,7 +3948,7 @@
 		};
 		8447F1521FE7D3FB00C5E00C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 463467F74CB8FE333FCED61B /* Pods-FarmerConnectTests.debug.xcconfig */;
+			baseConfigurationReference = 4A6082E79D0CC3FFD78446D0 /* Pods-Pioneer FarmFirstTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -3962,13 +3962,13 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmerConnect.app/FarmerConnect";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pioneer FarmFirst.app/Pioneer FarmFirst";
 			};
 			name = Debug;
 		};
 		8447F1531FE7D3FB00C5E00C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09602C6DFB30FFF55FBF1EA4 /* Pods-FarmerConnectTests.release.xcconfig */;
+			baseConfigurationReference = E0C0EBC8BAC8DF328B6449B2 /* Pods-Pioneer FarmFirstTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -3982,7 +3982,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmerConnect.app/FarmerConnect";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pioneer FarmFirst.app/Pioneer FarmFirst";
 			};
 			name = Release;
 		};
@@ -4024,7 +4024,7 @@
 		};
 		84930CE12004FBEB00C9F9BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 516E1C4CE5FEBE7799E155E8 /* Pods-NotificationMediaExtention.debug.xcconfig */;
+			baseConfigurationReference = B50CEC5AC01FD86BAD52B5B4 /* Pods-NotificationMediaExtention.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -4046,7 +4046,7 @@
 		};
 		84930CE22004FBEB00C9F9BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DB0BCB7C4D6700C23DA9017 /* Pods-NotificationMediaExtention.release.xcconfig */;
+			baseConfigurationReference = 57660AAAB85F945B4A6AE26C /* Pods-NotificationMediaExtention.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -4068,7 +4068,7 @@
 		};
 		D0A12AED24606B7900B36FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62105BD93A71E94D4A9B0E18 /* Pods-RichNotificationContent.debug.xcconfig */;
+			baseConfigurationReference = EF5DF84BEE763B3CDCA89047 /* Pods-RichNotificationContent.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -4097,7 +4097,7 @@
 		};
 		D0A12AEE24606B7900B36FE7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2559DC696C6AC372819C94C /* Pods-RichNotificationContent.release.xcconfig */;
+			baseConfigurationReference = F248D2A5A6EC3EAFB40692B9 /* Pods-RichNotificationContent.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -4125,7 +4125,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8447F1211FE7D3FB00C5E00C /* Build configuration list for PBXProject "FarmerConnect" */ = {
+		8447F1211FE7D3FB00C5E00C /* Build configuration list for PBXProject "Pioneer FarmFirst" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8447F14C1FE7D3FB00C5E00C /* Debug */,
@@ -4134,7 +4134,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8447F14E1FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnect" */ = {
+		8447F14E1FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "Pioneer FarmFirst" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8447F14F1FE7D3FB00C5E00C /* Debug */,
@@ -4143,7 +4143,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8447F1511FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnectTests" */ = {
+		8447F1511FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "Pioneer FarmFirstTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8447F1521FE7D3FB00C5E00C /* Debug */,
@@ -4152,7 +4152,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8447F1541FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnectUITests" */ = {
+		8447F1541FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "Pioneer FarmFirstUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8447F1551FE7D3FB00C5E00C /* Debug */,

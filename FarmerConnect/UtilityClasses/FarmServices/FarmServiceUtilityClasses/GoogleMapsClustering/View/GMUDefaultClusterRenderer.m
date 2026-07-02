@@ -28,7 +28,7 @@
 #import "GMUWrappingDictionaryKey.h"
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "FarmerConnect-Swift.h"
+#import "Pioneer_FarmFirst-Swift.h"
 
 // Clusters smaller than this threshold will be expanded.
 static const NSUInteger kGMUMinClusterSize = 2;
