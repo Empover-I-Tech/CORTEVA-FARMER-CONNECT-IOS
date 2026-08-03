@@ -24,7 +24,7 @@ class SampleTrackingListViewController: BaseViewController,UICollectionViewDeleg
     var filteredCustomer:NSArray = []
     var arrHybridList:NSArray = []
     var arrCropList:NSArray = []
-    
+    var arrSeasonList:NSArray = []
     struct Crop {
         let cropId: Int
         let cropName: String
@@ -140,6 +140,9 @@ class SampleTrackingListViewController: BaseViewController,UICollectionViewDeleg
                         
                         self.arrCropList = dict!["cropList"] as! NSArray
                         print("Response after arrCropList data:\(self.arrCropList)")
+                        
+                        self.arrSeasonList = dict!["seasonList"] as! NSArray
+                        print("Response after arrSeasonList data:\(self.arrSeasonList)")
 
                         self.sampleTrackingListCollectionView.reloadData()
                         
@@ -178,6 +181,7 @@ class SampleTrackingListViewController: BaseViewController,UICollectionViewDeleg
     @IBAction func raiseRequestBtnAction(_ sender: Any) {
         let selectLableVC = self.storyboard?.instantiateViewController(withIdentifier: "SampleTrackingDetailsViewController") as? SampleTrackingDetailsViewController
         selectLableVC?.dataObj = [:]
+        selectLableVC?.getSeasonListArray = self.arrSeasonList
         selectLableVC?.getCropListArray = self.arrCropList
         selectLableVC?.getHybridListArray = self.arrHybridList
         self.navigationController?.pushViewController(selectLableVC!, animated: true)
@@ -213,6 +217,7 @@ class SampleTrackingListViewController: BaseViewController,UICollectionViewDeleg
        // let imageUrl = URL(string: (cellData?.image)!)!
         
         
+        listCell.seasonDisplayLbl.text = NSLocalizedString("season", comment: "")
         listCell.cropDisplayLbl.text = NSLocalizedString("crop", comment: "")
         listCell.hybridDisplayLbl.text = NSLocalizedString("hybrid", comment: "")
         listCell.requestedDateDisplayLbl.text = NSLocalizedString("Requested_Date", comment: "")
@@ -232,6 +237,7 @@ class SampleTrackingListViewController: BaseViewController,UICollectionViewDeleg
             }
         }
         
+        listCell.seasonValueLbl.text = (arrHistoryList.object(at: indexPath.row) as! NSDictionary).value(forKey: "seasonName") as? String
         listCell.cropValueLbl.text = (arrHistoryList.object(at: indexPath.row) as! NSDictionary).value(forKey: "cropName") as? String
         listCell.hybridValueLbl.text = (arrHistoryList.object(at: indexPath.row) as! NSDictionary).value(forKey: "hybridName") as? String
         listCell.requestedDateValueLbl.text = (arrHistoryList.object(at: indexPath.row) as! NSDictionary).value(forKey: "mobileSubmitDateTime") as? String
@@ -249,6 +255,7 @@ class SampleTrackingListViewController: BaseViewController,UICollectionViewDeleg
         
         let selectLableVC = self.storyboard?.instantiateViewController(withIdentifier: "SampleTrackingDetailsViewController") as? SampleTrackingDetailsViewController
         selectLableVC?.dataObj = itemSelected as? NSDictionary
+        selectLableVC?.getSeasonListArray = self.arrSeasonList
         selectLableVC?.getCropListArray = self.arrCropList
         selectLableVC?.getHybridListArray = self.arrHybridList
         self.navigationController?.pushViewController(selectLableVC!, animated: true)

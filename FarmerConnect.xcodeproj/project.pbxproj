@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1793622FFDC42ADE461EFC5C /* Pods_NotificationMediaExtention.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93CA6A84917D87E67E6154A /* Pods_NotificationMediaExtention.framework */; };
 		180C4C6E23A1165D00EF7C14 /* PeetUploadedRecordsBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4C6C23A1165B00EF7C14 /* PeetUploadedRecordsBO.swift */; };
 		180C4C6F23A1165D00EF7C14 /* CDIDiseaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4C6D23A1165D00EF7C14 /* CDIDiseaseCell.swift */; };
 		180C4C7123A1166200EF7C14 /* CropDiagnosisPeetViwControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4C7023A1166200EF7C14 /* CropDiagnosisPeetViwControllerOne.swift */; };
@@ -43,9 +44,8 @@
 		18DC851B23A216F500E89C4C /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DC851A23A216F500E89C4C /* upArrow.png */; };
 		18DC851F23A24EA800E89C4C /* ca_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DC851E23A24EA600E89C4C /* ca_camera.png */; };
 		18DC852123A2509100E89C4C /* ca_camera1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DC852023A2508F00E89C4C /* ca_camera1.png */; };
-		390CF467D3072E49CFE467AB /* Pods_FarmerConnect_FarmerConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8438580D051E2762D58E44 /* Pods_FarmerConnect_FarmerConnectUITests.framework */; };
-		4AD0CD607C0531042F85FA3B /* Pods_FarmerConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13246E25325F9FE31E86EF77 /* Pods_FarmerConnect.framework */; };
-		6B71DFE12CDB33F6955B9D4D /* Pods_NotificationMediaExtention.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76459E7A5665507B7DA0A2A8 /* Pods_NotificationMediaExtention.framework */; };
+		4B8EC7F80FE5F8B45BD2FC40 /* Pods_FarmerConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBD7A21B3B119E0F5FEB401 /* Pods_FarmerConnectTests.framework */; };
+		6380C58A82399A53E9F8949A /* Pods_FarmerConnect_FarmerConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13FC621354A43836C54E9BE /* Pods_FarmerConnect_FarmerConnectUITests.framework */; };
 		840B5FAC1FEA5FCC004F4492 /* ISRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5FAB1FEA5FCC004F4492 /* ISRadioButton.swift */; };
 		840B5FAE1FEA6724004F4492 /* FarmServicesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5FAD1FEA6724004F4492 /* FarmServicesConstants.swift */; };
 		840B5FB01FEA9F1B004F4492 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5FAF1FEA9F1B004F4492 /* Equipment.swift */; };
@@ -138,7 +138,6 @@
 		84930CCC2004972400C9F9BC /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84930CCB2004972400C9F9BC /* Feedback.swift */; };
 		84930CCE2004B76C00C9F9BC /* RateQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84930CCD2004B76C00C9F9BC /* RateQuestionsViewController.swift */; };
 		84930CD02004B7D300C9F9BC /* RateQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84930CCF2004B7D300C9F9BC /* RateQuestion.swift */; };
-		84930CD22004CDD000C9F9BC /* GoogleService(Prod Old)-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84930CD12004CDCF00C9F9BC /* GoogleService(Prod Old)-Info.plist */; };
 		84930CDB2004FBEB00C9F9BC /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84930CDA2004FBEB00C9F9BC /* NotificationService.swift */; };
 		84930CDF2004FBEB00C9F9BC /* NotificationMediaExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84930CD82004FBEB00C9F9BC /* NotificationMediaExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8495C85D1FFDF96D00E353F4 /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495C85C1FFDF96D00E353F4 /* PlaceOrder.swift */; };
@@ -195,8 +194,6 @@
 		84C5F7371FFBBB0D00B78745 /* SingleDaySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5F7361FFBBB0D00B78745 /* SingleDaySelectionView.swift */; };
 		84C5F7391FFBBB8500B78745 /* SingleDaySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C5F7381FFBBB8500B78745 /* SingleDaySelectionView.xib */; };
 		84C5F7451FFBD1CC00B78745 /* BookNowTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C5F7441FFBD1CC00B78745 /* BookNowTimeCell.xib */; };
-		9396451B480C82FB836BD57E /* Pods_RichNotificationContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AE8B489A36FE846B74BC3B /* Pods_RichNotificationContent.framework */; };
-		98ADEA779C229620D7D73B94 /* Pods_FarmerConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07711D66C6283D01C7E1A16D /* Pods_FarmerConnectTests.framework */; };
 		A306D21926DCBD860032ABDF /* HeighestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A306D21826DCBD860032ABDF /* HeighestViewController.swift */; };
 		A30767171FFDFBF300B23F0C /* DiseasePrescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30767141FFDFBF300B23F0C /* DiseasePrescriptions.swift */; };
 		A30767181FFDFBF300B23F0C /* AgroProductMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30767151FFDFBF300B23F0C /* AgroProductMaster.swift */; };
@@ -331,6 +328,7 @@
 		B42D9F462270609D004CE1FD /* SVPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D9F442270609C004CE1FD /* SVPinCell.xib */; };
 		B42D9F472270609D004CE1FD /* SVPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42D9F452270609C004CE1FD /* SVPinView.xib */; };
 		B4A563352277025B00BB78EB /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A563342277025B00BB78EB /* PageContentViewController.swift */; };
+		C80D2256FA4E808E24F55FF6 /* Pods_FarmerConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B06412CC452D5A88CA34C8 /* Pods_FarmerConnect.framework */; };
 		D00741872518552500D731A8 /* GenuinityCheckReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00741852518552500D731A8 /* GenuinityCheckReportsViewController.swift */; };
 		D007418A2518572F00D731A8 /* ReportsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00741892518572F00D731A8 /* ReportsCell.swift */; };
 		D007418C2518574300D731A8 /* ReportsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D007418B2518574300D731A8 /* ReportsCell.xib */; };
@@ -489,6 +487,7 @@
 		D0F6F5A4245B509A00D1178B /* BookletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6F5A3245B509A00D1178B /* BookletInfo.swift */; };
 		D0F90D9423B7753300AAD1DA /* CropCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F90D9323B7753300AAD1DA /* CropCell.swift */; };
 		D0F90D9623B77E8A00AAD1DA /* CropCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F90D9523B77E8A00AAD1DA /* CropCell.xib */; };
+		F55B0234D19DBEC318BD924D /* Pods_RichNotificationContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D470FFBE3362F394B1B6905B /* Pods_RichNotificationContent.framework */; };
 		FF67E4F229D43B3C000FDED4 /* PlanterOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E4F129D43B3C000FDED4 /* PlanterOrdersViewController.swift */; };
 		FF67E4F429D43FF1000FDED4 /* PlanterOrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E4F329D43FF1000FDED4 /* PlanterOrdersTableViewCell.swift */; };
 		FF7CAC1C29B9C0020078E8C2 /* UserLogEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CAC1B29B9C0020078E8C2 /* UserLogEvents.swift */; };
@@ -566,9 +565,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07711D66C6283D01C7E1A16D /* Pods_FarmerConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		07AE8B489A36FE846B74BC3B /* Pods_RichNotificationContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichNotificationContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		13246E25325F9FE31E86EF77 /* Pods_FarmerConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		135AD481A126F513018CCF5D /* Pods-NotificationMediaExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.debug.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.debug.xcconfig"; sourceTree = "<group>"; };
 		180C4C6C23A1165B00EF7C14 /* PeetUploadedRecordsBO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeetUploadedRecordsBO.swift; sourceTree = "<group>"; };
 		180C4C6D23A1165D00EF7C14 /* CDIDiseaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDIDiseaseCell.swift; sourceTree = "<group>"; };
 		180C4C7023A1166200EF7C14 /* CropDiagnosisPeetViwControllerOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropDiagnosisPeetViwControllerOne.swift; sourceTree = "<group>"; };
@@ -605,11 +602,12 @@
 		18DC851A23A216F500E89C4C /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
 		18DC851E23A24EA600E89C4C /* ca_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ca_camera.png; sourceTree = "<group>"; };
 		18DC852023A2508F00E89C4C /* ca_camera1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ca_camera1.png; sourceTree = "<group>"; };
-		1973B71C087833D4ED0B897D /* Pods-FarmerConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnectTests.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnectTests/Pods-FarmerConnectTests.release.xcconfig"; sourceTree = "<group>"; };
-		4F8438580D051E2762D58E44 /* Pods_FarmerConnect_FarmerConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnect_FarmerConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50E17C2EAAD0F9E20C3A3B8F /* Pods-FarmerConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnectTests/Pods-FarmerConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		66B1D37DEE16B367B5818262 /* Pods-FarmerConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect.release.xcconfig"; sourceTree = "<group>"; };
-		76459E7A5665507B7DA0A2A8 /* Pods_NotificationMediaExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationMediaExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		478EFA4835D0282F1ED940BE /* Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4B70A9FA7AE474B655172D3C /* Pods-FarmerConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnectTests.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnectTests/Pods-FarmerConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		5DBD7A21B3B119E0F5FEB401 /* Pods_FarmerConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C55C7D5D21D121B99B8522B /* Pods-FarmerConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect.debug.xcconfig"; sourceTree = "<group>"; };
+		725FC841B47EDE47EA8D47FA /* Pods-FarmerConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect.release.xcconfig"; sourceTree = "<group>"; };
+		7A0ACA270358940BA82D21C8 /* Pods-RichNotificationContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.release.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.release.xcconfig"; sourceTree = "<group>"; };
 		840B5FAB1FEA5FCC004F4492 /* ISRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRadioButton.swift; sourceTree = "<group>"; };
 		840B5FAD1FEA6724004F4492 /* FarmServicesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmServicesConstants.swift; sourceTree = "<group>"; };
 		840B5FAF1FEA9F1B004F4492 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
@@ -725,7 +723,6 @@
 		84930CCB2004972400C9F9BC /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		84930CCD2004B76C00C9F9BC /* RateQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateQuestionsViewController.swift; sourceTree = "<group>"; };
 		84930CCF2004B7D300C9F9BC /* RateQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateQuestion.swift; sourceTree = "<group>"; };
-		84930CD12004CDCF00C9F9BC /* GoogleService(Prod Old)-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService(Prod Old)-Info.plist"; sourceTree = "<group>"; };
 		84930CD32004E24200C9F9BC /* FarmerConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FarmerConnect.entitlements; sourceTree = "<group>"; };
 		84930CD82004FBEB00C9F9BC /* NotificationMediaExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationMediaExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		84930CDA2004FBEB00C9F9BC /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -917,7 +914,6 @@
 		A33D290E2CE2023C00F4559C /* RGLCurrentOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGLCurrentOrderCell.swift; sourceTree = "<group>"; };
 		A342ED9426BF8F6200EB63AF /* BPHAlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPHAlertsViewController.swift; sourceTree = "<group>"; };
 		A342EDA326BF908E00EB63AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Main.strings; sourceTree = "<group>"; };
-		A34664BC47DA7FDA04C1116D /* Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3480654265520E0004B9B98 /* RewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsVC.swift; sourceTree = "<group>"; };
 		A348065A26552557004B9B98 /* RewardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewCell.swift; sourceTree = "<group>"; };
 		A348065B26552557004B9B98 /* RewardsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardsViewCell.xib; sourceTree = "<group>"; };
@@ -993,6 +989,7 @@
 		A3F439B029DBE8BD005F3598 /* PSViewEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSViewEquipmentViewController.swift; sourceTree = "<group>"; };
 		A3F439B129DBE8BD005F3598 /* PSSingleDaySelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSSingleDaySelectionView.swift; sourceTree = "<group>"; };
 		A3F439B229DBE8BD005F3598 /* PSSingleDaySelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSSingleDaySelectionView.xib; sourceTree = "<group>"; };
+		A8565D72CF4859AACC75651A /* Pods-NotificationMediaExtention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.release.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.release.xcconfig"; sourceTree = "<group>"; };
 		B411D2372271774400107DBA /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		B41E7DAF2269A2DB004CDC22 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		B42D9F4022705BE2004CE1FD /* SVPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVPinView.swift; sourceTree = "<group>"; };
@@ -1000,8 +997,9 @@
 		B42D9F442270609C004CE1FD /* SVPinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVPinCell.xib; sourceTree = "<group>"; };
 		B42D9F452270609C004CE1FD /* SVPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVPinView.xib; sourceTree = "<group>"; };
 		B4A563342277025B00BB78EB /* PageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
-		B54004B13571032BEDF182FB /* Pods-RichNotificationContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.release.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.release.xcconfig"; sourceTree = "<group>"; };
-		C99343B78A64F473E21F2E91 /* Pods-RichNotificationContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.debug.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.debug.xcconfig"; sourceTree = "<group>"; };
+		B93CA6A84917D87E67E6154A /* Pods_NotificationMediaExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationMediaExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3ADDD9805D21DA6DD34454 /* Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C13FC621354A43836C54E9BE /* Pods_FarmerConnect_FarmerConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnect_FarmerConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D005E50823DF22B30075DF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D005E50923DF22D50075DF75 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D005E50A23DF22E80075DF75 /* pa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pa; path = pa.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1183,10 +1181,10 @@
 		D0F6F5A3245B509A00D1178B /* BookletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookletInfo.swift; sourceTree = "<group>"; };
 		D0F90D9323B7753300AAD1DA /* CropCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropCell.swift; sourceTree = "<group>"; };
 		D0F90D9523B77E8A00AAD1DA /* CropCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CropCell.xib; sourceTree = "<group>"; };
-		D9A5BE5372A5F41B8D8D1825 /* Pods-FarmerConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect.debug.xcconfig"; sourceTree = "<group>"; };
-		E2E0A0203467233DBB4F02A4 /* Pods-NotificationMediaExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.debug.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.debug.xcconfig"; sourceTree = "<group>"; };
-		E64B342C9705C0E369DE51FA /* Pods-NotificationMediaExtention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationMediaExtention.release.xcconfig"; path = "Target Support Files/Pods-NotificationMediaExtention/Pods-NotificationMediaExtention.release.xcconfig"; sourceTree = "<group>"; };
-		F89FA5F86E37986FDFF55C84 /* Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D470FFBE3362F394B1B6905B /* Pods_RichNotificationContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichNotificationContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E524EC6E48244E73327F77B5 /* Pods-RichNotificationContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichNotificationContent.debug.xcconfig"; path = "Target Support Files/Pods-RichNotificationContent/Pods-RichNotificationContent.debug.xcconfig"; sourceTree = "<group>"; };
+		F8B06412CC452D5A88CA34C8 /* Pods_FarmerConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmerConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC7057B45492C79FEE95C6AE /* Pods-FarmerConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmerConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmerConnectTests/Pods-FarmerConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF573E5929B8DC6700936096 /* FarmerConnectV7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FarmerConnectV7.xcdatamodel; sourceTree = "<group>"; };
 		FF67E4F129D43B3C000FDED4 /* PlanterOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanterOrdersViewController.swift; sourceTree = "<group>"; };
 		FF67E4F329D43FF1000FDED4 /* PlanterOrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanterOrdersTableViewCell.swift; sourceTree = "<group>"; };
@@ -1204,7 +1202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C3B9D32EEAD1CA00EAE1AE /* EmpoverCameraScannerSDK.framework in Frameworks */,
-				4AD0CD607C0531042F85FA3B /* Pods_FarmerConnect.framework in Frameworks */,
+				C80D2256FA4E808E24F55FF6 /* Pods_FarmerConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,7 +1210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98ADEA779C229620D7D73B94 /* Pods_FarmerConnectTests.framework in Frameworks */,
+				4B8EC7F80FE5F8B45BD2FC40 /* Pods_FarmerConnectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1220,7 +1218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				390CF467D3072E49CFE467AB /* Pods_FarmerConnect_FarmerConnectUITests.framework in Frameworks */,
+				6380C58A82399A53E9F8949A /* Pods_FarmerConnect_FarmerConnectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1228,7 +1226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B71DFE12CDB33F6955B9D4D /* Pods_NotificationMediaExtention.framework in Frameworks */,
+				1793622FFDC42ADE461EFC5C /* Pods_NotificationMediaExtention.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,7 +1236,7 @@
 			files = (
 				D0A12AE224606B7900B36FE7 /* UserNotificationsUI.framework in Frameworks */,
 				D0A12AE024606B7900B36FE7 /* UserNotifications.framework in Frameworks */,
-				9396451B480C82FB836BD57E /* Pods_RichNotificationContent.framework in Frameworks */,
+				F55B0234D19DBEC318BD924D /* Pods_RichNotificationContent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1431,7 +1429,6 @@
 				8447F1351FE7D3FB00C5E00C /* Info.plist */,
 				A3726C4E2768BB6200227A7F /* Acviss-Credentials.plist */,
 				844CF21521D4F8B000C6AFE1 /* GoogleService-Info.plist */,
-				84930CD12004CDCF00C9F9BC /* GoogleService(Prod Old)-Info.plist */,
 				A30958951FEA2BE2005335C7 /* FarmerConnect-Bridging-Header.h */,
 				A388F35226DF8C52005633EE /* CameraUI.strings */,
 				A388F35926DF8C59005633EE /* PhotoLibrary.strings */,
@@ -2334,16 +2331,16 @@
 		B94EEAA99F559A3F07A84165 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D9A5BE5372A5F41B8D8D1825 /* Pods-FarmerConnect.debug.xcconfig */,
-				66B1D37DEE16B367B5818262 /* Pods-FarmerConnect.release.xcconfig */,
-				A34664BC47DA7FDA04C1116D /* Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig */,
-				F89FA5F86E37986FDFF55C84 /* Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig */,
-				50E17C2EAAD0F9E20C3A3B8F /* Pods-FarmerConnectTests.debug.xcconfig */,
-				1973B71C087833D4ED0B897D /* Pods-FarmerConnectTests.release.xcconfig */,
-				E2E0A0203467233DBB4F02A4 /* Pods-NotificationMediaExtention.debug.xcconfig */,
-				E64B342C9705C0E369DE51FA /* Pods-NotificationMediaExtention.release.xcconfig */,
-				C99343B78A64F473E21F2E91 /* Pods-RichNotificationContent.debug.xcconfig */,
-				B54004B13571032BEDF182FB /* Pods-RichNotificationContent.release.xcconfig */,
+				6C55C7D5D21D121B99B8522B /* Pods-FarmerConnect.debug.xcconfig */,
+				725FC841B47EDE47EA8D47FA /* Pods-FarmerConnect.release.xcconfig */,
+				BD3ADDD9805D21DA6DD34454 /* Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig */,
+				478EFA4835D0282F1ED940BE /* Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig */,
+				FC7057B45492C79FEE95C6AE /* Pods-FarmerConnectTests.debug.xcconfig */,
+				4B70A9FA7AE474B655172D3C /* Pods-FarmerConnectTests.release.xcconfig */,
+				135AD481A126F513018CCF5D /* Pods-NotificationMediaExtention.debug.xcconfig */,
+				A8565D72CF4859AACC75651A /* Pods-NotificationMediaExtention.release.xcconfig */,
+				E524EC6E48244E73327F77B5 /* Pods-RichNotificationContent.debug.xcconfig */,
+				7A0ACA270358940BA82D21C8 /* Pods-RichNotificationContent.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -2609,11 +2606,11 @@
 				D0273F71245C56DE0071346A /* QuickLook.framework */,
 				D0A12ADF24606B7900B36FE7 /* UserNotifications.framework */,
 				D0A12AE124606B7900B36FE7 /* UserNotificationsUI.framework */,
-				13246E25325F9FE31E86EF77 /* Pods_FarmerConnect.framework */,
-				4F8438580D051E2762D58E44 /* Pods_FarmerConnect_FarmerConnectUITests.framework */,
-				07711D66C6283D01C7E1A16D /* Pods_FarmerConnectTests.framework */,
-				76459E7A5665507B7DA0A2A8 /* Pods_NotificationMediaExtention.framework */,
-				07AE8B489A36FE846B74BC3B /* Pods_RichNotificationContent.framework */,
+				F8B06412CC452D5A88CA34C8 /* Pods_FarmerConnect.framework */,
+				C13FC621354A43836C54E9BE /* Pods_FarmerConnect_FarmerConnectUITests.framework */,
+				5DBD7A21B3B119E0F5FEB401 /* Pods_FarmerConnectTests.framework */,
+				B93CA6A84917D87E67E6154A /* Pods_NotificationMediaExtention.framework */,
+				D470FFBE3362F394B1B6905B /* Pods_RichNotificationContent.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2638,15 +2635,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8447F14E1FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnect" */;
 			buildPhases = (
-				F2484875097F0A41016658C5 /* [CP] Check Pods Manifest.lock */,
+				EB901E2CA24A9DEE76DE8E5B /* [CP] Check Pods Manifest.lock */,
 				8447F1221FE7D3FB00C5E00C /* Sources */,
 				8447F1231FE7D3FB00C5E00C /* Frameworks */,
 				8447F1241FE7D3FB00C5E00C /* Resources */,
 				84930CE32004FBEB00C9F9BC /* Embed App Extensions */,
 				D04B453A24AC7A6D000D8AA2 /* Embed Frameworks */,
 				D04B454D24ACA1E1000D8AA2 /* CopyFiles */,
-				914C0A422C6C3BC6FD0B03BD /* [CP] Embed Pods Frameworks */,
-				40653CCBD1E5321A8F60CC68 /* [CP] Copy Pods Resources */,
+				0330E96A656A5B72F442DD22 /* [CP] Embed Pods Frameworks */,
+				9402A07B3E1B086FDFE30A2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2663,7 +2660,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8447F1511FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnectTests" */;
 			buildPhases = (
-				944A1D7FC101D05CD74B3523 /* [CP] Check Pods Manifest.lock */,
+				1A0A0A5E4D0701A5244983E2 /* [CP] Check Pods Manifest.lock */,
 				8447F1361FE7D3FB00C5E00C /* Sources */,
 				8447F1371FE7D3FB00C5E00C /* Frameworks */,
 				8447F1381FE7D3FB00C5E00C /* Resources */,
@@ -2682,12 +2679,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8447F1541FE7D3FB00C5E00C /* Build configuration list for PBXNativeTarget "FarmerConnectUITests" */;
 			buildPhases = (
-				482B8197A1551BC9A7FD27DC /* [CP] Check Pods Manifest.lock */,
+				1F05E9E7A86555671ECE0714 /* [CP] Check Pods Manifest.lock */,
 				8447F1411FE7D3FB00C5E00C /* Sources */,
 				8447F1421FE7D3FB00C5E00C /* Frameworks */,
 				8447F1431FE7D3FB00C5E00C /* Resources */,
-				E8D6BD299A824C29AC43E9A9 /* [CP] Embed Pods Frameworks */,
-				446CA85594F741BEED5116AF /* [CP] Copy Pods Resources */,
+				20970828A82B59FF3DED7F9A /* [CP] Embed Pods Frameworks */,
+				6DF5D96A9E796872371DAFA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2703,7 +2700,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84930CE02004FBEB00C9F9BC /* Build configuration list for PBXNativeTarget "NotificationMediaExtention" */;
 			buildPhases = (
-				DA0739A7C873DE1FD83B050A /* [CP] Check Pods Manifest.lock */,
+				634114E278F6A5E9CC653040 /* [CP] Check Pods Manifest.lock */,
 				84930CD42004FBEB00C9F9BC /* Sources */,
 				84930CD52004FBEB00C9F9BC /* Frameworks */,
 				84930CD62004FBEB00C9F9BC /* Resources */,
@@ -2722,7 +2719,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A12AEF24606B7900B36FE7 /* Build configuration list for PBXNativeTarget "RichNotificationContent" */;
 			buildPhases = (
-				8CA82302F8A32B4BC1E1DB3C /* [CP] Check Pods Manifest.lock */,
+				AAD591D8B1DB19DF6EB13543 /* [CP] Check Pods Manifest.lock */,
 				D0A12ADA24606B7900B36FE7 /* Sources */,
 				D0A12ADB24606B7900B36FE7 /* Frameworks */,
 				D0A12ADC24606B7900B36FE7 /* Resources */,
@@ -2930,7 +2927,6 @@
 				8447F1311FE7D3FB00C5E00C /* Assets.xcassets in Resources */,
 				D01C8FD52524DFF70063383A /* 17-Spray-Services.png in Resources */,
 				D07CC73824ADEE6200D43FC0 /* CropNotificationWithAudioCell.xib in Resources */,
-				84930CD22004CDD000C9F9BC /* GoogleService(Prod Old)-Info.plist in Resources */,
 				A3F439BC29DBE8BD005F3598 /* PSSingleDaySelectionView.xib in Resources */,
 				D070755223DF212A00DBC0CA /* Localizable.strings in Resources */,
 				A33D290C2CE2023600F4559C /* RGLHistoryCell.xib in Resources */,
@@ -2976,47 +2972,83 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40653CCBD1E5321A8F60CC68 /* [CP] Copy Pods Resources */ = {
+		0330E96A656A5B72F442DD22 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Base64/Base64.framework",
+				"${BUILT_PRODUCTS_DIR}/FBAEMKit/FBAEMKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JWT/JWT.framework",
+				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base64.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAEMKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit_Basics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		446CA85594F741BEED5116AF /* [CP] Copy Pods Resources */ = {
+		1A0A0A5E4D0701A5244983E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"$(DERIVED_FILE_DIR)/Pods-FarmerConnectTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		482B8197A1551BC9A7FD27DC /* [CP] Check Pods Manifest.lock */ = {
+		1F05E9E7A86555671ECE0714 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3038,7 +3070,123 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8CA82302F8A32B4BC1E1DB3C /* [CP] Check Pods Manifest.lock */ = {
+		20970828A82B59FF3DED7F9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Base64/Base64.framework",
+				"${BUILT_PRODUCTS_DIR}/FBAEMKit/FBAEMKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JWT/JWT.framework",
+				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base64.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAEMKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit_Basics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		634114E278F6A5E9CC653040 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationMediaExtention-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF5D96A9E796872371DAFA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9402A07B3E1B086FDFE30A2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD591D8B1DB19DF6EB13543 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3054,90 +3202,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RichNotificationContent-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		914C0A422C6C3BC6FD0B03BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Base64/Base64.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseMessaging/FirebaseMessaging.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/JWT/JWT.framework",
-				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBAEMKit/FBAEMKit.framework/FBAEMKit",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework/FBSDKCoreKit",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics.framework/FBSDKCoreKit_Basics",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework/FBSDKLoginKit",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKShareKit/FBSDKShareKit.framework/FBSDKShareKit",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base64.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseMessaging.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAEMKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit_Basics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect/Pods-FarmerConnect-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		944A1D7FC101D05CD74B3523 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FarmerConnectTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3178,91 +3242,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
 		};
-		DA0739A7C873DE1FD83B050A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NotificationMediaExtention-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8D6BD299A824C29AC43E9A9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Base64/Base64.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseMessaging/FirebaseMessaging.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/JWT/JWT.framework",
-				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBAEMKit/FBAEMKit.framework/FBAEMKit",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework/FBSDKCoreKit",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKCoreKit_Basics/FBSDKCoreKit_Basics.framework/FBSDKCoreKit_Basics",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework/FBSDKLoginKit",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/FBSDKShareKit/FBSDKShareKit.framework/FBSDKShareKit",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Base64.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseMessaging.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAEMKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit_Basics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmerConnect-FarmerConnectUITests/Pods-FarmerConnect-FarmerConnectUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2484875097F0A41016658C5 /* [CP] Check Pods Manifest.lock */ = {
+		EB901E2CA24A9DEE76DE8E5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3979,7 +3959,7 @@
 		};
 		8447F14F1FE7D3FB00C5E00C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9A5BE5372A5F41B8D8D1825 /* Pods-FarmerConnect.debug.xcconfig */;
+			baseConfigurationReference = 6C55C7D5D21D121B99B8522B /* Pods-FarmerConnect.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -3988,7 +3968,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RLCDAA5W4Z;
 				DYLIB_INSTALL_NAME_BASE = "";
 				ENABLE_BITCODE = NO;
@@ -4008,7 +3988,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect;
@@ -4025,7 +4005,7 @@
 		};
 		8447F1501FE7D3FB00C5E00C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66B1D37DEE16B367B5818262 /* Pods-FarmerConnect.release.xcconfig */;
+			baseConfigurationReference = 725FC841B47EDE47EA8D47FA /* Pods-FarmerConnect.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4034,7 +4014,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RLCDAA5W4Z;
 				DYLIB_INSTALL_NAME_BASE = "";
 				ENABLE_BITCODE = NO;
@@ -4054,7 +4034,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(BUILT_PRODUCTS_DIR)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect;
@@ -4071,7 +4051,7 @@
 		};
 		8447F1521FE7D3FB00C5E00C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50E17C2EAAD0F9E20C3A3B8F /* Pods-FarmerConnectTests.debug.xcconfig */;
+			baseConfigurationReference = FC7057B45492C79FEE95C6AE /* Pods-FarmerConnectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -4091,7 +4071,7 @@
 		};
 		8447F1531FE7D3FB00C5E00C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1973B71C087833D4ED0B897D /* Pods-FarmerConnectTests.release.xcconfig */;
+			baseConfigurationReference = 4B70A9FA7AE474B655172D3C /* Pods-FarmerConnectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -4111,7 +4091,7 @@
 		};
 		8447F1551FE7D3FB00C5E00C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A34664BC47DA7FDA04C1116D /* Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig */;
+			baseConfigurationReference = BD3ADDD9805D21DA6DD34454 /* Pods-FarmerConnect-FarmerConnectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -4130,7 +4110,7 @@
 		};
 		8447F1561FE7D3FB00C5E00C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F89FA5F86E37986FDFF55C84 /* Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig */;
+			baseConfigurationReference = 478EFA4835D0282F1ED940BE /* Pods-FarmerConnect-FarmerConnectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -4149,7 +4129,7 @@
 		};
 		84930CE12004FBEB00C9F9BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2E0A0203467233DBB4F02A4 /* Pods-NotificationMediaExtention.debug.xcconfig */;
+			baseConfigurationReference = 135AD481A126F513018CCF5D /* Pods-NotificationMediaExtention.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -4171,7 +4151,7 @@
 		};
 		84930CE22004FBEB00C9F9BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E64B342C9705C0E369DE51FA /* Pods-NotificationMediaExtention.release.xcconfig */;
+			baseConfigurationReference = A8565D72CF4859AACC75651A /* Pods-NotificationMediaExtention.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -4193,7 +4173,7 @@
 		};
 		D0A12AED24606B7900B36FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C99343B78A64F473E21F2E91 /* Pods-RichNotificationContent.debug.xcconfig */;
+			baseConfigurationReference = E524EC6E48244E73327F77B5 /* Pods-RichNotificationContent.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -4222,7 +4202,7 @@
 		};
 		D0A12AEE24606B7900B36FE7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B54004B13571032BEDF182FB /* Pods-RichNotificationContent.release.xcconfig */;
+			baseConfigurationReference = 7A0ACA270358940BA82D21C8 /* Pods-RichNotificationContent.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = YES;

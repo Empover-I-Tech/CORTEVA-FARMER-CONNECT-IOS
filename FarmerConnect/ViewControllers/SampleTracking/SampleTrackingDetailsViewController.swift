@@ -68,6 +68,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     @IBOutlet weak var overAllHyrbidTopConstraint: NSLayoutConstraint!
     //Right side Value Lables
     @IBOutlet weak var sampleRequestLbl1: UILabel!
+    @IBOutlet weak var sampleRequestSeasonLbl: UILabel!
     @IBOutlet weak var sampleRequestLbl2: UILabel!
     @IBOutlet weak var sampleRequestLbl3: UILabel!
     @IBOutlet weak var sampleReportLbl1: UILabel!
@@ -172,6 +173,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                    self.dataSection1Pravakta = "No"
                }
     }
+    @IBOutlet weak var sampleRequestSeasonTxt: UITextField!
     @IBOutlet weak var sampleRequestCropTxt: UITextField!
     @IBOutlet weak var sampleRequestHybridTxt: UITextField!
     @IBOutlet weak var sampleReportYesBtn: UIButton!
@@ -489,7 +491,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     }
     
     var dataObj: NSDictionary?
-    
+    var getSeasonListArray: NSArray?
     var getCropListArray: NSArray?
     var getHybridListArray: NSArray?
     var getTopFabListArray: NSArray?
@@ -548,6 +550,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     
     var statusIS:String = ""
     
+    var seasonDropDownTblView = UITableView()
     var cropDropDownTblView = UITableView()
     var hybridNameTblView = UITableView()
     var reportCropDropDownTblView = UITableView()
@@ -558,6 +561,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     var reportDidYouLikeTblView = UITableView()
     var reportHybridReasonTblView = UITableView()
     
+    var seasonID = ""
     var cropID = ""
     var hybridID = ""
     
@@ -565,6 +569,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
     var reportHybridID = ""
     var topFabID = ""
     
+    var seasonArray = NSArray()
     var cropArray = NSArray()
     var hybridArray = NSArray()
     var reportCropArray = NSArray()
@@ -622,6 +627,10 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             }
             else if(dataSection1Pravakta == ""){
                 self.view.makeToast("Please Select Pravakta")
+                return
+            }
+            else if(sampleRequestSeasonTxt.text == ""){
+                self.view.makeToast("Please Select Season")
                 return
             }
             else if(sampleRequestCropTxt.text == ""){
@@ -873,6 +882,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         super.viewDidLoad()
         self.iagUserIDTxt.keyboardType = .numberPad
         self.iagUserIDTxt.delegate = self
+        self.sampleRequestSeasonTxt.delegate = self
         self.sampleRequestCropTxt.delegate = self
         
         RetailerTopView.isHidden = true
@@ -907,6 +917,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         print("selected list data",self.dataObj!)
         print("selected list data count",self.dataObj!.count)
         
+        print("season list data", self.getSeasonListArray!)
         print("crop list data",self.getCropListArray!)
         print("hybrid list data",self.getHybridListArray!)
 
@@ -946,15 +957,21 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         
         //updateStarColors(for: ratingView, rating: Float(ratingView.rating))
         
+        self.seasonArray = getSeasonListArray!
         self.cropArray = getCropListArray!
         self.hybridArray = getHybridListArray!
         self.reportCropArray = getCropListArray!
         self.reportHybridArray = getHybridListArray!
         self.originalReportHybridArray = getHybridListArray!
 
-        
+        print("season list data",self.seasonArray)
         print("crop list data",self.cropArray)
         print("hybrid list data",self.hybridArray)
+        
+        //season dropdown tableView
+        self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: seasonDropDownTblView, textField: sampleRequestSeasonTxt)
+        seasonDropDownTblView.dataSource = self
+        seasonDropDownTblView.delegate = self
         
         //crop dropdown tableView
         self.loadDropDownTableView(tableViewDataSource: self, tableViewDelegate: self, tableview: cropDropDownTblView, textField: sampleRequestCropTxt)
@@ -1017,7 +1034,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             RetailerTopView.isHidden = false
             retailerEditView.isHidden = false
 
-        retailerEditHeightConstraint.constant = 240
+        retailerEditHeightConstraint.constant = 300
         RetailerTopImageView.image = UIImage(named: "downroundIcon")
         
         farmerTopView.isHidden = true
@@ -1037,10 +1054,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
+           seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
         if(dataSection1Pravakta == "Yes"){
             self.sampleRequestYesBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
             self.sampleRequestNoBtn?.setImage(UIImage(named: "Radio"), for: .normal)
@@ -1066,7 +1085,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         self.stackHeightSetInitial()
         RetailerTopView.isHidden = false
         retailerEditView.isHidden = false
-        retailerEditHeightConstraint.constant = 240
+        retailerEditHeightConstraint.constant = 300
         RetailerTopImageView.image = UIImage(named: "downroundIcon")
         
         getServerId = 0
@@ -1109,7 +1128,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             editButton.isHidden = false
             
-            RetailerHeightConstraint.constant = 130
+            RetailerHeightConstraint.constant = 150
             RetailerTopImageView.image = UIImage(named: "downroundIcon")
             
             farmerEditHeightConstraint.constant =  250 //heightConstant
@@ -1120,15 +1139,18 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
+            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
             
         }
         else if(NSLocalizedString("sampleReport", comment: "") == self.statusIS){
@@ -1140,7 +1162,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             farmerView.isHidden = false
             pravtktaEditView.isHidden = false
             
-            RetailerHeightConstraint.constant = 130
+            RetailerHeightConstraint.constant = 150
             RetailerTopImageView.image = UIImage(named: "downroundIcon")
             
             farmerHeightConstraint.constant =  170 //heightConstant
@@ -1154,11 +1176,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
-            
+            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
       
             self.sampleReportLbl1.text = self.dataObj?.value(forKey: "sampleReceived") as? String
             self.sampleReportLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
@@ -1170,6 +1193,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             
@@ -1190,7 +1214,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                     PravtktaView.isHidden = false
                     bigFarmerEditView.isHidden = false
             
-            RetailerHeightConstraint.constant = 130
+            RetailerHeightConstraint.constant = 150
             RetailerTopImageView.image = UIImage(named: "downroundIcon")
             
             farmerHeightConstraint.constant =  170 //heightConstant
@@ -1207,10 +1231,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
+            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
             
             self.sampleReportLbl1.text = self.dataObj?.value(forKey: "sampleReceived") as? String
             self.sampleReportLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
@@ -1238,6 +1264,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             
@@ -1267,7 +1294,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             BigfarmerView.isHidden = false
         
     
-    RetailerHeightConstraint.constant = 130
+    RetailerHeightConstraint.constant = 150
     RetailerTopImageView.image = UIImage(named: "downroundIcon")
     
     farmerHeightConstraint.constant =  170 //heightConstant
@@ -1283,10 +1310,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
+            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
             
             self.sampleReportLbl1.text = self.dataObj?.value(forKey: "sampleReceived") as? String
             self.sampleReportLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
@@ -2071,9 +2100,13 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             view.endEditing(true)
             self.RetailerView.endEditing(true)
             self.retailerEditView.endEditing(true)
-            self.sampleRequestCropTxt.becomeFirstResponder()
+            self.sampleRequestSeasonTxt.becomeFirstResponder()
+            //self.sampleRequestCropTxt.becomeFirstResponder()
         }
-         if textField == sampleRequestCropTxt {
+        if textField == sampleRequestSeasonTxt {
+            seasonDropDownTblView.isHidden = true
+        }
+        else if textField == sampleRequestCropTxt {
             cropDropDownTblView.isHidden = true
         }
         else if textField == sampleRequestHybridTxt {
@@ -2106,18 +2139,29 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         return true
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == sampleRequestCropTxt {
+        if textField == sampleRequestSeasonTxt {
+            self.view.endEditing(true)
+            self.RetailerView.endEditing(true)
+            self.retailerEditView.endEditing(true)
+                self.sampleRequestSeasonTxt.resignFirstResponder()
+                self.seasonDropDownTblView.isHidden = false
+                self.cropDropDownTblView.isHidden = true
+                self.hybridNameTblView.isHidden = true
+       }
+       else if textField == sampleRequestCropTxt {
             self.view.endEditing(true)
             self.RetailerView.endEditing(true)
             self.retailerEditView.endEditing(true)
                 self.sampleRequestCropTxt.resignFirstResponder()
                 self.cropDropDownTblView.isHidden = false
+                self.seasonDropDownTblView.isHidden = true
                 self.hybridNameTblView.isHidden = true
        }
        else if textField == sampleRequestHybridTxt {
            self.RetailerView.endEditing(true)
            self.retailerEditView.endEditing(true)
                self.sampleRequestHybridTxt.resignFirstResponder()
+               self.seasonDropDownTblView.isHidden = true
                self.hybridNameTblView.isHidden = false
                self.cropDropDownTblView.isHidden = true
        }
@@ -2195,7 +2239,13 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             self.RetailerView.endEditing(true)
             self.retailerEditView.endEditing(true)
         }
-        if textField == sampleRequestCropTxt{
+        if textField == sampleRequestSeasonTxt{
+            view.endEditing(true)
+            self.RetailerView.endEditing(true)
+            self.retailerEditView.endEditing(true)
+
+        }
+        else if textField == sampleRequestCropTxt{
             view.endEditing(true)
             self.RetailerView.endEditing(true)
             self.retailerEditView.endEditing(true)
@@ -2394,7 +2444,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                     RetailerHeightConstraint.constant = 0
                 }
                 else{
-                    RetailerHeightConstraint.constant = 130
+                    RetailerHeightConstraint.constant = 160
                     RetailerTopImageView.image = UIImage(named: "downroundIcon")
                 }
             }
@@ -2405,7 +2455,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                     retailerEditHeightConstraint.constant = 0
                 }
                 else{
-                    retailerEditHeightConstraint.constant = 240
+                    retailerEditHeightConstraint.constant = 300
                     RetailerTopImageView.image = UIImage(named: "downroundIcon")
                 }
             }
@@ -2528,6 +2578,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                 "serverId": self.getServerId,
                 "growNextYear": self.dataSection4WillGrow,
                 "reportHybridId":self.reportHybridID,
+                "seasonId": self.seasonID,
                 "cropId": self.cropID,
                 "pricePerQt": self.harvestReportMandiTxt.text!,
                 "hybridId": self.hybridID,
@@ -2538,6 +2589,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
                 "rating": self.dataSection4HybridRating,
                 "reportCropId": self.reportCropID,
                 "mobileSubmitDateTime": formattedDate,
+                "seasonName":self.sampleRequestSeasonTxt.text!,
                 "cropName":self.sampleRequestCropTxt.text!,
                 "hybridName":self.sampleRequestHybridTxt.text!,
                 "reportCropName":self.sampleReportCropTxt.text!,
@@ -2659,7 +2711,10 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
 extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == cropDropDownTblView {
+        if tableView == seasonDropDownTblView {
+            return seasonArray.count
+        }
+        else if tableView == cropDropDownTblView {
             return cropArray.count
         }
         else if tableView == hybridNameTblView {
@@ -2694,8 +2749,11 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: cellIdentifier)
         cell.backgroundColor = UIColor.clear
         cell.textLabel?.font = UIFont(name: "Helvetica", size: 14.0)
-       
-        if tableView == cropDropDownTblView {
+         if tableView == seasonDropDownTblView {
+            let seasonDic = seasonArray.object(at: indexPath.row) as? NSDictionary
+            cell.textLabel?.text = seasonDic?.value(forKey: "name") as? String
+        }
+        else if tableView == cropDropDownTblView {
             let cropDic = cropArray.object(at: indexPath.row) as? NSDictionary
             cell.textLabel?.text = cropDic?.value(forKey: "name") as? String
         }
@@ -2736,8 +2794,15 @@ extension SampleTrackingDetailsViewController :  UITableViewDataSource, UITableV
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-         if tableView == cropDropDownTblView {
+        if tableView == seasonDropDownTblView {
+           let seasonDic = self.seasonArray.object(at: indexPath.row) as? NSDictionary
+            seasonID = (seasonDic!.value(forKey: "id") as! NSString) as String
+            sampleRequestSeasonTxt.text = seasonDic?.value(forKey: "name") as? String
+    
+            seasonDropDownTblView.isHidden = true
+            sampleRequestSeasonTxt.resignFirstResponder()
+       }
+        else if tableView == cropDropDownTblView {
             let cropDic = self.cropArray.object(at: indexPath.row) as? NSDictionary
              cropID = (cropDic!.value(forKey: "id") as! NSString) as String
              sampleRequestCropTxt.text = cropDic?.value(forKey: "name") as? String

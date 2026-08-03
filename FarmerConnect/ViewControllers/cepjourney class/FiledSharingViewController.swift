@@ -447,11 +447,11 @@ class FiledSharingViewController: BaseViewController,UIScrollViewDelegate,UIImag
          shareDialog.shareContent = shareLinkContent
          shareDialog.show()*/
         
-        let photo = SharePhoto(image: img_upload.image!, isUserGenerated: true)
+        let photo = SharePhoto(image: img_upload.image!, userGenerated: true)
         let content = SharePhotoContent()
         content.photos = [photo]
         photo.caption = self.selectedStr
-        let showDialog = ShareDialog(viewController: self, content: content, delegate: self)
+        let showDialog = ShareDialog(fromViewController: self, content: content, delegate: self)
         // showDialog.mode = .feedWeb
         showDialog.show()
         if (showDialog.canShow) {

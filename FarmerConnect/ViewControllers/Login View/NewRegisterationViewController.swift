@@ -776,7 +776,7 @@ class NewRegisterationViewController: BaseViewController,UITextFieldDelegate,UIC
         
         let downBtn = UIButton(type: .custom)
         downBtn.frame = CGRect(x: 0, y: 0, width: 15, height: 15)
-        downBtn.setImage(UIImage(named:"registartionICon4"), for:.normal)
+        downBtn.setImage(UIImage(named:"registartionICon"), for:.normal)
         txtMobileRvillage?.rightView = downBtn
         txtMobileRvillage?.rightViewMode = .always
         txtMobileRvillage?.contentMode = .center
