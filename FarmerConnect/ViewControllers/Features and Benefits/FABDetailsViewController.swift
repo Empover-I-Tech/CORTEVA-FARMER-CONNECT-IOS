@@ -364,13 +364,14 @@ class FABDetailsViewController: BaseViewController,UIGestureRecognizerDelegate {
         print(headers)
         
         Alamofire.request(urlString, method: .post, parameters: Params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
-            SwiftLoader.hide()
+//            SwiftLoader.hide()
             if response.result.error == nil {
                 if let json = response.result.value {
-                    
+                    SwiftLoader.hide()
                     //print("Response :\(json)")
                     let responseStatusCode = (json as! NSDictionary).value(forKey: "statusCode") as! String
                     if responseStatusCode == STATUS_CODE_200{
+                        SwiftLoader.hide()
                         let respData = (json as! NSDictionary).value(forKey: "response") as! NSString
                         let decryptData  = Constatnts.decryptResult(StrJson: respData as String)
                         print("Response after decrypting data:\(decryptData)")
@@ -430,6 +431,7 @@ class FABDetailsViewController: BaseViewController,UIGestureRecognizerDelegate {
                         self.updateUI()
                     }
                     else if responseStatusCode == STATUS_CODE_601{
+                        SwiftLoader.hide()
                          Constatnts.logOut()
                         if let msg = ((json as! NSDictionary).value(forKey: "message") as? NSString){
                             self.view.makeToast(msg as String)
@@ -438,6 +440,7 @@ class FABDetailsViewController: BaseViewController,UIGestureRecognizerDelegate {
                 }
             }
             else{
+                SwiftLoader.hide()
                 self.view.makeToast((response.result.error.debugDescription), duration: 1.0, position: .center)
                 return
             }

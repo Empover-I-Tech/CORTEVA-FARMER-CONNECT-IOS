@@ -220,7 +220,6 @@ class ChangeLanguageViewController: BaseViewController {
         var yes = ""
         var no = ""
         var header = ""
-        
         if selectedLanguageCode == "en"{
             message = "Do you want to set English language?"
             yes = "YES"
@@ -272,18 +271,40 @@ class ChangeLanguageViewController: BaseViewController {
             yes = "ಹೌದು"
             no = "ಇಲ್ಲ"
             header = "ಎಚ್ಚರಿಕೆ !"
+            selectedLanguageCode = "kn"
+            selectedLanguage = "தமிழ்"
         }
         else if selectedLanguageCode == "bn"{
             message = "আপনি কি বাংলা ভাষা সেট করতে চান?"
             yes = "হ্যাঁ"
             no = "না."
             header = "সতর্কতা!"
+            selectedLanguageCode = "bn"
+            selectedLanguage = "தமிழ்"
         }
         else if selectedLanguageCode == "or"{
             message = "ଆପଣ ଓଡ଼ିଆ ଭାଷା ସେଟ କରିବା ପାଇଁ ଚାହୁଁ ଛନ୍ତି କୀ?"
             yes = "ହଁ"
             no = "ନାଁ"
             header = "ସୂଚନା"
+            selectedLanguageCode = "or"
+            selectedLanguage = "தமிழ்"
+        }
+        else if selectedLanguageCode == "gu"{
+            message = "Do you want to set English language?"
+            yes = "YES"
+            no = "NO"
+            header = "Alert!"
+            selectedLanguageCode = "gu"
+            selectedLanguage = "English"
+        }
+        else if selectedLanguageCode == "mr"{
+            message = "Do you want to set English language?"
+            yes = "YES"
+            no = "NO"
+            header = "Alert!"
+            selectedLanguageCode = "mr"
+            selectedLanguage = "English"
         }
         
         self.alertView = CustomAlert.alertPopUpView(self, frame: self.view.frame, title: header as NSString, message: message as NSString, okButtonTitle: yes, cancelButtonTitle: no) as! UIView

@@ -293,6 +293,7 @@ class ProviderFilterViewController: ProviderBaseViewController {
         dobPicker.backgroundColor = UIColor.white
         dobPicker.layer.cornerRadius = 5.0
         dobPicker.datePickerMode = UIDatePickerMode.date
+        dobPicker.preferredDatePickerStyle = .wheels
         dobPicker.minimumDate = NSDate() as Date
         
         let dateFormatter: DateFormatter = DateFormatter()
@@ -348,6 +349,7 @@ class ProviderFilterViewController: ProviderBaseViewController {
         dobPicker.backgroundColor = UIColor.white
         dobPicker.layer.cornerRadius = 5.0
         dobPicker.datePickerMode = UIDatePickerMode.date
+        dobPicker.preferredDatePickerStyle = .wheels
         
         if Validations.isNullString(txtFldToDate.text! as NSString) == false{
             let dateFormatter: DateFormatter = DateFormatter()

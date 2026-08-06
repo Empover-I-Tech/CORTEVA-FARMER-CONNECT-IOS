@@ -1054,12 +1054,13 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
-            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
-           seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
+        seasonID = self.dataObj?.value(forKey: "seasonId") as? String ?? ""
+        
         if(dataSection1Pravakta == "Yes"){
             self.sampleRequestYesBtn?.setImage(UIImage(named: "SelectRadioBlue"), for: .normal)
             self.sampleRequestNoBtn?.setImage(UIImage(named: "Radio"), for: .normal)
@@ -1145,12 +1146,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
-            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
-            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
+            seasonID = self.dataObj?.value(forKey: "seasonId") as? String ?? ""
             
         }
         else if(NSLocalizedString("sampleReport", comment: "") == self.statusIS){
@@ -1193,7 +1194,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
-            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             
@@ -1264,7 +1265,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             iagUserIDTxt.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             dataSection1Pravakta = self.dataObj?.value(forKey: "isPravaktha") as! String
-            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String
+            sampleRequestSeasonTxt.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             sampleRequestCropTxt.text = self.dataObj?.value(forKey: "cropName") as? String
             sampleRequestHybridTxt.text = self.dataObj?.value(forKey: "hybridName") as? String
             
@@ -1905,6 +1906,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
         dobPicker.backgroundColor = UIColor.white
         dobPicker.layer.cornerRadius = 5.0
         dobPicker.datePickerMode = UIDatePickerMode.date
+        dobPicker.preferredDatePickerStyle = .wheels
         dobPicker.maximumDate = NSDate() as Date
         
         if(self.dataStatus == NSLocalizedString("geoTag", comment: "")){

@@ -345,7 +345,7 @@ public class SwiftLoader: UIView {
         /**
          *  Background color for loader
          */
-        public var backgroundColor = UIColor.white
+        public var backgroundColor = UIColor.clear
         
         /**
          *  Foreground color

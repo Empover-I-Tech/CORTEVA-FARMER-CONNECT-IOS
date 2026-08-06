@@ -3969,7 +3969,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				DYLIB_INSTALL_NAME_BASE = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4015,7 +4015,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				DYLIB_INSTALL_NAME_BASE = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4057,7 +4057,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				INFOPLIST_FILE = /Users/empover/Documents/FarmerConnectDevelopment/FarmerConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FarmerConnectTests;
@@ -4077,7 +4077,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				INFOPLIST_FILE = /Users/empover/Documents/FarmerConnectDevelopment/FarmerConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FarmerConnectTests;
@@ -4096,7 +4096,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				INFOPLIST_FILE = FarmerConnectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FarmerConnectUITests;
@@ -4115,7 +4115,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				INFOPLIST_FILE = FarmerConnectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FarmerConnectUITests;
@@ -4135,12 +4135,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				INFOPLIST_FILE = NotificationMediaExtention/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 4.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.notificationextention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.notificationextensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -4157,12 +4157,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				INFOPLIST_FILE = NotificationMediaExtention/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 4.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.notificationextention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.notificationextensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -4181,7 +4181,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				ENABLE_BITCODE = NO;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = RichNotificationContent/Info.plist;
@@ -4191,7 +4191,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.RichNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.RichNotificationExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -4210,7 +4210,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = RLCDAA5W4Z;
+				DEVELOPMENT_TEAM = P86UHBJPTD;
 				ENABLE_BITCODE = NO;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = RichNotificationContent/Info.plist;
@@ -4218,7 +4218,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 4.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.RichNotification;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phi.farmerconnect.RichNotificationExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

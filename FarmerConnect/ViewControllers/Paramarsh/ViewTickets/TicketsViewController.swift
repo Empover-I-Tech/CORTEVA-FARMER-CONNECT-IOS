@@ -137,6 +137,7 @@ class TicketsViewController: BaseViewController {
         dobPicker.backgroundColor = UIColor.white
         dobPicker.layer.cornerRadius = 5.0
         dobPicker.datePickerMode = UIDatePickerMode.date
+        dobPicker.preferredDatePickerStyle = .wheels
         if Validations.isNullString(selectedDate) == false{
             let dateFormatter: DateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy"

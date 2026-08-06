@@ -1001,6 +1001,7 @@ extension SprayServiceViewController : UIImagePickerControllerDelegate,UINavigat
         dobPicker.backgroundColor = UIColor.white
         dobPicker.layer.cornerRadius = 5.0
         dobPicker.datePickerMode = UIDatePickerMode.date
+        dobPicker.preferredDatePickerStyle = .wheels
         
         let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
         calendar.timeZone = NSTimeZone(name: "UTC")! as TimeZone
