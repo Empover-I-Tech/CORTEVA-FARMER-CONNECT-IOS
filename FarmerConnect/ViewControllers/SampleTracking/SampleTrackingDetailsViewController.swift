@@ -1140,7 +1140,7 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
-            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             
@@ -1177,12 +1177,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
-            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
-            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
+            seasonID = self.dataObj?.value(forKey: "seasonId") as? String ?? ""
       
             self.sampleReportLbl1.text = self.dataObj?.value(forKey: "sampleReceived") as? String
             self.sampleReportLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
@@ -1232,12 +1232,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
-            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
-            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
+            seasonID = self.dataObj?.value(forKey: "seasonId") as? String ?? ""
             
             self.sampleReportLbl1.text = self.dataObj?.value(forKey: "sampleReceived") as? String
             self.sampleReportLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
@@ -1311,12 +1311,12 @@ class SampleTrackingDetailsViewController: BaseViewController,UIImagePickerContr
             
             self.iagUserValueLbl.text = self.dataObj?.value(forKey: "mdoMdrActualUserId") as? String
             self.sampleRequestLbl1.text = self.dataObj?.value(forKey: "isPravaktha") as? String
-            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String
+            self.sampleRequestSeasonLbl.text = self.dataObj?.value(forKey: "seasonName") as? String ?? ""
             self.sampleRequestLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
             self.sampleRequestLbl3.text = self.dataObj?.value(forKey: "hybridName") as? String
             hybridID = String(describing: self.dataObj!.value(forKey: "hybridId")!)
             cropID = String(describing: self.dataObj!.value(forKey: "cropId")!)
-            seasonID = String(describing: self.dataObj!.value(forKey: "seasonId")!)
+            seasonID = self.dataObj?.value(forKey: "seasonId") as? String ?? ""
             
             self.sampleReportLbl1.text = self.dataObj?.value(forKey: "sampleReceived") as? String
             self.sampleReportLbl2.text = self.dataObj?.value(forKey: "cropName") as? String
